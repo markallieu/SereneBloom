@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Serene Bloom"
-run/main_scene="res://essential/scenes/cliffside.tscn"
+run/main_scene="res://essential/scenes/worlds/cliffside.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 config/icon="res://essential/art/icon.svg"
 
