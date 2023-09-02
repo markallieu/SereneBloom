@@ -1,1 +1,7 @@
+res://essential/scenes/gui/Menu.tscn
+res://UITheme.tres
+res://essential/scenes/worlds/cliffside.tscn
 res://essential/scenes/worlds/serenavon.tscn
+res://essential/scenes/player/playerKaine.tscn
+res://essential/scenes/worlds/ivory-lake.tscn
+res://essential/scenes/gui/OptionMenu.tscn
