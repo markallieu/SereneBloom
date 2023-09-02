@@ -1,3 +1,13 @@
+HSlider
+Label
+VBoxContainer
+HBoxContainer
+CheckBox
+Button
+Line2D
+ColorRect
+TextureButton
+MarginContainer
 Node
 TileMap
 CollisionPolygon2D
