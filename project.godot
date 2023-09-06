@@ -19,6 +19,10 @@ config/icon="res://essential/art/icon.svg"
 
 aseprite_executable_path="C:/aseprite/build/bin/aseprite.exe"
 
+[autoload]
+
+BackgroundMusic="*res://essential/scenes/gui/BackgroundMusic.tscn"
+
 [display]
 
 window/size/viewport_width=416

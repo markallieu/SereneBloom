@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjw43gx73qhsd"]
+
+[ext_resource type="AudioStream" uid="uid://j65guk8w1d21" path="res://essential/audio/Background_Music/Ambient 2.ogg" id="1_g5ub1"]
+
+[node name="Background Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_g5ub1")
+volume_db = -1.568
+autoplay = true
+bus = &"Music"
