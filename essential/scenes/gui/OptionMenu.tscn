@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cug57spgx0bmo"]
+[gd_scene load_steps=8 format=3 uid="uid://cug57spgx0bmo"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/OptionMenu.cs" id="1_4jtcn"]
+[ext_resource type="Texture2D" uid="uid://bxav48w18j6li" path="res://essential/art/bg.jpeg" id="2_rncig"]
 [ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="2_txriu"]
 [ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf" id="3_uaoe6"]
+[ext_resource type="Script" path="res://essential/scenes/gui/MasterSlider.cs" id="4_6ww0o"]
+[ext_resource type="Script" path="res://essential/scenes/gui/SFXSlider.cs" id="5_gpy33"]
+[ext_resource type="Script" path="res://essential/scenes/gui/MusicSlider.cs" id="6_31y05"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -13,11 +17,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4jtcn")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 416.0
 offset_bottom = 224.0
-color = Color(0.439216, 0.454902, 0.470588, 1)
+texture = ExtResource("2_rncig")
+expand_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 404.0
+offset_bottom = 210.0
+color = Color(0, 0, 0, 0.639216)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -35,7 +48,7 @@ theme = ExtResource("2_txriu")
 theme_override_font_sizes/font_size = 13
 text = "Back To Menu"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Video" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_uaoe6")
 theme_override_font_sizes/font_size = 13
@@ -45,19 +58,25 @@ vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Fullscreen" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_uaoe6")
+theme_override_font_sizes/font_size = 13
 text = "Fullscreen"
 horizontal_alignment = 1
 
 [node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
+theme = ExtResource("2_txriu")
 
 [node name="Audio" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uaoe6")
+theme_override_font_sizes/font_size = 13
 text = "Audio"
 horizontal_alignment = 1
 
@@ -70,16 +89,22 @@ size_flags_horizontal = 3
 
 [node name="Master" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Labels"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uaoe6")
+theme_override_font_sizes/font_size = 13
 text = "Master"
 horizontal_alignment = 1
 
 [node name="SoundFx" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Labels"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uaoe6")
+theme_override_font_sizes/font_size = 13
 text = "Sound Effects"
 horizontal_alignment = 1
 
 [node name="Music" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Labels"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uaoe6")
+theme_override_font_sizes/font_size = 13
 text = "Music"
 horizontal_alignment = 1
 
@@ -87,16 +112,37 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
+[node name="MasterSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
 layout_mode = 2
 size_flags_vertical = 2
+theme = ExtResource("2_txriu")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("4_6ww0o")
 
-[node name="HSlider2" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
+[node name="SFXSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
 layout_mode = 2
 size_flags_vertical = 2
+theme = ExtResource("2_txriu")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("5_gpy33")
 
-[node name="HSlider3" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_txriu")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("6_31y05")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MasterSlider" to="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MasterSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer2/Slider/SFXSlider" to="MarginContainer/VBoxContainer/HBoxContainer2/Slider/SFXSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MusicSlider" to="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MusicSlider" method="_on_value_changed"]

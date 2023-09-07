@@ -1,7 +1,17 @@
 using Godot;
+using System;
 
 public partial class playerKaine : CharacterBody2D
-{
+{   
+    private AudioStreamPlayer2D walkingSound;
+
+    Random random = new Random();
+    public override void _Ready()
+    {
+        walkingSound = GetNode<AudioStreamPlayer2D>("WalkingSound");
+        walkingSound.Stream = GD.Load<AudioStream>("res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav");
+    }
+
     private Vector2 _velocity = Vector2.Zero;
     private Vector2 _moveDirection = Vector2.Zero;
     private string _currentDirection;
@@ -42,6 +52,11 @@ public partial class playerKaine : CharacterBody2D
         // If true, assign to 1, plays walking animation
         // If false, assign to 0, plays idle
         PlayAnimation(_moveDirection.LengthSquared() > 0 ? 1 : 0);
+
+        if(_moveDirection.LengthSquared() > 0 && !walkingSound.Playing){
+            walkingSound.PitchScale = (float)(random.NextDouble() * 0.4 + 0.8);
+            walkingSound.Play();
+        }
 
         // Normalize ensures that the _moveDirection is consistent with the _speed which is 100f
         _velocity = _moveDirection.Normalized() * _speed;

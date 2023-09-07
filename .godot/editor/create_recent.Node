@@ -1,5 +1,8 @@
-HSlider
 Label
+TextureRect
+AudioStreamPlayer2D
+Timer
+HSlider
 VBoxContainer
 HBoxContainer
 CheckBox
