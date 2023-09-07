@@ -1,7 +1,7 @@
 cffcf7cc5eb03ca20a5c49cce30ef619
-::res://::1693703892
+::res://::1694017343
 README.md::TextFile::-1::1693411448::0::1::::<><>::
-UITheme.tres::Theme::1832913361037448250::1693703892::0::1::::<><>::uid://bdhfjrcav1v7::::res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png<>uid://bcisfkw4ji5h2::::res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf
+UITheme.tres::Theme::1832913361037448250::1694014162::0::1::::<><>::uid://bdhfjrcav1v7::::res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png<>uid://bcisfkw4ji5h2::::res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf
 ::res://addons/::1693413872
 ::res://addons/nklbdev.aseprite_importers/::1693411796
 aseprite_image_format_loader_extension.gd::GDScript::-1::1692722050::0::1::::<>ImageFormatLoaderExtension<>::
@@ -120,16 +120,16 @@ Cover.png::CompressedTexture2D::6270530665869286838::1657866616::1693576545::1::
 88_Teleport_02.wav::AudioStreamWAV::3299211704156562923::1647626228::1693576547::1::::<><>::
 ::res://essential/scenes/::1693655283
 global_tilemap.tres::TileSet::1314864912822112732::1693397971::0::1::::<><>::uid://25vy1bd20iug
-::res://essential/scenes/gui/::1693702996
+::res://essential/scenes/gui/::1693732702
 menu.cs::CSharpScript::-1::1693655283::0::1::::<><>::
-Menu.tscn::PackedScene::4687258184975286954::1693702996::0::1::::<><>::res://essential/scenes/gui/menu.cs<>uid://bcisfkw4ji5h2
+Menu.tscn::PackedScene::4687258184975286954::1693732702::0::1::::<><>::res://essential/scenes/gui/menu.cs<>uid://bcisfkw4ji5h2
 OptionMenu.cs::CSharpScript::-1::1693655283::0::1::::<><>::
-OptionMenu.tscn::PackedScene::6190884130755860322::1693702996::0::1::::<><>::res://essential/scenes/gui/OptionMenu.cs<>uid://1d42ypfa3rje
-::res://essential/scenes/player/::1693702995
+OptionMenu.tscn::PackedScene::6190884130755860322::1693732701::0::1::::<><>::res://essential/scenes/gui/OptionMenu.cs<>uid://1d42ypfa3rje
+::res://essential/scenes/player/::1693732701
 playerKaine.cs::CSharpScript::-1::1693403491::0::1::::<><>::
-playerKaine.tscn::PackedScene::2812167398017557647::1693702995::0::1::::<><>::res://essential/scenes/player/playerKaine.cs<>uid://cbt206dwwm0b5
-::res://essential/scenes/worlds/::1693704014
-cliffside.tscn::PackedScene::2550545563553412663::1693702994::0::1::::<><>::uid://bgch8sa6ik2hf
-ivory_lake.tscn::PackedScene::8938344237781812550::1693704042::0::1::::<><>::uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://cdofo5io3m6uy::::res://essential/art/tilemap/Objects_Tilemap2.png<>uid://cp4qbuyjsm4sb::::res://essential/art/tilemap/TopDownHouse_SmallItems.png<>uid://b7ey3kouedc15::::res://essential/art/tilemap/TopDownHouse_FurnitureState2.png<>uid://4yyy4j7rgcf2::::res://essential/art/tilemap/TopDownHouse_FurnitureState1.png<>uid://dfjrx5x4of782::::res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png<>uid://c30yyhhpu1frg::::res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png
-serenavon.tscn::PackedScene::6398375932374715080::1693703984::0::1::::<><>::uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://cdofo5io3m6uy::::res://essential/art/tilemap/Objects_Tilemap2.png<>uid://cp4qbuyjsm4sb::::res://essential/art/tilemap/TopDownHouse_SmallItems.png<>uid://b7ey3kouedc15::::res://essential/art/tilemap/TopDownHouse_FurnitureState2.png<>uid://4yyy4j7rgcf2::::res://essential/art/tilemap/TopDownHouse_FurnitureState1.png<>uid://dfjrx5x4of782::::res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png<>uid://c30yyhhpu1frg::::res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png
+playerKaine.tscn::PackedScene::2812167398017557647::1693732701::0::1::::<><>::res://essential/scenes/player/playerKaine.cs<>uid://cbt206dwwm0b5
+::res://essential/scenes/worlds/::1694015108
+cliffside.tscn::PackedScene::2550545563553412663::1693732700::0::1::::<><>::uid://bgch8sa6ik2hf
+ivory_lake.tscn::PackedScene::8938344237781812550::1694015108::0::1::::<><>::uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://cdofo5io3m6uy::::res://essential/art/tilemap/Objects_Tilemap2.png<>uid://cp4qbuyjsm4sb::::res://essential/art/tilemap/TopDownHouse_SmallItems.png<>uid://b7ey3kouedc15::::res://essential/art/tilemap/TopDownHouse_FurnitureState2.png<>uid://4yyy4j7rgcf2::::res://essential/art/tilemap/TopDownHouse_FurnitureState1.png<>uid://dfjrx5x4of782::::res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png<>uid://c30yyhhpu1frg::::res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png
+serenavon.tscn::PackedScene::6398375932374715080::1693732701::0::1::::<><>::uid://bgch8sa6ik2hf
 ::res://essential/script/::1693576992
