@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cug57spgx0bmo"]
+[gd_scene load_steps=9 format=3 uid="uid://cug57spgx0bmo"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/OptionMenu.cs" id="1_4jtcn"]
 [ext_resource type="Texture2D" uid="uid://bxav48w18j6li" path="res://essential/art/bg.jpeg" id="2_rncig"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf" id="3_uaoe6"]
 [ext_resource type="Script" path="res://essential/scenes/gui/MasterSlider.cs" id="4_6ww0o"]
 [ext_resource type="Script" path="res://essential/scenes/gui/SFXSlider.cs" id="5_gpy33"]
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="5_omdf8"]
 [ext_resource type="Script" path="res://essential/scenes/gui/MusicSlider.cs" id="6_31y05"]
 
 [node name="Menu" type="Control"]
@@ -71,7 +72,7 @@ horizontal_alignment = 1
 [node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
-theme = ExtResource("2_txriu")
+theme = ExtResource("5_omdf8")
 
 [node name="Audio" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -115,7 +116,7 @@ size_flags_horizontal = 3
 [node name="MasterSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_txriu")
+theme = ExtResource("5_omdf8")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -124,7 +125,7 @@ script = ExtResource("4_6ww0o")
 [node name="SFXSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
 layout_mode = 2
 size_flags_vertical = 2
-theme = ExtResource("2_txriu")
+theme = ExtResource("5_omdf8")
 max_value = 1.0
 step = 0.001
 value = 1.0
@@ -133,7 +134,7 @@ script = ExtResource("5_gpy33")
 [node name="MusicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_txriu")
+theme = ExtResource("5_omdf8")
 max_value = 1.0
 step = 0.001
 value = 1.0
