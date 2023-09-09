@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3vaylse8fnu8"]
+[gd_scene load_steps=4 format=3 uid="uid://d3vaylse8fnu8"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/pause_menu.cs" id="1_i27sg"]
+[ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf" id="2_qjud2"]
+[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://Themes/UITheme.tres" id="3_6kt2e"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 2
@@ -24,10 +26,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.0
-offset_top = -67.0
-offset_right = 62.0
-offset_bottom = 67.0
+offset_left = -62.292
+offset_top = -74.28
+offset_right = 61.708
+offset_bottom = 66.72
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.368627)
@@ -51,19 +53,27 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Game Paused"
+theme_override_fonts/font = ExtResource("2_qjud2")
+theme_override_font_sizes/font_size = 14
+text = "Paused"
 horizontal_alignment = 1
 
 [node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_6kt2e")
+theme_override_font_sizes/font_size = 14
 text = "Resume"
 
 [node name="Option" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_6kt2e")
+theme_override_font_sizes/font_size = 14
 text = "Option"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_6kt2e")
+theme_override_font_sizes/font_size = 14
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b71sps4f00xig"]
+[gd_scene load_steps=5 format=3 uid="uid://b71sps4f00xig"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/menu.cs" id="1_xhrj1"]
 [ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf" id="2_oyjyj"]
 [ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="3_sgel8"]
+[ext_resource type="AudioStream" uid="uid://j65guk8w1d21" path="res://essential/audio/Background_Music/Ambient 2.ogg" id="4_iv3f2"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -93,6 +94,10 @@ size_flags_horizontal = 4
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("3_sgel8")
 text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_iv3f2")
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
