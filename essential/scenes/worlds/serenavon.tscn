@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=23 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://4yyy4j7rgcf2" path="res://essential/art/tilemap/TopDownHouse_FurnitureState1.png" id="8_b0v5e"]
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="9_qlph1"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_4wrf8"]
+[ext_resource type="AudioStream" uid="uid://bpx2uppixnw6b" path="res://essential/audio/Bustling Streets.ogg" id="12_qwbg2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_k1sjv")
@@ -3319,3 +3320,7 @@ layer_4/tile_data = PackedInt32Array(5308418, 655360, 6, 5439492, 655360, 6, 530
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_qwbg2")
+autoplay = true
