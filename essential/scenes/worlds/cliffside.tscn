@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bclrd3ngqo83l"]
+[gd_scene load_steps=12 format=3 uid="uid://bclrd3ngqo83l"]
 
+[ext_resource type="Script" path="res://essential/scenes/worlds/cliffside.cs" id="1_1b85f"]
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_1eqme"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="2_ixbpg"]
 [ext_resource type="Texture2D" uid="uid://dn1ehmub35n7k" path="res://essential/art/tilemap/Objects_Tilemap.png" id="3_2ddls"]
@@ -1217,13 +1218,20 @@ sources/0 = SubResource("TileSetAtlasSource_fhucq")
 sources/1 = SubResource("TileSetAtlasSource_5scsv")
 sources/2 = SubResource("TileSetAtlasSource_kgc5a")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whs4q"]
+size = Vector2(117, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tea8g"]
+size = Vector2(86, 52)
+
 [node name="Cliffside" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_1b85f")
 
 [node name="playerKaine" parent="." instance=ExtResource("1_1eqme")]
 z_index = 1
 texture_filter = 1
-position = Vector2(167, 113)
+position = Vector2(272, 376)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1260,7 +1268,22 @@ layer_4/y_sort_origin = 0
 layer_4/z_index = 1
 layer_4/tile_data = PackedInt32Array(589838, 655360, 6, 458759, 655360, 6, 131088, 655360, 6, 393236, 655360, 6, 524312, 655360, 6, 589826, 655360, 6, 65543, 655360, 6, 327695, 655360, 6, 1048577, 655360, 6, 917510, 655360, 6, 851985, 655360, 6, 851992, 655360, 6, 1179667, 655360, 6, 1376280, 655360, 6, 1376260, 655360, 6, 1310731, 655360, 6)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="CliffsideCollision" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(3, 0, 175, 1, 175, -44, 271, -45, 271, 0, 415, 0, 415, 383, 0, 383, 1, -18, -22, 10, -40, 145, -43, 346, -47, 416, 145, 452, 366, 457, 450, 457, 497, 404, 508, 218, 510, 66, 517, -48, 432, -194, 255, -202, 156, -168)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CliffsideCollision"]
+polygon = PackedVector2Array(3, 0, 175, 0, 176, -80, 291, -81, 291, 0, 415, 1, 416, 382, 315, 383, 315, 437, 229, 437, 229, 379, 1, 383, 0, -17, -60, 21, -72, 94, -61, 203, -66, 318, -114, 513, 71, 598, 350, 573, 526, 579, 564, 352, 554, 132, 541, -121, 428, -197, 295, -199, 88, -180, -4, -99, 8, -16, 0, -16, 0, 0)
+
+[node name="serenavon_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="serenavon_transition_point"]
+position = Vector2(233.5, -40)
+shape = SubResource("RectangleShape2D_whs4q")
+
+[node name="cliffside_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_transition_point"]
+position = Vector2(272, 410)
+shape = SubResource("RectangleShape2D_tea8g")
+
+[connection signal="body_entered" from="serenavon_transition_point" to="." method="_on_serenavon_transition_point_body_entered"]
+[connection signal="body_exited" from="serenavon_transition_point" to="." method="_on_serenavon_transition_point_body_exited"]

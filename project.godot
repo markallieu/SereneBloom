@@ -22,6 +22,7 @@ aseprite_executable_path="C:/aseprite/build/bin/aseprite.exe"
 [autoload]
 
 BackgroundMusic="*res://essential/scenes/gui/BackgroundMusic.tscn"
+Globals="*res://essential/globals.cs"
 
 [display]
 

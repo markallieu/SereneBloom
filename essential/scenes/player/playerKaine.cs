@@ -5,14 +5,17 @@ public partial class playerKaine : CharacterBody2D
 {   
     private AudioStreamPlayer2D walkingSound;
     private Control PauseMenu;
+    private Camera2D CliffsideCamera;
+    private Camera2D SerenavonCamera;
 
     Random random = new Random();
     public override void _Ready()
     {
         walkingSound = GetNode<AudioStreamPlayer2D>("WalkingSound");
         walkingSound.Stream = GD.Load<AudioStream>("res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav");
+       
         PauseMenu = GetNode<Control>("PauseMenu");
-        PauseMenu.Hide();
+        PauseMenu.Hide();   
     }
 
     public override void _Process(double delta)
@@ -134,6 +137,20 @@ public partial class playerKaine : CharacterBody2D
             {
                 animation.Play("backIdle");
             }
+        }
+    }
+    
+    public void CurrentCamera()
+    {
+        if (globals.currentScene == "cliffside")
+        {
+            GetNode<Camera2D>("CliffsideCamera").Enabled = true;
+            GetNode<Camera2D>("SerenavonCamera").Enabled = false;
+        }
+        else if (globals.currentScene == "serenavon")
+        {
+            GetNode<Camera2D>("CliffsideCamera").Enabled = false;
+            GetNode<Camera2D>("SerenavonCamera").Enabled = true;
         }
     }
 }
