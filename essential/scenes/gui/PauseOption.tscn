@@ -1,0 +1,148 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjrhnkenmewxf"]
+
+[ext_resource type="Script" path="res://essential/scenes/gui/PauseOption.cs" id="1_ax0bp"]
+[ext_resource type="Texture2D" uid="uid://bxav48w18j6li" path="res://essential/art/bg.jpeg" id="2_uymtk"]
+[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="3_5uf5h"]
+[ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf" id="4_0h0ri"]
+[ext_resource type="Script" path="res://essential/scenes/gui/MasterSlider.cs" id="5_6hw5t"]
+[ext_resource type="Script" path="res://essential/scenes/gui/SFXSlider.cs" id="6_hbdxo"]
+[ext_resource type="Script" path="res://essential/scenes/gui/MusicSlider.cs" id="7_e0yva"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ax0bp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 416.0
+offset_bottom = 224.0
+texture = ExtResource("2_uymtk")
+expand_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 9.0
+offset_right = 404.0
+offset_bottom = 210.0
+color = Color(0, 0, 0, 0.639216)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 9.0
+offset_right = 397.0
+offset_bottom = 210.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_5uf5h")
+theme_override_font_sizes/font_size = 13
+text = "Back To Game"
+
+[node name="Video" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0h0ri")
+theme_override_font_sizes/font_size = 13
+text = "Video"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Fullscreen" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_0h0ri")
+theme_override_font_sizes/font_size = 13
+text = "Fullscreen"
+horizontal_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("3_5uf5h")
+
+[node name="Audio" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0h0ri")
+theme_override_font_sizes/font_size = 13
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Master" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Labels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0h0ri")
+theme_override_font_sizes/font_size = 13
+text = "Master"
+horizontal_alignment = 1
+
+[node name="SoundFx" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Labels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0h0ri")
+theme_override_font_sizes/font_size = 13
+text = "Sound Effects"
+horizontal_alignment = 1
+
+[node name="Music" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Labels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_0h0ri")
+theme_override_font_sizes/font_size = 13
+text = "Music"
+horizontal_alignment = 1
+
+[node name="Slider" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MasterSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("3_5uf5h")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("5_6hw5t")
+
+[node name="SFXSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("3_5uf5h")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("6_hbdxo")
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer2/Slider"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_5uf5h")
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("7_e0yva")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MasterSlider" to="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MasterSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer2/Slider/SFXSlider" to="MarginContainer/VBoxContainer/HBoxContainer2/Slider/SFXSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MusicSlider" to="MarginContainer/VBoxContainer/HBoxContainer2/Slider/MusicSlider" method="_on_value_changed"]

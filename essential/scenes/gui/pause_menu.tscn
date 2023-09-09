@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3vaylse8fnu8"]
+
+[ext_resource type="Script" path="res://essential/scenes/gui/pause_menu.cs" id="1_i27sg"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchor_left = 0.35
+anchor_top = 0.2
+anchor_right = 0.65
+anchor_bottom = 0.8
+offset_left = 0.0319977
+offset_top = -0.0960007
+offset_right = -0.184021
+offset_bottom = 0.0639954
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i27sg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -67.0
+offset_right = 62.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.368627)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.292
+offset_top = -67.28
+offset_right = 61.708
+offset_bottom = 66.72
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game Paused"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Option" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Option"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

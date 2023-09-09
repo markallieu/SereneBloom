@@ -17,7 +17,5 @@ public partial class MasterSlider : HSlider
 
 	public void _on_value_changed(float value){
 		AudioServer.SetBusVolumeDb(busIndex, 20 * Mathf.Log(value));
-		GD.Print(AudioServer.GetBusVolumeDb(busIndex));
-
 	}
 }

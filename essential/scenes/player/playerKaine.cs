@@ -4,13 +4,25 @@ using System;
 public partial class playerKaine : CharacterBody2D
 {   
     private AudioStreamPlayer2D walkingSound;
+    private Control PauseMenu;
 
     Random random = new Random();
     public override void _Ready()
     {
         walkingSound = GetNode<AudioStreamPlayer2D>("WalkingSound");
         walkingSound.Stream = GD.Load<AudioStream>("res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav");
+        PauseMenu = GetNode<Control>("PauseMenu");
+        PauseMenu.Hide();
     }
+
+    public override void _Process(double delta)
+	{
+        if (Input.IsActionPressed("ui_cancel"))
+        {
+            GetTree().Paused = true;
+            PauseMenu.Show();
+        }
+	}
 
     private Vector2 _velocity = Vector2.Zero;
     private Vector2 _moveDirection = Vector2.Zero;
