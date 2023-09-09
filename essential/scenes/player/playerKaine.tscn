@@ -213,22 +213,11 @@ drag_right_margin = 0.0
 drag_bottom_margin = 0.0
 script = SubResource("CSharpScript_mop4x")
 
-[node name="SerenavonCamera" type="Camera2D" parent="."]
-position = Vector2(-7, -7)
-zoom = Vector2(1.2, 1.2)
-limit_left = 0
-limit_top = 400
-limit_right = 1488
-limit_bottom = 1360
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
 [node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_171u8")
 volume_db = -13.886
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_idvph")]
-visible = false
 layout_direction = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -239,3 +228,5 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.159996
+
+[node name="Camera2D" type="Camera2D" parent="."]

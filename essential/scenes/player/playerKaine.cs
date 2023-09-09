@@ -144,13 +144,13 @@ public partial class playerKaine : CharacterBody2D
     {
         if (globals.currentScene == "cliffside")
         {
-            GetNode<Camera2D>("CliffsideCamera").Enabled = true;
-            GetNode<Camera2D>("SerenavonCamera").Enabled = false;
+            GetNode<Camera2D>("playerKaine/CliffsideCamera").Enabled = true;
+            GetNode<Camera2D>("playerKaine/SerenavonCamera").Enabled = false;
         }
         else if (globals.currentScene == "serenavon")
         {
-            GetNode<Camera2D>("CliffsideCamera").Enabled = false;
-            GetNode<Camera2D>("SerenavonCamera").Enabled = true;
+            GetNode<Camera2D>("playerKaine/CliffsideCamera").Enabled = false;
+            GetNode<Camera2D>("playerKaine/SerenavonCamera").Enabled = true;
         }
     }
 }
