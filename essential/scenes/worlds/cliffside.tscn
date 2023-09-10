@@ -1302,6 +1302,7 @@ shape = SubResource("RectangleShape2D_tea8g")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_u1xk2")
 autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="serenavon_transition_point" to="." method="_on_serenavon_transition_point_body_entered"]
 [connection signal="body_exited" from="serenavon_transition_point" to="." method="_on_serenavon_transition_point_body_exited"]

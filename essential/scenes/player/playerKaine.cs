@@ -16,6 +16,7 @@ public partial class playerKaine : CharacterBody2D
        
         PauseMenu = GetNode<Control>("PauseMenu");
         PauseMenu.Hide();   
+        CliffsideCamera = GetNode<Camera2D>("CliffsideCamera");
     }
 
     public override void _Process(double delta)
@@ -23,6 +24,8 @@ public partial class playerKaine : CharacterBody2D
         if (Input.IsActionPressed("ui_cancel"))
         {
             GetTree().Paused = true;
+            //PauseMenu.Position = GetViewport().GetVisibleRect().Size / 2;
+            PauseMenu.SetPosition(GetViewportRect().Size / 2  );
             PauseMenu.Show();
         }
 	}
