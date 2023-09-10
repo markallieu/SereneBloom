@@ -3282,6 +3282,12 @@ z_index = 1
 texture_filter = 1
 position = Vector2(854, 1348)
 
+[node name="SerenavonCamera" type="Camera2D" parent="playerKaine"]
+limit_left = 0
+limit_top = 400
+limit_right = 1488
+limit_bottom = 1360
+
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_fhije")

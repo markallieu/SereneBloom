@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bgch8sa6ik2hf"]
+[gd_scene load_steps=26 format=3 uid="uid://bgch8sa6ik2hf"]
 
 [ext_resource type="Script" path="res://essential/scenes/player/playerKaine.cs" id="1_g30rh"]
 [ext_resource type="Texture2D" uid="uid://cbt206dwwm0b5" path="res://essential/art/character/Kaine_Animation.aseprite" id="1_mxq3e"]
@@ -174,16 +174,6 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_1oajc"]
 radius = 4.0
 
-[sub_resource type="CSharpScript" id="CSharpScript_mop4x"]
-script/source = "using Godot;
-using System;
-
-public partial class CliffsideCamera : Camera2D
-{
-	
-}
-"
-
 [node name="playerKaine" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_g30rh")
@@ -198,26 +188,12 @@ offset = Vector2(0, -15)
 position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_1oajc")
 
-[node name="CliffsideCamera" type="Camera2D" parent="."]
-position = Vector2(-7, -7)
-zoom = Vector2(1.2, 1.2)
-limit_left = 0
-limit_top = 0
-limit_right = 416
-limit_bottom = 384
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.0
-drag_top_margin = 0.0
-drag_right_margin = 0.0
-drag_bottom_margin = 0.0
-script = SubResource("CSharpScript_mop4x")
-
 [node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_171u8")
 volume_db = -13.886
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_idvph")]
+visible = false
 layout_direction = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -228,5 +204,3 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.159996
-
-[node name="Camera2D" type="Camera2D" parent="."]
