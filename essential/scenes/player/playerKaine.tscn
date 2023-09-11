@@ -1,9 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://bgch8sa6ik2hf"]
+[gd_scene load_steps=25 format=3 uid="uid://bgch8sa6ik2hf"]
 
 [ext_resource type="Script" path="res://essential/scenes/player/playerKaine.cs" id="1_g30rh"]
 [ext_resource type="Texture2D" uid="uid://cbt206dwwm0b5" path="res://essential/art/character/Kaine_Animation.aseprite" id="1_mxq3e"]
 [ext_resource type="AudioStream" uid="uid://mf03slfqlbvw" path="res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav" id="3_171u8"]
-[ext_resource type="PackedScene" uid="uid://d3vaylse8fnu8" path="res://essential/scenes/gui/pause_menu.tscn" id="3_idvph"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ci84w"]
 atlas = ExtResource("1_mxq3e")
@@ -191,6 +190,3 @@ shape = SubResource("CircleShape2D_1oajc")
 [node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_171u8")
 volume_db = -13.886
-
-[node name="PauseMenu" parent="." instance=ExtResource("3_idvph")]
-visible = false
