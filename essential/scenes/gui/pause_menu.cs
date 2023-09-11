@@ -3,10 +3,12 @@ using System;
 
 public partial class pause_menu : Control
 {
+	private Control pauseOption;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Hide();
+		pauseOption = GetParent().GetNode<Control>("PauseOption");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,7 +29,8 @@ public partial class pause_menu : Control
 		Hide();
 	}
 	public void _on_option_pressed(){
-		GetTree().ChangeSceneToFile("res://essential/scenes/gui/PauseOption.tscn");	
+		Hide();
+		pauseOption.Show();
 	}
 	public void _on_quit_pressed(){
 		GetTree().Quit();
