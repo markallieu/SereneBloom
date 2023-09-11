@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=27 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -238,7 +238,7 @@ texture = ExtResource("2_k1sjv")
 8:8/0 = 0
 8:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:8/0/physics_layer_0/angular_velocity = 0.0
-8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.09359, -6.6875, -4.5625, 0.0625, -3.9375, 1.6875, -2.6875, 3.8125, -3.1875, 4.9375, -4.8125, 8, -3.09359, 8, 5.74524, 0.1875, 6.0625, -0.5625, 6.8125, -5.1875, 6.9375, -5.5625, 6.1875, -8, 6.0988)
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.75, -2.1875, -6.625, -4.1875, -5.625, -4.3125, -5.5, -5.5625, -4.25, -4.5625, -3.625, -3.5625, -2, -3.4375, -1.75, -3.8125, 0, -3.6875, 1.375, -3.4375, 2.125, -1.9375, 3, -1.9375, 3.5, -2.5625, 5.375, -4.1875, 8, -1.9375, 8, 5.74524, 0.5, 5.8125, 0.125, 6.9375, -4.875, 6.9375, -8, 5.56847, -8, -2.1875)
 9:8/0 = 0
 9:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:8/0/physics_layer_0/angular_velocity = 0.0
@@ -460,6 +460,7 @@ texture = ExtResource("4_ivvmx")
 texture = ExtResource("5_8rfii")
 9:0/size_in_atlas = Vector2i(2, 4)
 9:0/0 = 0
+9:0/0/y_sort_origin = -21
 9:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:0/0/physics_layer_0/angular_velocity = 0.0
 9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -23.25, -11.5, 32.25, -15.5, 31.25, -14.5, -22.25)
@@ -643,6 +644,7 @@ texture = ExtResource("5_8rfii")
 13:1/0/physics_layer_0/polygon_1/points = PackedVector2Array(7.5, -22.25, 3, -22.25, 0.5, -19.75, -8, -8, -0.5, -12.75, 8.5, -19.75)
 3:0/size_in_atlas = Vector2i(4, 4)
 3:0/0 = 0
+3:0/0/y_sort_origin = -21
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25.8094, -23.6881, -25.8094, 29.3449, -31.4662, 30.052, -31.4662, -22.981)
@@ -3273,6 +3275,18 @@ sources/6 = SubResource("TileSetAtlasSource_w3kfd")
 sources/7 = SubResource("TileSetAtlasSource_ytn0n")
 sources/8 = SubResource("TileSetAtlasSource_bus4c")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djelo"]
+size = Vector2(142, 56.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qjjv"]
+size = Vector2(54, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrq2d"]
+size = Vector2(67.75, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rk05q"]
+size = Vector2(129.5, 58.5)
+
 [node name="Serenavon" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_s47pv")
@@ -3280,7 +3294,7 @@ script = ExtResource("1_s47pv")
 [node name="playerKaine" parent="." instance=ExtResource("1_eeq64")]
 z_index = 1
 texture_filter = 1
-position = Vector2(854, 1348)
+position = Vector2(10, 1122)
 
 [node name="SerenavonCamera" type="Camera2D" parent="playerKaine"]
 limit_left = 0
@@ -3326,8 +3340,38 @@ layer_4/tile_data = PackedInt32Array(5308418, 655360, 6, 5439492, 655360, 6, 530
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(417, 400, 417, 343, 544, 343, 546, 400, 1488, 400, 1488, 1005, 1527, 1005, 1527, 1058, 1488, 1058, 1488, 1359, 919, 1360, 919, 1416, 777, 1415, 778, 1359, 0, 1360, 0, 1174, -54, 1174, -54, 1044, 0, 1044, 0, 353, -52, 353, -229, 378, -296, 648, -299, 1118, -331, 1464, -169, 1595, 406, 1595, 1034, 1579, 1736, 1592, 1885, 1163, 1835, 912, 1847, 376, 1746, 214, 1327, 227, 657, 198, 349, 201, 57, 227, 0, 278, 41, 355, 0, 355, 0, 400, 5, 400)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_qwbg2")
 autoplay = true
 bus = &"Music"
+
+[node name="serenavon_exit_point1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="serenavon_exit_point1"]
+position = Vector2(848, 1387.81)
+shape = SubResource("RectangleShape2D_djelo")
+
+[node name="ivory_lake_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ivory_lake_transition_point"]
+position = Vector2(-27, 1109)
+shape = SubResource("RectangleShape2D_2qjjv")
+
+[node name="ivory_lake_checkpoint" type="Area2D" parent="ivory_lake_transition_point"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ivory_lake_transition_point/ivory_lake_checkpoint"]
+position = Vector2(-20, 1109)
+shape = SubResource("RectangleShape2D_mrq2d")
+
+[node name="solace_haven_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="solace_haven_transition_point"]
+position = Vector2(481.25, 371.25)
+shape = SubResource("RectangleShape2D_rk05q")
+
+[connection signal="body_entered" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_entered"]
+[connection signal="body_exited" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_exited"]
+[connection signal="body_entered" from="ivory_lake_transition_point" to="." method="_on_ivory_lake_transition_point_body_entered"]
+[connection signal="body_entered" from="ivory_lake_transition_point/ivory_lake_checkpoint" to="." method="_on_ivory_lake_checkpoint_body_entered"]

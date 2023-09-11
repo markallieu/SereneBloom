@@ -18,4 +18,6 @@ res://essential/scenes/gui/pause_menu.cs
 res://essential/scenes/gui/SFXSlider.cs
 res://essential/scenes/player/playerKaine.cs
 res://essential/scenes/worlds/cliffside.cs
+res://essential/scenes/worlds/Dummy.cs
+res://essential/scenes/worlds/ivory_lake.cs
 res://essential/scenes/worlds/serenavon.cs

@@ -1,0 +1,44 @@
+using Godot;
+using System;
+
+public partial class ivory_lake : Node2D
+{
+    public override void _Ready()
+    {
+        globals.currentScene = "ivory_lake";
+        Node2D player = GetNode<Node2D>("playerKaine");
+        if (globals.firstGameLoad == true)
+        {
+            Vector2 newPositionIvoryLake = new Vector2(globals.PlayerStartIvoryLakeX, globals.PlayerStartIvoryLakeY);
+            player.Position = newPositionIvoryLake;
+        }
+    }
+
+    public override void _Process(double delta)
+    {
+        ChangeScene();
+    }
+
+    public void _on_ivory_lake_exit_point_body_entered(Node2D body)
+    {
+        if (body is playerKaine)
+        {
+            globals.transitionScene = true;
+            globals.targetScene = "serenavon";
+        }           
+    }
+
+    private void ChangeScene()
+    {
+        if (globals.transitionScene == true)
+        {
+            if (globals.targetScene == "serenavon")
+            {
+                GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
+                globals.firstGameLoad = false;
+                globals.firstIvoryLoad = false;
+                globals.FinishChangeScene();
+            }
+        }
+    }
+}

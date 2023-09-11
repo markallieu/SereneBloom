@@ -5,10 +5,13 @@ public partial class globals : Node
 {
     public static bool transitionScene = false;
     public static string currentScene = "";
+    public static string targetScene = "";    
+    public static bool firstGameLoad = true;
+    public static bool firstIvoryLoad = true;
 
     public static void FinishChangeScene()
     {
-        if (transitionScene == true )
+        if (transitionScene == true)
         {
             transitionScene = false;
             if (currentScene == "cliffside")
@@ -17,14 +20,30 @@ public partial class globals : Node
             }
             else if (currentScene == "serenavon")
             {
-                currentScene = "cliffside"; 
+                currentScene = "cliffside";
+            }
+            else if (currentScene == "serenavon")
+            {
+                currentScene = "ivory_lake";
+            }
+            else if (currentScene == "ivory_lake")
+            {
+                currentScene = "serenavon";
             }
         }
     }
 
-    float PLayerStartPosX = 0f;
-    float PLayerEndPosY = 0f;
+    public static float PlayerStartCliffsideX = 271f;
+    public static float PlayerStartCliffsideY = 374f;
+    public static float PlayerExitCliffisideX = 223f;
+    public static float PlayerExitCliffsideY = 8f;
 
-    float PlayerExitCliffisdePosX = 0f;
-    float PlayerExitCliffsidePosY = 0f;
+    public static float PlayerStartSerenavonX = 854f;
+    public static float PlayerStartSerenavonY = 1348f;
+
+    public static float PlayerExitSerenavon1X = 10f;
+    public static float PlayerExitSerenavon1Y = 1122f;
+
+    public static float PlayerStartIvoryLakeX = 899f;
+    public static float PlayerStartIvoryLakeY = 723f;
 }

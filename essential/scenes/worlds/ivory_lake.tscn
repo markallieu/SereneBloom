@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://d0l2hut3dnm3g"]
+[gd_scene load_steps=24 format=3 uid="uid://d0l2hut3dnm3g"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_36myb"]
+[ext_resource type="Script" path="res://essential/scenes/worlds/ivory_lake.cs" id="1_gkaks"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="2_p1yj5"]
 [ext_resource type="Texture2D" uid="uid://dn1ehmub35n7k" path="res://essential/art/tilemap/Objects_Tilemap.png" id="3_5otol"]
 [ext_resource type="Texture2D" uid="uid://8b16xsmjctxf" path="res://essential/art/tilemap/Village_Tilemap.png" id="4_q8ynk"]
@@ -3279,14 +3280,24 @@ sources/6 = SubResource("TileSetAtlasSource_w3kfd")
 sources/7 = SubResource("TileSetAtlasSource_ytn0n")
 sources/8 = SubResource("TileSetAtlasSource_bus4c")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00dxx"]
+size = Vector2(77, 105)
+
 [node name="Ivory_Lake" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_gkaks")
 metadata/_edit_horizontal_guides_ = [-10.0, 57.0]
 
 [node name="playerKaine" parent="." instance=ExtResource("1_36myb")]
 z_index = 1
 texture_filter = 1
 position = Vector2(899, 723)
+
+[node name="Camera2D" type="Camera2D" parent="playerKaine"]
+limit_left = -80
+limit_top = -80
+limit_right = 912
+limit_bottom = 912
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -3326,8 +3337,17 @@ layer_4/tile_data = PackedInt32Array(2555957, 655360, 6, 2752555, 655360, 6, 222
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-77, -80, 911, -80, 912, 651, 989, 651, 989, 755, 912, 754, 912, 911, -80, 912, -80, -98, -110, -80, -133, 12, -216, 305, -223, 438, -238, 818, -224, 1007, 279, 1229, 1162, 1206, 1383, 709, 1282, 344, 1349, -240, 1031, -352, 505, -349, -146, -274, -77, -97, -80, -96, -80, -80)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_5n1ur")
 autoplay = true
 bus = &"Music"
+
+[node name="ivory_lake_exit_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ivory_lake_exit_point"]
+position = Vector2(950.5, 702.5)
+shape = SubResource("RectangleShape2D_00dxx")
+
+[connection signal="body_entered" from="ivory_lake_exit_point" to="." method="_on_ivory_lake_exit_point_body_entered"]
