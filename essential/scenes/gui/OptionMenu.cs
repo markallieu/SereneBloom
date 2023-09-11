@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Runtime.InteropServices;
 
 public partial class OptionMenu : Control
 {
@@ -15,5 +16,13 @@ public partial class OptionMenu : Control
 
 	public  void _on_back_pressed(){
 		GetTree().ChangeSceneToFile("res://essential/scenes/gui/Menu.tscn");
+	}
+
+	public void _on_fullscreen_checkbox_toggled(bool toggled){
+		if(toggled){
+			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
+		}else{
+			DisplayServer.WindowSetMode(DisplayServer.WindowMode.Windowed);
+		}
 	}
 }

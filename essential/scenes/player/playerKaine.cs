@@ -8,6 +8,8 @@ public partial class playerKaine : CharacterBody2D
     private Camera2D CliffsideCamera;
     private Camera2D SerenavonCamera;
 
+    private AnimatedSprite2D sprite;
+
     Random random = new Random();
     public override void _Ready()
     {
@@ -17,6 +19,7 @@ public partial class playerKaine : CharacterBody2D
         PauseMenu = GetNode<Control>("PauseMenu");
         PauseMenu.Hide();   
         CliffsideCamera = GetNode<Camera2D>("CliffsideCamera");
+        sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
     }
 
     public override void _Process(double delta)
@@ -25,7 +28,8 @@ public partial class playerKaine : CharacterBody2D
         {
             GetTree().Paused = true;
             //PauseMenu.Position = GetViewport().GetVisibleRect().Size / 2;
-            PauseMenu.SetPosition(GetViewportRect().Size / 2  );
+            //PauseMenu.SetPosition(GetViewportRect().Size / 2  );
+            sprite.Hide();
             PauseMenu.Show();
         }
 	}
