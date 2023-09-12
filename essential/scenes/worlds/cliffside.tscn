@@ -1235,7 +1235,6 @@ texture_filter = 1
 position = Vector2(271, 374)
 
 [node name="CliffsideCamera" type="Camera2D" parent="playerKaine"]
-zoom = Vector2(1.2, 1.2)
 limit_left = 0
 limit_top = 0
 limit_right = 416

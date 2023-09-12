@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://by3t5nuhly3if"]
+[gd_scene load_steps=24 format=3 uid="uid://by3t5nuhly3if"]
 
+[ext_resource type="Script" path="res://essential/scenes/worlds/solace_haven.cs" id="1_8yokk"]
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_mdqm0"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="2_np7gk"]
 [ext_resource type="Texture2D" uid="uid://dn1ehmub35n7k" path="res://essential/art/tilemap/Objects_Tilemap.png" id="3_2xo0f"]
@@ -3273,13 +3274,27 @@ sources/6 = SubResource("TileSetAtlasSource_w3kfd")
 sources/7 = SubResource("TileSetAtlasSource_ytn0n")
 sources/8 = SubResource("TileSetAtlasSource_bus4c")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daore"]
+size = Vector2(122, 64)
+
 [node name="Solace Haven" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_8yokk")
 
 [node name="playerKaine" parent="." instance=ExtResource("1_mdqm0")]
 z_index = 1
 texture_filter = 1
-position = Vector2(366, 666)
+position = Vector2(368, 661)
+
+[node name="Solace_HavenCamera" type="Camera2D" parent="playerKaine"]
+limit_left = 0
+limit_top = 0
+limit_right = 752
+limit_bottom = 672
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -3338,3 +3353,14 @@ stream = ExtResource("11_xjt0k")
 volume_db = -6.807
 autoplay = true
 bus = &"Music"
+
+[node name="solace_haven_exit_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="solace_haven_exit_point"]
+position = Vector2(368, 704)
+shape = SubResource("RectangleShape2D_daore")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(752, 672)
+
+[connection signal="body_entered" from="solace_haven_exit_point" to="." method="_on_solace_haven_exit_point_body_entered"]

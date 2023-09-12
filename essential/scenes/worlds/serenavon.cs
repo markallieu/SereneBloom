@@ -7,19 +7,24 @@ public partial class serenavon : Node2D
     {
         globals.currentScene = "serenavon";
         Node2D player = GetNode<Node2D>("playerKaine");
-        if (globals.firstGameLoad == false)
+        if (globals.firstSolaceLoad == false)
         {
-            Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
+            Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon2X, globals.PlayerExitSerenavon2Y);
             player.Position = newPositionSerenavon;
         }
-        else if (globals.firstGameLoad == true)
-        {
-            Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
-            player.Position = newPositionSerenavon;
-        }
-        else if (!globals.firstIvoryLoad)
+        else if (globals.firstIvoryLoad == false)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon1X, globals.PlayerExitSerenavon1Y);
+            player.Position = newPositionSerenavon;
+        }
+        else if (globals.firstGameLoad == false)
+        {
+            Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
+            player.Position = newPositionSerenavon;
+        }
+        else
+        {
+            Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
             player.Position = newPositionSerenavon;
         }
     }
@@ -45,7 +50,17 @@ public partial class serenavon : Node2D
         if (body is playerKaine)
         {
             globals.transitionScene = true;
-            globals.targetScene = "ivory_lake"; // Set the target scene to Serenavon
+            globals.targetScene = "ivory_lake"; 
+        }
+    }
+
+    public void _on_solace_haven_transition_point_body_entered(Node2D body)
+    {
+        if (body is playerKaine)
+        {
+
+            globals.transitionScene = true;
+            globals.targetScene = "solace_haven";
         }
     }
 
@@ -56,16 +71,22 @@ public partial class serenavon : Node2D
             if (globals.targetScene == "cliffside")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/cliffside.tscn");
-                globals.firstGameLoad = false;
-                globals.FinishChangeScene();
+                globals.firstGameLoad = false;               
             }
             else if (globals.targetScene == "ivory_lake")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/ivory_lake.tscn");
                 globals.firstGameLoad = false;
-                globals.firstIvoryLoad = false;
-                globals.FinishChangeScene();
+                globals.firstIvoryLoad = false;              
             }
+            else if (globals.targetScene == "solace_haven")
+            {
+                GetTree().ChangeSceneToFile("res://essential/scenes/worlds/solace_haven.tscn");
+                globals.firstGameLoad = false;
+                globals.firstIvoryLoad = false;
+                globals.firstSolaceLoad = false;
+            }
+            globals.FinishChangeScene();
         }
     }
 

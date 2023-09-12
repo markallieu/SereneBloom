@@ -5,9 +5,6 @@ public partial class playerKaine : CharacterBody2D
 {   
     private AudioStreamPlayer2D walkingSound;
     private Control PauseMenu;
-    private Camera2D CliffsideCamera;
-    private Camera2D SerenavonCamera;
-
     Random random = new Random();
     public override void _Ready()
     {
@@ -16,7 +13,6 @@ public partial class playerKaine : CharacterBody2D
        
         PauseMenu = GetNode<Control>("PauseMenu");
         PauseMenu.Hide();   
-        CliffsideCamera = GetNode<Camera2D>("CliffsideCamera");
     }
 
     public override void _Process(double delta)
@@ -33,7 +29,7 @@ public partial class playerKaine : CharacterBody2D
     private Vector2 _velocity = Vector2.Zero;
     private Vector2 _moveDirection = Vector2.Zero;
     private string _currentDirection;
-    [Export] private const float _speed = 80f;
+    [Export] private const float _speed = 100f;
 
     public override void _PhysicsProcess(double delta)
     {
@@ -140,20 +136,6 @@ public partial class playerKaine : CharacterBody2D
             {
                 animation.Play("backIdle");
             }
-        }
-    }
-    
-    public void CurrentCamera()
-    {
-        if (globals.currentScene == "cliffside")
-        {
-            GetNode<Camera2D>("playerKaine/CliffsideCamera").Enabled = true;
-            GetNode<Camera2D>("playerKaine/SerenavonCamera").Enabled = false;
-        }
-        else if (globals.currentScene == "serenavon")
-        {
-            GetNode<Camera2D>("playerKaine/CliffsideCamera").Enabled = false;
-            GetNode<Camera2D>("playerKaine/SerenavonCamera").Enabled = true;
         }
     }
 }
