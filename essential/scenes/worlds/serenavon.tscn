@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
+[ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_eq8io"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="2_k1sjv"]
 [ext_resource type="Texture2D" uid="uid://dn1ehmub35n7k" path="res://essential/art/tilemap/Objects_Tilemap.png" id="3_ilhfk"]
 [ext_resource type="Texture2D" uid="uid://8b16xsmjctxf" path="res://essential/art/tilemap/Village_Tilemap.png" id="4_ivvmx"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_4wrf8"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="12_keug5"]
 [ext_resource type="AudioStream" uid="uid://bpx2uppixnw6b" path="res://essential/audio/Bustling Streets.ogg" id="12_qwbg2"]
+[ext_resource type="AudioStream" uid="uid://bpx2uppixnw6b" path="res://essential/audio/Background_Music/Village.ogg" id="13_y0cno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_k1sjv")
@@ -3346,6 +3348,8 @@ size = Vector2(129.5, 58.5)
 y_sort_enabled = true
 script = ExtResource("1_s47pv")
 
+[node name="CanvasLayer" parent="." instance=ExtResource("2_eq8io")]
+
 [node name="playerKaine" parent="." instance=ExtResource("1_eeq64")]
 z_index = 1
 texture_filter = 1
@@ -3403,7 +3407,7 @@ layer_4/tile_data = PackedInt32Array(5308418, 655360, 6, 5439492, 655360, 6, 530
 polygon = PackedVector2Array(417, 400, 417, 343, 544, 343, 546, 400, 1488, 400, 1488, 1005, 1527, 1005, 1527, 1058, 1488, 1058, 1488, 1359, 919, 1360, 919, 1416, 777, 1415, 778, 1359, 0, 1360, 0, 1174, -54, 1174, -54, 1044, 0, 1044, 0, 353, -52, 353, -229, 378, -296, 648, -299, 1118, -331, 1464, -169, 1595, 406, 1595, 1034, 1579, 1736, 1592, 1885, 1163, 1835, 912, 1847, 376, 1746, 214, 1327, 227, 657, 198, 349, 201, 57, 227, 0, 278, 41, 355, 0, 355, 0, 400, 5, 400)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("12_qwbg2")
+stream = ExtResource("13_y0cno")
 autoplay = true
 bus = &"Music"
 

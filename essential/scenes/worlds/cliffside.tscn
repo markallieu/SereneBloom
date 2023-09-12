@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://bclrd3ngqo83l"]
+[gd_scene load_steps=14 format=3 uid="uid://bclrd3ngqo83l"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/cliffside.cs" id="1_1b85f"]
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_1eqme"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="2_ixbpg"]
+[ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_rkmv2"]
 [ext_resource type="Texture2D" uid="uid://dn1ehmub35n7k" path="res://essential/art/tilemap/Objects_Tilemap.png" id="3_2ddls"]
 [ext_resource type="Texture2D" uid="uid://8b16xsmjctxf" path="res://essential/art/tilemap/Village_Tilemap.png" id="4_rotax"]
-[ext_resource type="AudioStream" uid="uid://bxwxlfjwdo5h1" path="res://essential/audio/CliffSide.ogg" id="6_u1xk2"]
+[ext_resource type="AudioStream" uid="uid://c15xu5e3qdje7" path="res://essential/audio/Background_Music/Cliff.ogg" id="7_hc544"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_ixbpg")
@@ -1229,6 +1230,8 @@ size = Vector2(86, 52)
 y_sort_enabled = true
 script = ExtResource("1_1b85f")
 
+[node name="CanvasLayer" parent="." instance=ExtResource("2_rkmv2")]
+
 [node name="playerKaine" parent="." instance=ExtResource("1_1eqme")]
 z_index = 1
 texture_filter = 1
@@ -1297,7 +1300,8 @@ position = Vector2(272, 410)
 shape = SubResource("RectangleShape2D_tea8g")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_u1xk2")
+stream = ExtResource("7_hc544")
+volume_db = 6.237
 autoplay = true
 bus = &"Music"
 

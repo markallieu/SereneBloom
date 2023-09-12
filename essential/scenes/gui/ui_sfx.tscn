@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://by0q83rdyh6r5"]
+
+[ext_resource type="AudioStream" uid="uid://7c4bt8xyj7s0" path="res://essential/audio/RPG_Essentials_Free/10_UI_Menu_SFX/051_use_item_01.wav" id="1_gaiv4"]
+
+[node name="UI_SFX" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_gaiv4")
