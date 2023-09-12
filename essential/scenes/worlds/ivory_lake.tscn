@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d0l2hut3dnm3g"]
+[gd_scene load_steps=27 format=3 uid="uid://d0l2hut3dnm3g"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_36myb"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/ivory_lake.cs" id="1_gkaks"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://4yyy4j7rgcf2" path="res://essential/art/tilemap/TopDownHouse_FurnitureState1.png" id="8_pge5i"]
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="9_48wuw"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_jji58"]
-[ext_resource type="AudioStream" uid="uid://qb0fq5xxo2h3" path="res://essential/audio/Lake.ogg" id="11_5n1ur"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="12_pxr2v"]
 [ext_resource type="AudioStream" uid="uid://qb0fq5xxo2h3" path="res://essential/audio/Background_Music/Lake.ogg" id="13_xfodh"]
 

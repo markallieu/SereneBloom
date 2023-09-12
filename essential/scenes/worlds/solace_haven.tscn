@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://by3t5nuhly3if"]
+[gd_scene load_steps=25 format=3 uid="uid://by3t5nuhly3if"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/solace_haven.cs" id="1_8yokk"]
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_mdqm0"]

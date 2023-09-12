@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=30 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="9_qlph1"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_4wrf8"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="12_keug5"]
-[ext_resource type="AudioStream" uid="uid://bpx2uppixnw6b" path="res://essential/audio/Bustling Streets.ogg" id="12_qwbg2"]
 [ext_resource type="AudioStream" uid="uid://bpx2uppixnw6b" path="res://essential/audio/Background_Music/Village.ogg" id="13_y0cno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]

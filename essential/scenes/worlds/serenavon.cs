@@ -71,13 +71,13 @@ public partial class serenavon : Node2D
             if (globals.targetScene == "cliffside")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/cliffside.tscn");
-                globals.firstGameLoad = false;               
+                globals.firstGameLoad = false;
             }
             else if (globals.targetScene == "ivory_lake")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/ivory_lake.tscn");
                 globals.firstGameLoad = false;
-                globals.firstIvoryLoad = false;              
+                globals.firstIvoryLoad = false;
             }
             else if (globals.targetScene == "solace_haven")
             {
@@ -89,6 +89,4 @@ public partial class serenavon : Node2D
             globals.FinishChangeScene();
         }
     }
-
-
 }
