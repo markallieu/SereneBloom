@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3vaylse8fnu8"]
+[gd_scene load_steps=5 format=3 uid="uid://d3vaylse8fnu8"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/pause_menu.cs" id="1_i27sg"]
 [ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf" id="2_qjud2"]
 [ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="3_6kt2e"]
+[ext_resource type="PackedScene" uid="uid://by0q83rdyh6r5" path="res://essential/scenes/gui/ui_sfx.tscn" id="4_f2678"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 2
@@ -75,6 +76,8 @@ layout_mode = 2
 theme = ExtResource("3_6kt2e")
 theme_override_font_sizes/font_size = 14
 text = "Quit"
+
+[node name="UI_SFX" parent="." instance=ExtResource("4_f2678")]
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]

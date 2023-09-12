@@ -16,7 +16,6 @@ public partial class playerKaine : CharacterBody2D
         walkingSound.Stream = GD.Load<AudioStream>("res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav");
        
         PauseMenu = GetNode<Control>("PauseMenu");
-        PauseMenu.Hide();   
         CliffsideCamera = GetNode<Camera2D>("CliffsideCamera");
     }
 
@@ -28,7 +27,7 @@ public partial class playerKaine : CharacterBody2D
             //PauseMenu.Position = GetViewport().GetVisibleRect().Size / 2;
             //PauseMenu.SetPosition(GetViewportRect().Size / 2  );
             //PauseMenu.Position = GetViewportRect().Size / 2;
-            PauseMenu.Show();
+            // PauseMenu.Show();
         }
 	}
 

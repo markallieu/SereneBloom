@@ -1,7 +1,6 @@
-res://essential/scenes/worlds/serenavon.tscn
+res://essential/scenes/worlds/cliffside.tscn
 res://UITheme.tres
 res://Themes/UI_theme_2.tres
-res://essential/scenes/worlds/cliffside.tscn
 res://essential/scenes/worlds/ivory_lake.tscn
 res://essential/scenes/worlds/solace_haven.tscn
 res://essential/scenes/player/playerKaine.tscn
@@ -10,3 +9,18 @@ res://essential/scenes/gui/Menu.tscn
 res://essential/scenes/gui/pause_menu.tscn
 res://essential/scenes/gui/UI.tscn
 res://essential/scenes/gui/PauseOption.tscn
+res://essential/scenes/worlds/serenavon.tscn
+res://essential/globals.cs
+res://essential/scenes/gui/MasterSlider.cs
+res://essential/scenes/gui/menu.cs
+res://essential/scenes/gui/MusicSlider.cs
+res://essential/scenes/gui/OptionMenu.cs
+res://essential/scenes/gui/PauseOption.cs
+res://essential/scenes/gui/pause_menu.cs
+res://essential/scenes/gui/SFXSlider.cs
+res://essential/scenes/player/playerKaine.cs
+res://essential/scenes/worlds/cliffside.cs
+res://essential/scenes/worlds/Dummy.cs
+res://essential/scenes/worlds/ivory_lake.cs
+res://essential/scenes/worlds/serenavon.cs
+res://essential/scenes/gui/ui_sfx.tscn
