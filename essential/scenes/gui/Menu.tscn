@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b71sps4f00xig"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/menu.cs" id="1_xhrj1"]
-[ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/RolePlayingFonts3_SysL/menu_card/MenuCard.ttf" id="2_oyjyj"]
+[ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/MenuCard.ttf" id="2_1rb1u"]
 [ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="3_sgel8"]
 [ext_resource type="AudioStream" uid="uid://j65guk8w1d21" path="res://essential/audio/Background_Music/Ambient 2.ogg" id="4_iv3f2"]
 
@@ -28,7 +28,7 @@ offset_bottom = 131.0
 [node name="Title" type="Label" parent="VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_oyjyj")
+theme_override_fonts/font = ExtResource("2_1rb1u")
 theme_override_font_sizes/font_size = 28
 text = "Serene Bloom"
 horizontal_alignment = 1

@@ -11,8 +11,7 @@ public partial class playerKaine : CharacterBody2D
         walkingSound = GetNode<AudioStreamPlayer2D>("WalkingSound");
         walkingSound.Stream = GD.Load<AudioStream>("res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav");
        
-        PauseMenu = GetNode<Control>("PauseMenu");
-        PauseMenu.Hide();   
+        PauseMenu = GetNode<Control>("PauseMenu");   
     }
 
     public override void _Process(double delta)
