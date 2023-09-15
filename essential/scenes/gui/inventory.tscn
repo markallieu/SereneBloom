@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3 uid="uid://h6doxtctw1dy"]
+
+[ext_resource type="Texture2D" uid="uid://bdhfjrcav1v7" path="res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png" id="1_yurcs"]
+[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://Themes/UITheme.tres" id="2_xvfie"]
+[ext_resource type="FontFile" uid="uid://lnvsw5jj15lo" path="res://essential/art/gui/GUI Asset/ThaleahFat.ttf" id="3_q5dcd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22m6a"]
+texture = ExtResource("1_yurcs")
+texture_margin_left = 9.31383
+texture_margin_top = 10.7297
+texture_margin_right = 9.01806
+texture_margin_bottom = 10.2632
+region_rect = Rect2(4, 4, 56, 56)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx4pq"]
+bg_color = Color(0, 0, 0, 0.137255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1m8l"]
+bg_color = Color(0, 0, 0, 0.733333)
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+
+[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_22m6a")
+
+[node name="PlayerName" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 80.0
+offset_bottom = 43.0
+theme = ExtResource("2_xvfie")
+theme_override_font_sizes/font_size = 32
+text = "KAINE"
+
+[node name="CurrentScene" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer/Panel"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 35.0
+offset_right = 74.0
+offset_bottom = 53.0
+theme = ExtResource("2_xvfie")
+theme_override_colors/font_color = Color(0.52549, 0.0313726, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 16
+text = "Cliffside"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.54
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/VBoxContainer/MarginContainer2"]
+clip_children = 2
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_22m6a")
+
+[node name="InventoryTab" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer2/Panel2"]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 77.0
+offset_bottom = 42.0
+scale = Vector2(1.3133, 1.24986)
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_q5dcd")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_nx4pq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f1m8l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f1m8l")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nx4pq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nx4pq")
+toggle_mode = true
+text = "Inventory"
+
+[node name="QuestTab" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer2/Panel2"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 51.0
+offset_right = 79.0
+offset_bottom = 91.0
+scale = Vector2(1.3133, 1.24986)
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_q5dcd")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_nx4pq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f1m8l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f1m8l")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nx4pq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_nx4pq")
+toggle_mode = true
+text = "Quest"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="HBoxContainer/MarginContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_22m6a")

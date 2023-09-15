@@ -52,10 +52,10 @@ layout/styles={
 "name_label_color": "Color(0.235294, 0.184314, 0.184314, 1)",
 "name_label_font": "\"res://essential/art/gui/GUI Asset/ThaleahFat.ttf\"",
 "normal_font": "\"res://essential/art/gui/GUI Asset/ThaleahFat.ttf\"",
-"portrait_position": "1",
-"portrait_stretch_factor": "0.4",
-"text_color": "Color(0.380392, 0.380392, 0.321569, 1)",
-"text_size": "17.0"
+"portrait_bg_modulate": "Color(0, 0, 0, 0)",
+"portrait_stretch_factor": "0.25",
+"text_color": "Color(0, 0, 0, 1)",
+"text_size": "13.0"
 },
 "layout": "res://essential/scenes/gui/DialogLayout.tscn"
 }
