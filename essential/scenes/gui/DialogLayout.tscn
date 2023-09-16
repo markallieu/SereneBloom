@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://comwvjd7pkxoo"]
+[gd_scene load_steps=11 format=3 uid="uid://comwvjd7pkxoo"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayouts/RPG_BoxPortrait/DialogicRPGLayout.gd" id="1_1u6kv"]
+[ext_resource type="Texture2D" uid="uid://c0t06snl5466i" path="res://essential/art/UI assets pack 2/UI books & more.png" id="2_dibao"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="2_v128c"]
 [ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/MenuCard.ttf" id="3_hnlwl"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="3_r53ia"]
@@ -24,17 +25,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_775n1"]
-bg_color = Color(0.254902, 0.254902, 0.254902, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8u4cf"]
+texture = ExtResource("2_dibao")
+region_rect = Rect2(721, 65, 46, 46)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ksvve"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="RPG_ExampleNode" type="CanvasLayer"]
 layer = 3
@@ -49,6 +45,9 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
 
 [node name="Panel" type="PanelContainer" parent="Anchor"]
 unique_name_in_owner = true
@@ -70,15 +69,31 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_smrwn")
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="PortraitPanel" type="Panel" parent="Anchor/Panel/HBox"]
-unique_name_in_owner = true
-clip_children = 1
+[node name="Panel" type="Panel" parent="Anchor/Panel/HBox"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.25
-theme_override_styles/panel = SubResource("StyleBoxFlat_775n1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_8u4cf")
 
-[node name="PortraitBackgroundColor" type="ColorRect" parent="Anchor/Panel/HBox/PortraitPanel"]
+[node name="PortraitPanel" type="Panel" parent="Anchor/Panel/HBox/Panel"]
+unique_name_in_owner = true
+clip_children = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.5
+offset_top = 7.0
+offset_right = 7.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.743999, 0.72736)
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+theme_override_styles/panel = SubResource("StyleBoxFlat_ksvve")
+
+[node name="PortraitBackgroundColor" type="ColorRect" parent="Anchor/Panel/HBox/Panel/PortraitPanel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -89,16 +104,17 @@ offset_right = 123.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.231373)
+color = Color(1, 0, 0, 0)
 
-[node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/HBox/PortraitPanel/PortraitBackgroundColor"]
+[node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/HBox/Panel/PortraitPanel/PortraitBackgroundColor"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = 4.0
-offset_right = 2.0
+offset_left = -0.5
+offset_top = 2.0
+offset_right = 3.5
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_v128c")
@@ -127,7 +143,6 @@ size_flags_vertical = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
 theme_override_colors/selection_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
 theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)

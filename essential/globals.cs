@@ -10,6 +10,8 @@ public partial class globals : Node
     public static bool firstIvoryLoad = true;
     public static bool firstSolaceLoad = true;
 
+    public static bool textPlayed = false;
+
     public static void FinishChangeScene()
     {
         if (transitionScene == true)

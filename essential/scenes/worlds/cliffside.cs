@@ -3,6 +3,10 @@ using System;
 
 public partial class cliffside : Node2D
 {
+    //Script dialogic = ResourceLoader.Load("res://addons/dialogic/Other/DialogicGameHandler.gd") as Script;
+    private GDScript dialogic;
+    private GodotObject dialogicNode; // This is a GodotObject
+    private bool played = false;
     public override void _Ready()
     {
         globals.currentScene = "cliffside";
@@ -17,11 +21,19 @@ public partial class cliffside : Node2D
             Vector2 newPositionCliffiside = new Vector2(globals.PlayerExitCliffisideX, globals.PlayerExitCliffsideY);
             player.Position = newPositionCliffiside;
         }
+        dialogic = (GDScript)GD.Load("res://addons/dialogic/Other/DialogicGameHandler.gd");
+        dialogicNode = (GodotObject) dialogic.New();
+        AddChild((Node) dialogicNode);
     }
 
     public override void _Process(double delta)
     {
         ChangeScene();
+        if(globals.textPlayed && !played){
+            var dialog = (Node) dialogicNode.Call("start","StartingTimeline");	
+            AddChild(dialog);
+            played = true;
+        }
     }
 
     public void _on_serenavon_transition_point_body_entered(Node2D body)

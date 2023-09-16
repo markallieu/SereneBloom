@@ -27,10 +27,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.292
-offset_top = -74.28
-offset_right = 61.708
-offset_bottom = 66.72
+offset_left = -82.292
+offset_top = -104.28
+offset_right = 83.708
+offset_bottom = 106.72
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.384314)
@@ -42,10 +42,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.292
-offset_top = -67.28
-offset_right = 61.708
-offset_bottom = 66.72
+offset_left = -74.292
+offset_top = -96.28
+offset_right = 75.708
+offset_bottom = 96.72
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -71,6 +71,19 @@ theme = ExtResource("3_6kt2e")
 theme_override_font_sizes/font_size = 14
 text = "Option"
 
+[node name="Save" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_6kt2e")
+theme_override_font_sizes/font_size = 14
+text = "Save
+"
+
+[node name="Load" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_6kt2e")
+theme_override_font_sizes/font_size = 14
+text = "Load"
+
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_6kt2e")
@@ -81,4 +94,6 @@ text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Save" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Load" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
