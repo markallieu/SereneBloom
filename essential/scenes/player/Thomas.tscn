@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cofgjxwbapqmu"]
+
+[ext_resource type="Texture2D" uid="uid://ct31neorsx4j8" path="res://essential/art/character/NPC Art/Sprite Character/ThomasSprite.png" id="1_yi6yh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1oajc"]
+radius = 6.32456
+
+[node name="playerKaine" type="CharacterBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yi6yh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_1oajc")

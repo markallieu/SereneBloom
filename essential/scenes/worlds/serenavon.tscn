@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=31 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_4wrf8"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="12_keug5"]
 [ext_resource type="AudioStream" uid="uid://bpx2uppixnw6b" path="res://essential/audio/Background_Music/Village.ogg" id="13_y0cno"]
+[ext_resource type="PackedScene" uid="uid://so7q0lgm1ikh" path="res://essential/scenes/player/Kravon.tscn" id="15_icioc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_k1sjv")
@@ -3433,6 +3434,9 @@ shape = SubResource("RectangleShape2D_mrq2d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="solace_haven_transition_point"]
 position = Vector2(481.25, 371.25)
 shape = SubResource("RectangleShape2D_rk05q")
+
+[node name="playerKaine2" parent="." instance=ExtResource("15_icioc")]
+position = Vector2(905, 1192)
 
 [connection signal="body_entered" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_entered"]
 [connection signal="body_exited" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_exited"]

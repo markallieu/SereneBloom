@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsb8yoc3bpe4a"]
+
+[ext_resource type="FontFile" uid="uid://lnvsw5jj15lo" path="res://essential/art/gui/GUI Asset/ThaleahFat.ttf" id="1_lr34m"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 108.0
+offset_bottom = 20.0
+scale = Vector2(1.49948, 1.57504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_lr34m")
+theme_override_font_sizes/font_size = 16
+text = "Building a statue"
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 16.0
+offset_right = 211.0
+offset_bottom = 34.0
+scale = Vector2(0.607414, 1.27976)
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_lr34m")
+theme_override_font_sizes/font_size = 16
+text = "Meet with all villagers (0/14) !"

@@ -9,14 +9,15 @@ public partial class inventory : MarginContainer
 	private Label currentScene;
 
 	private Node2D inventoryList;
-	private Node2D currentQuest;
+	private Node2D QuestList;
 	public override void _Ready()
 	{
 		inventoryTab = GetNode<Button>("HBoxContainer/VBoxContainer/MarginContainer2/Panel2/InventoryTab");
 		questTab = GetNode<Button>("HBoxContainer/VBoxContainer/MarginContainer2/Panel2/QuestTab");
 		currentScene = GetNode<Label>("HBoxContainer/VBoxContainer/MarginContainer/Panel/CurrentScene");
 		currentScene.Text = globals.currentScene;
-		GD.Print(globals.currentScene);
+		inventoryList = GetNode<Node2D>("HBoxContainer/MarginContainer/MarginContainer3/Panel/InventoryPanel");
+		QuestList = GetNode<Node2D>("HBoxContainer/MarginContainer/MarginContainer3/Panel/QuestPanel");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,8 +36,13 @@ public partial class inventory : MarginContainer
 
 	void _on_quest_tab_toggled(bool pressed){
 		inventoryTab.ButtonPressed = false;
+		inventoryList.Hide();
+		QuestList.Show();
+		
 	}
 	void _on_inventory_tab_toggled(bool pressed){
 		questTab.ButtonPressed = false;
+		QuestList.Hide();
+		inventoryList.Show();
 	}
 }
