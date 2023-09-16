@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ypabrx62sf8y"]
+[gd_scene load_steps=4 format=3 uid="uid://ypabrx62sf8y"]
 
 [ext_resource type="PackedScene" uid="uid://d3vaylse8fnu8" path="res://essential/scenes/gui/pause_menu.tscn" id="1_g65hy"]
 [ext_resource type="PackedScene" uid="uid://bjrhnkenmewxf" path="res://essential/scenes/gui/PauseOption.tscn" id="2_xhg0t"]
+[ext_resource type="PackedScene" uid="uid://h6doxtctw1dy" path="res://essential/scenes/gui/inventory.tscn" id="3_rbgse"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="PauseMenu" parent="." instance=ExtResource("1_g65hy")]
-visible = false
-
 [node name="PauseOption" parent="." instance=ExtResource("2_xhg0t")]
 process_mode = 2
+visible = false
+
+[node name="MarginContainer2" parent="." instance=ExtResource("3_rbgse")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_g65hy")]
 visible = false

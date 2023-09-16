@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://h6doxtctw1dy"]
+[gd_scene load_steps=8 format=3 uid="uid://h6doxtctw1dy"]
 
+[ext_resource type="Script" path="res://essential/scenes/gui/inventory.cs" id="1_pl3uo"]
 [ext_resource type="Texture2D" uid="uid://bdhfjrcav1v7" path="res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png" id="1_yurcs"]
-[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://Themes/UITheme.tres" id="2_xvfie"]
+[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="2_xvfie"]
 [ext_resource type="FontFile" uid="uid://lnvsw5jj15lo" path="res://essential/art/gui/GUI Asset/ThaleahFat.ttf" id="3_q5dcd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22m6a"]
@@ -9,7 +10,7 @@ texture = ExtResource("1_yurcs")
 texture_margin_left = 9.31383
 texture_margin_top = 10.7297
 texture_margin_right = 9.01806
-texture_margin_bottom = 10.2632
+texture_margin_bottom = 17.1098
 region_rect = Rect2(4, 4, 56, 56)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx4pq"]
@@ -19,11 +20,13 @@ bg_color = Color(0, 0, 0, 0.137255)
 bg_color = Color(0, 0, 0, 0.733333)
 
 [node name="MarginContainer" type="MarginContainer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pl3uo")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -45,22 +48,24 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_22m6a")
 
 [node name="PlayerName" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer/Panel"]
 layout_mode = 2
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 80.0
-offset_bottom = 43.0
+offset_left = 5.0
+offset_top = 0.999998
+offset_right = 99.0
+offset_bottom = 49.0
+scale = Vector2(0.774441, 0.711835)
 theme = ExtResource("2_xvfie")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "KAINE"
 
 [node name="CurrentScene" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer/Panel"]
 layout_mode = 2
-offset_left = 9.0
-offset_top = 35.0
-offset_right = 74.0
-offset_bottom = 53.0
+offset_left = 4.0
+offset_top = 24.0
+offset_right = 69.0
+offset_bottom = 50.0
 theme = ExtResource("2_xvfie")
-theme_override_colors/font_color = Color(0.52549, 0.0313726, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0313726, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 16
 text = "Cliffside"
@@ -135,3 +140,25 @@ theme_override_constants/margin_bottom = 20
 [node name="Panel" type="Panel" parent="HBoxContainer/MarginContainer/MarginContainer3"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_22m6a")
+
+[node name="InventoryPanel" type="Node2D" parent="HBoxContainer/MarginContainer/MarginContainer3/Panel"]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/MarginContainer/MarginContainer3/Panel/InventoryPanel"]
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 200.0
+offset_bottom = 170.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/MarginContainer3/Panel/InventoryPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/MarginContainer3/Panel/InventoryPanel/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "TREE BRANCH"
+
+[node name="QuestPanel" type="Node2D" parent="HBoxContainer/MarginContainer/MarginContainer3/Panel"]
+
+[connection signal="toggled" from="HBoxContainer/VBoxContainer/MarginContainer2/Panel2/InventoryTab" to="." method="_on_inventory_tab_toggled"]
+[connection signal="toggled" from="HBoxContainer/VBoxContainer/MarginContainer2/Panel2/QuestTab" to="." method="_on_quest_tab_toggled"]
