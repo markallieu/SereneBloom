@@ -6,11 +6,11 @@
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="PauseOption" parent="." instance=ExtResource("2_xhg0t")]
-process_mode = 2
+[node name="MarginContainer2" parent="." instance=ExtResource("3_rbgse")]
 visible = false
 
-[node name="MarginContainer2" parent="." instance=ExtResource("3_rbgse")]
+[node name="PauseOption" parent="." instance=ExtResource("2_xhg0t")]
+process_mode = 2
 visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_g65hy")]
