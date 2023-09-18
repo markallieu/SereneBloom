@@ -1,6 +1,6 @@
 Join kaine 1
-kaine: Halo, namaku Kaine, Junior Magus.
 Join Aeiri 1
+kaine: Halo, namaku Kaine, Junior Magus.
 Aeiri: Ooh Magus? Namaku Aeiri, Alchemist desa ini.
 kaine: Aeiri yang membuat Rejuvenation Potion itu!?
 Aeiri: Ahahaha, benar.
@@ -9,9 +9,9 @@ Aeiri: Akademi mana tempat kamu kuliah? Apakah Akademi mu menggunakannya?
 kaine: Aku dari Astrolite Tower, setiap ada Luminous Duel para peserta disediakan Rejuvenation Potion sebagai .
 Aeiri: Sanctum Tower? Ada Magus yang bertalenta banget disini.
 kaine: Ehehe… makasih.
-if {haveTalkedToReva} == "false":
-kaine: Oh ya, Reva bilang kamu ada Orchid. Apakah aku boleh minta 2?
-Aeiri: Ini Orchidnya.
-kaine: Terimakasih, Aeiri!
-Aeiri: Sama-sama.
+if {haveTalkedToReva} == "true":
+	kaine: Oh ya, Reva bilang kamu ada Orchid. Apakah aku boleh minta 2?
+	Aeiri: Ini Orchidnya.
+	kaine: Terimakasih, Aeiri!
+	Aeiri: Sama-sama.
 else:

@@ -1,11 +1,18 @@
-Join krovan 1
-krovan: Halo, baru pertama kali aku melihat wajahmu disini. Namaku adalah Kravon, Kepala Desa ini Serenavon, bagaimana denganmu?
 Join kaine 1
-kaine: Oh hai! Namaku Kaine, seorang Junior Magus yang sedang dalam tugas akhirnya.
-krovan: Oho, Junior Magus ya? Berarti kamu sedang dalam tugas Social Flag Bearing?
-kaine: Betul sekali Pak, saya butuh reputasi dengan membantu beberapa desa terdekat. Bapak juga seorang Magus?
-krovan: Hahaha! Bukan begitu, tapi dulu Party ku ada seorang Magus, jadi aku tahu beberapa hal. Baiklah, aku akan membantu tugasmu
-kaine: Apakah benar Pak!? Terimakasih.
-krovan: Kondisinya tidak terlalu sulit, kamu pertama tolong kenalan dengan semua penduduk desa ini. Setelah itu tolonglah mereka dengan hal yang mereka butuhkan.
-kaine: Baik Pak, saya akan laksanakan tugasnya. Sekali lagi, terimakasih!
-krovan: Hahaha, sama-sama, Junior Magus.
+Join krovan 1
+if {haveTalkedToKrovan} == "false":
+	krovan: Halo, baru pertama kali aku melihat wajahmu disini. Namaku adalah Kravon, Kepala Desa ini Serenavon, bagaimana denganmu?
+	kaine: Oh hai! Namaku Kaine, seorang Junior Magus yang sedang dalam tugas akhirnya.
+	krovan: Oho, Junior Magus ya? Berarti kamu sedang dalam tugas Social Flag Bearing?
+	kaine: Betul sekali Pak, saya butuh reputasi dengan membantu beberapa desa terdekat. Bapak juga seorang Magus?
+	krovan: Hahaha! Bukan begitu, tapi dulu Party ku ada seorang Magus, jadi aku tahu beberapa hal. Baiklah, aku akan membantu tugasmu
+	kaine: Apakah benar Pak!? Terimakasih.
+	krovan: Kondisinya tidak terlalu sulit, kamu pertama tolong kenalan dengan semua penduduk desa ini. Setelah itu tolonglah mereka dengan hal yang mereka butuhkan.
+	kaine: Baik Pak, saya akan laksanakan tugasnya. Sekali lagi, terimakasih!
+	krovan: Hahaha, sama-sama, Junior Magus.
+	VAR {haveTalkedToKrovan} = "true"
+else:
+	Join krovan 1
+	krovan: Cuacanya idah ya?
+	Join kaine 2
+	kaine: Iya

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dccclnyjpfovh"]
+[gd_scene load_steps=4 format=3 uid="uid://dccclnyjpfovh"]
 
 [ext_resource type="Texture2D" uid="uid://gu87vd15s47s" path="res://essential/art/character/NPC Art/Sprite Character/RevaSprite.png" id="1_2sbhk"]
+[ext_resource type="PackedScene" uid="uid://bb5salg3h8ru1" path="res://essential/scenes/interact/interactArea.tscn" id="2_1gxs8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1oajc"]
 radius = 6.32456
@@ -14,3 +15,5 @@ texture = ExtResource("1_2sbhk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_1oajc")
+
+[node name="Area2D" parent="." instance=ExtResource("2_1gxs8")]
