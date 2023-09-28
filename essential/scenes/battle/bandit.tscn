@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhlxm2wikvy4l"]
+
+[ext_resource type="Texture2D" uid="uid://cm71ir458gi4g" path="res://essential/art/battle/Battle Art/Battlers/Battlers/World01_007_Pirate.png" id="1_0o0oi"]
+[ext_resource type="Script" path="res://essential/scenes/battle/bandit.cs" id="1_e7bsl"]
+[ext_resource type="Texture2D" uid="uid://cnu3nrebqr2wy" path="res://essential/art/FF_Cursor.png" id="2_a6dg4"]
+
+[sub_resource type="Animation" id="Animation_1m26t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3qwqr"]
+resource_name = "hurt"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(30, 30, 30, 1), Color(1, 1, 1, 1), Color(30, 30, 30, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8a6cm"]
+_data = {
+"RESET": SubResource("Animation_1m26t"),
+"hurt": SubResource("Animation_3qwqr")
+}
+
+[node name="Bandit" type="CharacterBody2D" node_paths=PackedStringArray("HealthBar", "AnimationPlayer", "_focus")]
+script = ExtResource("1_e7bsl")
+HealthBar = NodePath("ProgressBar")
+AnimationPlayer = NodePath("AnimationPlayer")
+_focus = NodePath("focus")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_0o0oi")
+
+[node name="focus" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-22, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_a6dg4")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -11.0
+offset_top = -25.0
+offset_right = 139.0
+offset_bottom = 2.0
+scale = Vector2(0.15, 0.15)
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8a6cm")
+}

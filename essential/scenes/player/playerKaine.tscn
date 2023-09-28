@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://bgch8sa6ik2hf"]
+[gd_scene load_steps=27 format=3 uid="uid://bgch8sa6ik2hf"]
 
 [ext_resource type="Script" path="res://essential/scenes/player/playerKaine.cs" id="1_g30rh"]
 [ext_resource type="Texture2D" uid="uid://cbt206dwwm0b5" path="res://essential/art/character/Kaine_Animation.aseprite" id="1_mxq3e"]
 [ext_resource type="AudioStream" uid="uid://mf03slfqlbvw" path="res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav" id="3_171u8"]
+[ext_resource type="Texture2D" uid="uid://cu6gm1mll45nf" path="res://essential/art/battle/Battle Art/KaineBattle.png" id="3_xu5af"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ci84w"]
 atlas = ExtResource("1_mxq3e")
@@ -23,6 +24,10 @@ region = Rect2(64, 84, 32, 42)
 [sub_resource type="AtlasTexture" id="AtlasTexture_as6wf"]
 atlas = ExtResource("1_mxq3e")
 region = Rect2(96, 84, 32, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3xet"]
+atlas = ExtResource("3_xu5af")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v288c"]
 atlas = ExtResource("1_mxq3e")
@@ -109,6 +114,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_r3xet")
+}],
+"loop": true,
+"name": &"battle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_v288c")
 }],
 "loop": true,
@@ -178,13 +191,13 @@ y_sort_enabled = true
 script = ExtResource("1_g30rh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, 4)
 sprite_frames = SubResource("SpriteFrames_j012r")
-animation = &"backIdle"
+animation = &"backWalk"
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1)
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_1oajc")
 
 [node name="WalkingSound" type="AudioStreamPlayer2D" parent="."]

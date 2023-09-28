@@ -1,3 +1,6 @@
+res://essential/scenes
+res://essential/scenes/battle
+res://essential/art/battle/Battle Art
 res://essential/art/character/NPC Art/Potrait Character
 res://essential/dialog
 res://essential/scenes/gui
@@ -7,6 +10,5 @@ res://essential
 res://essential/art
 res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX
 res://
-res://essential/scenes
 res://essential/art/character
 C:/aseprite/build/bin

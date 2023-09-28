@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd588bb7srou0"]
+
+[ext_resource type="Script" path="res://essential/scenes/battle/bandit_battle.cs" id="1_vwpf2"]
+[ext_resource type="Texture2D" uid="uid://bck6g1k1wynot" path="res://essential/art/battle/Battle Art/BG 2.0/BG/battleback1.png" id="1_xcjuw"]
+[ext_resource type="PackedScene" uid="uid://co8ur5lfohymf" path="res://essential/scenes/bandit_group.tscn" id="2_aii15"]
+[ext_resource type="PackedScene" uid="uid://mmlumv7q3fu4" path="res://essential/scenes/battle/battle_kaine.tscn" id="3_ehk4n"]
+[ext_resource type="Script" path="res://essential/scenes/battle/battleKaine.cs" id="4_258ls"]
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="4_ectq8"]
+
+[node name="BanditBattle" type="Node2D" node_paths=PackedStringArray("choice", "pacify")]
+script = ExtResource("1_vwpf2")
+choice = NodePath("CanvasLayer/Choice")
+pacify = NodePath("CanvasLayer/Choice/Pacify")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 416.0
+offset_bottom = 224.0
+texture = ExtResource("1_xcjuw")
+expand_mode = 1
+
+[node name="BanditGroup" parent="." instance=ExtResource("2_aii15")]
+position = Vector2(132, 94)
+
+[node name="battleKaine" parent="." instance=ExtResource("3_ehk4n")]
+position = Vector2(247, 102)
+script = ExtResource("4_258ls")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Choice" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -76.0
+offset_top = -65.0
+offset_right = -12.0
+offset_bottom = 11.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("4_ectq8")
+
+[node name="Pacify" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Pacify"
+
+[node name="Magic" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Magic"
+
+[node name="Flee" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Flee"
+
+[connection signal="NextPlayer" from="BanditGroup" to="battleKaine" method="_on_bandit_group_next_player"]
+[connection signal="pressed" from="CanvasLayer/Choice/Pacify" to="BanditGroup" method="_on_pacify_pressed"]
