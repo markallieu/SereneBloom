@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cofgjxwbapqmu"]
+[gd_scene load_steps=5 format=3 uid="uid://cofgjxwbapqmu"]
 
 [ext_resource type="Texture2D" uid="uid://ct31neorsx4j8" path="res://essential/art/character/NPC Art/Sprite Character/ThomasSprite.png" id="1_yi6yh"]
+[ext_resource type="PackedScene" uid="uid://bb5salg3h8ru1" path="res://essential/scenes/interact/interactArea.tscn" id="2_j02fx"]
+[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="3_6s3i5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1oajc"]
 radius = 6.32456
 
-[node name="playerKaine" type="CharacterBody2D"]
+[node name="Thomas" type="CharacterBody2D"]
 y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,3 +16,7 @@ texture = ExtResource("1_yi6yh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_1oajc")
+
+[node name="Area2D" parent="." instance=ExtResource("2_j02fx")]
+
+[node name="dialogic" parent="Area2D" instance=ExtResource("3_6s3i5")]

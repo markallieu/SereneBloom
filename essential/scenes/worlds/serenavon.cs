@@ -3,8 +3,10 @@ using System;
 
 public partial class serenavon : Node2D
 {
+    private Node2D dialogic;
     public override void _Ready()
     {
+        
         globals.currentScene = "serenavon";
         Node2D player = GetNode<Node2D>("playerKaine");
         if (globals.firstSolaceLoad == false)
@@ -27,6 +29,8 @@ public partial class serenavon : Node2D
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
             player.Position = newPositionSerenavon;
         }
+        dialogic = GetNode<Node2D>("dialogic");
+        dialogic.Call("dialog","Quest1Aeiri");
     }
 
     public override void _Process(double delta)

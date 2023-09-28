@@ -1,9 +1,9 @@
 Label
+CanvasLayer
 CollisionShape2D
 Area2D
 Sprite2D
 Node2D
-CanvasLayer
 VBoxContainer
 ScrollContainer
 CheckBox

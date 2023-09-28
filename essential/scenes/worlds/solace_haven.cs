@@ -3,6 +3,8 @@ using System;
 
 public partial class solace_haven : Node2D
 {
+    private Node2D dialogic;
+
     public override void _Ready()
     {
         globals.currentScene = "solace_haven";
@@ -12,6 +14,8 @@ public partial class solace_haven : Node2D
             Vector2 newPositionSolaceHaven = new Vector2(globals.PlayerStartSolaceHavenX, globals.PlayerStartSolaceHavenY);
             player.Position = newPositionSolaceHaven;
         }
+        dialogic = GetNode<Node2D>("dialogic");
+        dialogic.Call("dialog","Quest1Aeiri");
     }
 
     public override void _Process(double delta)

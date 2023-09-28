@@ -1,5 +1,5 @@
-Join kaine 1
-Join krovan 1
+Join kaine 1 [animation="Bounce In"]
+Join krovan 2 [animation="Fade In Up"]
 if {haveTalkedToKrovan} == "false":
 	krovan: Halo, baru pertama kali aku melihat wajahmu disini. Namaku adalah Kravon, Kepala Desa ini Serenavon, bagaimana denganmu?
 	kaine: Oh hai! Namaku Kaine, seorang Junior Magus yang sedang dalam tugas akhirnya.
@@ -12,7 +12,5 @@ if {haveTalkedToKrovan} == "false":
 	krovan: Hahaha, sama-sama, Junior Magus.
 	VAR {haveTalkedToKrovan} = "true"
 else:
-	Join krovan 1
-	krovan: Cuacanya idah ya?
-	Join kaine 2
+	krovan: Cuacanya indah ya?
 	kaine: Iya

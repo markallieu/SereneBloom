@@ -3439,8 +3439,8 @@ shape = SubResource("RectangleShape2D_rk05q")
 [node name="Kravon" parent="." instance=ExtResource("15_icioc")]
 position = Vector2(905, 1192)
 
-[node name="playerKaine2" parent="." instance=ExtResource("16_yftan")]
-position = Vector2(821, 809)
+[node name="Aeiri" parent="." instance=ExtResource("16_yftan")]
+position = Vector2(848, 829)
 
 [connection signal="body_entered" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_entered"]
 [connection signal="body_exited" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_exited"]
