@@ -1,0 +1,21 @@
+if {haveTalkedToEleanor} == "true":
+	if {haveFoundEleanorNecklace} == "true":
+		Eleanor: Terimakasih banyak, Kaine!
+		kaine: Sama-sama, Eleanor. Oh ya, apakah surat ini juga punyamu?
+		Eleanor: Bukan, tapi biasanya Aecrim tahu barang seperti ini.
+		kaine: Oke, aku akan berikan ini ke dia.
+	else:
+		Eleanor: Tolong ambilkan kalungku, ya?
+		kaine: Aku lagi mencarinya.
+else:
+	Eleanor: Hai, kamu Magus yang sedang berjelajah ya?
+	kaine: Benar, namaku Kaine.
+	Eleanor: Namaku Eleanor, Junior Paladin yang sedang liburan saja ke desa ini.
+	kaine: Baru pertama kali aku melihat seorang Paladin, kamu dari sektor mana?
+	Eleanor: Sektor Fortress of Imperial Cathedral.
+	kaine: Menarik, semoga kamu lulus menjadi Paladin resmi ya! Soalnya aku juga Junior.
+	Eleanor: Terimakasih. Oh ya, mohon maaf tapi apakah aku boleh minta tolong?
+	kaine: Boleh, butuh apa?
+	Eleanor: Di tebing kiri sana ada peti yang isinya ada kalungku. Aku baru sadar hilang ketika aku sudah disini, apakah kamu bisa mengambilnya?
+	kaine: Tidak apa-apa, akan ku ambilkan segera.
+	Eleanor: Terimakasih, Kaine.

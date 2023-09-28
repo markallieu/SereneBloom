@@ -25,6 +25,8 @@ MarginContainer
 NinePatchRect
 AudioStreamPlayer2D
 Node
+Camera2D
+CollisionPolygon2D
 Timer
 HSlider
 Line2D

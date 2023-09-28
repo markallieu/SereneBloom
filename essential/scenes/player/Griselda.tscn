@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbeud7kv4hhpr"]
+
+[ext_resource type="Texture2D" uid="uid://vhyrfe81btvt" path="res://essential/art/character/NPC Art/Sprite Character/GriseldaPotrait.png" id="1_1tr23"]
+[ext_resource type="PackedScene" uid="uid://bb5salg3h8ru1" path="res://essential/scenes/interact/interactArea.tscn" id="2_okc4u"]
+[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="3_48lcf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1oajc"]
+radius = 6.32456
+
+[node name="Griselda" type="CharacterBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1tr23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_1oajc")
+
+[node name="Area2D" parent="." instance=ExtResource("2_okc4u")]
+
+[node name="dialogic" parent="Area2D" instance=ExtResource("3_48lcf")]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnk16gpaulu0c"]
+
+[ext_resource type="Texture2D" uid="uid://df8q0d2harg2k" path="res://essential/art/character/NPC Art/Sprite Character/SigoriusSprite.png" id="1_kq0fj"]
+[ext_resource type="PackedScene" uid="uid://bb5salg3h8ru1" path="res://essential/scenes/interact/interactArea.tscn" id="2_a3yol"]
+[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="3_pguio"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1oajc"]
+radius = 6.32456
+
+[node name="Sigorius" type="CharacterBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kq0fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_1oajc")
+
+[node name="Area2D" parent="." instance=ExtResource("2_a3yol")]
+
+[node name="dialogic" parent="Area2D" instance=ExtResource("3_pguio")]
