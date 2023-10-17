@@ -1,12 +1,18 @@
 using Godot;
 using System;
 
+
 public partial class serenavon : Node2D
 {
     private Node2D dialogic;
+    private UI ui;
     public override void _Ready()
     {
-        
+        GD.Print("AAAA");
+        ui = GetNode<UI>("CanvasLayer");
+        ui.GlobalNotif("test");
+        GD.Print("test");
+        GD.Print(ui.notifText.Text);
         globals.currentScene = "serenavon";
         Node2D player = GetNode<Node2D>("playerKaine");
         if (globals.firstSolaceLoad == false)

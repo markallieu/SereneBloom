@@ -1,12 +1,11 @@
-res://essential/scenes/worlds/cliffside.tscn
+res://essential/scenes/gui/UI.tscn
 res://UITheme.tres
 res://Themes/UI_theme_2.tres
+res://essential/scenes/worlds/cliffside.tscn
 res://essential/scenes/worlds/serenavon.tscn
 res://essential/scenes/worlds/reva_house.tscn
 res://essential/scenes/worlds/thomas_shop.tscn
 res://essential/scenes/bandit_group.tscn
-res://essential/scenes/battle/bandit_battle.tscn
-res://essential/scenes/battle/battle_kaine.tscn
 res://essential/globals.cs
 res://essential/scenes/battle/bandit.cs
 res://essential/scenes/battle/BanditGroup.cs
@@ -21,6 +20,8 @@ res://essential/scenes/gui/OptionMenu.cs
 res://essential/scenes/gui/PauseOption.cs
 res://essential/scenes/gui/pause_menu.cs
 res://essential/scenes/gui/SFXSlider.cs
+res://essential/scenes/gui/text_panel.cs
+res://essential/scenes/gui/UI.cs
 res://essential/scenes/interact/dialogic.cs
 res://essential/scenes/interact/interactArea.cs
 res://essential/scenes/player/playerKaine.cs
@@ -29,3 +30,4 @@ res://essential/scenes/worlds/Dummy.cs
 res://essential/scenes/worlds/ivory_lake.cs
 res://essential/scenes/worlds/serenavon.cs
 res://essential/scenes/worlds/solace_haven.cs
+res://essential/scenes/player/playerKaine.tscn

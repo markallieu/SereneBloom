@@ -1,3 +1,7 @@
+AudioStreamPlayer2D
+AnimationPlayer
+RichTextLabel
+Panel
 Button
 VBoxContainer
 CanvasLayer
@@ -10,11 +14,9 @@ Camera2D
 CharacterBody2D
 TextureRect
 Sprite2D
-AnimationPlayer
 ProgressBar
 Label
 HBoxContainer
-Panel
 ScrollContainer
 CheckBox
 TabBar
@@ -23,12 +25,8 @@ CheckButton
 ColorRect
 MarginContainer
 NinePatchRect
-AudioStreamPlayer2D
 Node
 Camera2D
 CollisionPolygon2D
 Timer
 HSlider
-Line2D
-TextureButton
-TileMap

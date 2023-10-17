@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmlc81vfhrn02"]
+
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="1_jg8oy"]
+[ext_resource type="Script" path="res://essential/scenes/gui/text_panel.cs" id="1_yebsc"]
+[ext_resource type="Texture2D" uid="uid://bdhfjrcav1v7" path="res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png" id="2_d831s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xskfq"]
+texture = ExtResource("2_d831s")
+texture_margin_left = 10.8653
+texture_margin_top = 12.2673
+texture_margin_right = 10.8653
+texture_margin_bottom = 12.9683
+region_rect = Rect2(68, 8, 56, 52)
+
+[node name="TextPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yebsc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_right = 316.0
+offset_bottom = 40.0
+theme = ExtResource("1_jg8oy")
+theme_override_styles/panel = SubResource("StyleBoxTexture_xskfq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -12.0
+offset_right = 68.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Makan Bang
+"
+fit_content = true

@@ -1,3 +1,4 @@
+res://essential/scenes/gui
 res://essential/scenes/interact
 res://
 res://essential/scenes/worlds
@@ -6,7 +7,6 @@ res://essential/scenes
 res://essential/scenes/battle
 res://essential/art/battle/Battle Art
 res://essential/art/character/NPC Art/Potrait Character
-res://essential/scenes/gui
 res://essential/scenes/player
 res://essential
 res://essential/art

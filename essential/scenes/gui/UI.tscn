@@ -1,10 +1,136 @@
-[gd_scene load_steps=4 format=3 uid="uid://ypabrx62sf8y"]
+[gd_scene load_steps=13 format=3 uid="uid://ypabrx62sf8y"]
 
+[ext_resource type="Script" path="res://essential/scenes/gui/UI.cs" id="1_dwbpl"]
 [ext_resource type="PackedScene" uid="uid://d3vaylse8fnu8" path="res://essential/scenes/gui/pause_menu.tscn" id="1_g65hy"]
 [ext_resource type="PackedScene" uid="uid://bjrhnkenmewxf" path="res://essential/scenes/gui/PauseOption.tscn" id="2_xhg0t"]
 [ext_resource type="PackedScene" uid="uid://h6doxtctw1dy" path="res://essential/scenes/gui/inventory.tscn" id="3_rbgse"]
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="4_7bh1x"]
+[ext_resource type="Texture2D" uid="uid://bdhfjrcav1v7" path="res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png" id="5_0btx6"]
+[ext_resource type="AudioStream" uid="uid://djuxj3ghcy1f7" path="res://essential/audio/Retro Event UI 01.wav" id="7_jy361"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yi3xr"]
+texture = ExtResource("5_0btx6")
+texture_margin_left = 10.8653
+texture_margin_top = 12.2673
+texture_margin_right = 10.8653
+texture_margin_bottom = 12.9683
+region_rect = Rect2(68, 8, 56, 52)
+
+[sub_resource type="Animation" id="Animation_5jk3p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Notif:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Notif:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(113, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Notif/AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_5ypit"]
+resource_name = "NotifEnter"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Notif:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Notif:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(113, -20), Vector2(113, 10)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Notif/AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_00x7m"]
+resource_name = "NotifExit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Notif:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(113, 10), Vector2(113, -20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Notif:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7c35b"]
+_data = {
+"NotifEnter": SubResource("Animation_5ypit"),
+"NotifExit": SubResource("Animation_00x7m"),
+"RESET": SubResource("Animation_5jk3p")
+}
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_dwbpl")
 
 [node name="MarginContainer2" parent="." instance=ExtResource("3_rbgse")]
 visible = false
@@ -15,3 +141,42 @@ visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_g65hy")]
 visible = false
+
+[node name="Notif" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 113.0
+offset_top = -20.0
+offset_right = 317.0
+offset_bottom = 20.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("4_7bh1x")
+theme_override_styles/panel = SubResource("StyleBoxTexture_yi3xr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Notif"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -10.0
+offset_right = 71.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Makan Bang
+"
+fit_content = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Notif"]
+stream = ExtResource("7_jy361")
+volume_db = 5.0
+bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7c35b")
+}
