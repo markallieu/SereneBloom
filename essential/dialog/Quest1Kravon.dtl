@@ -11,6 +11,7 @@ if {haveTalkedToKrovan} == "false":
 	kaine: Baik Pak, saya akan laksanakan tugasnya. Sekali lagi, terimakasih!
 	krovan: Hahaha, sama-sama, Junior Magus.
 	VAR {haveTalkedToKrovan} = "true"
+	[signal]
 else:
 	krovan: Cuacanya indah ya?
 	kaine: Iya
