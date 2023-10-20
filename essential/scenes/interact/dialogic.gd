@@ -3,7 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-		pass
+	var cs = load("res://essential/scenes/gui/UI.cs")
+	var csnode = cs.new()
+	#Dialogic.signal_event.connect(csnode._on_dialogic_signal)
 
 func dialog(timeline):
 	print(timeline)

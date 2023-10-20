@@ -6,7 +6,7 @@ res://essential/scenes/worlds/reva_house.tscn
 res://essential/scenes/worlds/thomas_shop.tscn
 res://essential/scenes/bandit_group.tscn
 res://essential/scenes/gui/UI.tscn
-res://essential/scenes/player/playerKaine.tscn
+res://essential/scenes/gui/inventory.tscn
 res://essential/globals.cs
 res://essential/scenes/battle/bandit.cs
 res://essential/scenes/battle/BanditGroup.cs
@@ -31,4 +31,6 @@ res://essential/scenes/worlds/Dummy.cs
 res://essential/scenes/worlds/ivory_lake.cs
 res://essential/scenes/worlds/serenavon.cs
 res://essential/scenes/worlds/solace_haven.cs
+res://essential/scenes/interact/dialogic.gd
 res://essential/dialog/Quest1Kravon.dtl
+res://essential/scenes/gui/dialogic_on_signal.gd

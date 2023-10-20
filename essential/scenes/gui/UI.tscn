@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ypabrx62sf8y"]
+[gd_scene load_steps=14 format=3 uid="uid://ypabrx62sf8y"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/UI.cs" id="1_dwbpl"]
 [ext_resource type="PackedScene" uid="uid://d3vaylse8fnu8" path="res://essential/scenes/gui/pause_menu.tscn" id="1_g65hy"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="4_7bh1x"]
 [ext_resource type="Texture2D" uid="uid://bdhfjrcav1v7" path="res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png" id="5_0btx6"]
 [ext_resource type="AudioStream" uid="uid://dy00e8oirpy26" path="res://essential/audio/Retro Success Melody 01 - sawtooth lead 1.wav" id="7_xuvjd"]
+[ext_resource type="Script" path="res://essential/scenes/gui/dialogic_on_signal.gd" id="8_3ml3m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yi3xr"]
 texture = ExtResource("5_0btx6")
@@ -180,3 +181,6 @@ bus = &"SFX"
 libraries = {
 "": SubResource("AnimationLibrary_7c35b")
 }
+
+[node name="dialogic_on_signal" type="Node" parent="."]
+script = ExtResource("8_3ml3m")

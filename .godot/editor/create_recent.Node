@@ -1,3 +1,4 @@
+Node
 Label
 AudioStreamPlayer2D
 AnimationPlayer
@@ -25,7 +26,6 @@ CheckButton
 ColorRect
 MarginContainer
 NinePatchRect
-Node
 Camera2D
 CollisionPolygon2D
 Timer

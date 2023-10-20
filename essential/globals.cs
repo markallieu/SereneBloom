@@ -54,4 +54,8 @@ public partial class globals : Node
 
     public static float PlayerStartSolaceHavenX = 368f;
     public static float PlayerStartSolaceHavenY = 661f;
+
+    public void _on_dialogic_signal(string arg){
+        GD.Print(arg);
+    }
 }

@@ -5,11 +5,11 @@ using System;
 public partial class serenavon : Node2D
 {
     private Node2D dialogic;
-    private UI ui;
+    //private UI ui;
     public override void _Ready()
     {
-        ui = GetNode<UI>("CanvasLayer");
-        ui.GlobalNotif("test");
+        //ui = GetNode<UI>("CanvasLayer");
+        //ui.GlobalNotif("test");
         globals.currentScene = "serenavon";
         Node2D player = GetNode<Node2D>("playerKaine");
         if (globals.firstSolaceLoad == false)

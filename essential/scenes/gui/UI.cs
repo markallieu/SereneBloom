@@ -7,6 +7,8 @@ public partial class UI : CanvasLayer
 	AnimationPlayer anim;
 	
 	Label notifText;
+	bool test = true;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -21,7 +23,12 @@ public partial class UI : CanvasLayer
 	{
 	}
 
-	public async void GlobalNotif(string text){
+	public void _on_dialogic_signal(string arg){
+        GD.Print(arg);
+		GlobalNotif("arg");
+    }
+	async void GlobalNotif(string text){
+		_Ready();
         notifText.Text = text;
 		notif.Show();
 		anim.Play("NotifEnter");
@@ -29,4 +36,5 @@ public partial class UI : CanvasLayer
 		anim.Play("NotifExit");
 		notif.Hide();
     }
+	
 }
