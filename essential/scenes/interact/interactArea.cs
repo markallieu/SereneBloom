@@ -30,7 +30,7 @@ public partial class interactArea : Area2D
 	{
 		if (Input.IsActionJustReleased("interact") && inside)
         {
-			dialogic.Call("dialog","Quest1" + name);
+			dialogic.Call("dialog",name);
 	        //AddChild(dialog);
 			label.Hide();
         }

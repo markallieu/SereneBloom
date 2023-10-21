@@ -1,0 +1,15 @@
+Join kaine 1
+Join krovan 1
+if {haveTalkedToKrovan} == "false":
+	krovan: Halo, baru pertama kali aku melihat wajahmu disini.
+	krovan: Namaku adalah Kravon, Kepala Desa Serenavon, Siapa namamu?
+	kaine: Oh hai! Namaku Kaine, saya adalah Junior Magus. Saya disini sedang mengerjakan tugas akhirnya.
+	krovan: Oho, Junior Magus ya? Berarti kamu sedang dalam tugas Flag Bearing?
+	kaine: Betul sekali Pak, saya butuh reputasi dengan membantu beberapa desa terdekat. Bapak juga seorang Magus?
+	krovan: Hahaha, bukan.
+	krovan: Tetapi dulu aku mengenal seorang Magus, jadi aku tahu beberapa hal.
+	krovan: Baiklah, aku akan membantu tugasmu.
+	krovan: Tapi sebelum itu aku ada permintaan, apakah kamu bisa mendemonstrasikan satu saja magic spell? Tidak usah yang terlalu kompleks.
+	[signal arg="tutorailKravon"]
+	[signal arg="kravon1"]
+else:
