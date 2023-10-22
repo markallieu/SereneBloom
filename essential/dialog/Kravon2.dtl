@@ -6,3 +6,5 @@ krovan: Silahkan kamu kenalan dengan semua penduduk desa ini.
 krovan: Setelah itu tolonglah mereka dengan hal yang mereka butuhkan.
 kaine: Baik Pak, terimakasih banyak.
 krovan: Hahaha, sama-sama, Junior Magus.
+[signal arg="WarmGreeting"]
+VAR {haveTalkedToKrovan} = "true"

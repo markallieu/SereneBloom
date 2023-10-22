@@ -29,7 +29,7 @@ public partial class UI : CanvasLayer
 
 	public void _on_dialogic_signal(string arg){
         GD.Print(arg);
-		if(arg == "kravon1"){
+		if(arg == "WarmGreeting"){
 			GlobalNotif("Warm Greetings (" + warmGreetingProgress.ToString() + "/7)","Berkenalanlah bersama semua penduduk Desa Serenavon.");
 		}
     }

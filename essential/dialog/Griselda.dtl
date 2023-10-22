@@ -1,0 +1,33 @@
+Join kaine 1
+Join Griselda 1
+if {haveTalkedToGriselda} == "false":
+	Griselda: Halo! Namaku Griselda.
+	kaine: Hai juga namaku Kaine.
+	Griselda: Kamu Magus yang sedang berkunjung ke sini ya?
+	kaine: Benar sekali.
+	Griselda: Salam kenal, kalo kamu butuh apa-apa beritahu aku.
+	if {haveTalkedToReva} == "true":
+		kaine: Griselda, Reva bilang kamu ada Sycamore Wood, apakah ini benar?
+		Griselda: Ah oke, bilang ke Reva jangan terlalu memaksakan diri.
+		Griselda: Iya, kebetulan aku dan Thomas minggu lalu memotong pohon di Ivory Lake.
+		Griselda: Apakah kayu adalah bahan untuk sebuah patung?
+		kaine: Betul, Reva ada dapat kontrak Kepala Desa Kravon.
+		kaine: Oke, akan ku sampaikan kepadanya.
+		VAR {BuildingAStatue.Sycamore} = "true"
+		[signal arg="Sycamore"]
+	else:
+		kaine: Oke Griselda, aku bakal ke kamu kalo aku butuh bantuan.
+	[signal arg="WarmGretting"]
+else:
+	if {BuildingAStatue.Sycamore} == "false":
+		kaine: Griselda, Reva bilang kamu ada Sycamore Wood, apakah ini benar?
+		Griselda: Iya, kebetulan aku dan Thomas minggu lalu memotong pohon di Ivory Lake.
+		Griselda: Apakah kayu adalah bahan untuk sebuah patung?
+		kaine: Betul, Reva ada dapat kontrak Kepala Desa Kravon.
+		Griselda: Ah oke, bilang ke Reva tidak terlalu memaksakan diri.
+		kaine: Oke, akan ku sampaikan kepadanya.
+		[signal arg="Sycamore"]
+		VAR {BuildingAStatue.Sycamore} = "true"
+	else:
+		Griselda: Aku lihat kamu mulai membantu penduduk di desa ini.
+		Griselda: Terimakasih banyak tapi ingat jaga diri dan jangan terlalu memaksakan diri ya!

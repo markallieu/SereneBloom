@@ -1,12 +1,12 @@
 if {haveTalkedToEleanor} == "true":
 	if {haveFoundEleanorNecklace} == "true":
 		Eleanor: Terimakasih banyak, Kaine!
-		kaine: Sama-sama, Eleanor. Oh ya, apakah surat ini juga punyamu?
-		Eleanor: Bukan, tapi biasanya Aecrim tahu barang seperti ini.
-		kaine: Oke, aku akan berikan ini ke dia.
+		kaine: Sama-sama, Eleanor.
+		kaine: Semoga kamu sukses menjadi Paladin resmi secepat mungkin!
+		Eleanor: Haha, semoga kamu juga bisa menjadi Magus yang hebat.
+		[signal arg="EndLostJewelry"]
 	else:
-		Eleanor: Tolong ambilkan kalungku, ya?
-		kaine: Aku lagi mencarinya.
+		Eleanor: Tolong bantu temukan kalungku, ya?
 else:
 	Eleanor: Hai, kamu Magus yang sedang berjelajah ya?
 	kaine: Benar, namaku Kaine.
@@ -15,7 +15,10 @@ else:
 	Eleanor: Sektor Fortress of Imperial Cathedral.
 	kaine: Menarik, semoga kamu lulus menjadi Paladin resmi ya! Soalnya aku juga Junior.
 	Eleanor: Terimakasih. Oh ya, mohon maaf tapi apakah aku boleh minta tolong?
-	kaine: Boleh, butuh apa?
-	Eleanor: Di tebing kiri sana ada peti yang isinya ada kalungku. Aku baru sadar hilang ketika aku sudah disini, apakah kamu bisa mengambilnya?
-	kaine: Tidak apa-apa, akan ku ambilkan segera.
+	kaine: Boleh aja, memangnya kamu butuh apa?
+	Eleanor: Sepertinya aku menjatuhkan kalungku di tebing kiri sana.
+	Eleanor: Aku baru sadar hilang ketika aku sudah disini, apakah kamu membantuku untuk mencarinya?
+	kaine: Tidak apa-apa, akan ku carikan segera.
 	Eleanor: Terimakasih, Kaine.
+	[signal arg="LostJewelry"]
+	[signal arg="WarmGretting"]

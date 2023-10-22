@@ -12,8 +12,8 @@ public partial class inventory : MarginContainer
 	private Node2D QuestList;
 	public override void _Ready()
 	{
-		inventoryTab = GetNode<Button>("HBoxContainer/VBoxContainer/MarginContainer2/Panel2/InventoryTab");
-		questTab = GetNode<Button>("HBoxContainer/VBoxContainer/MarginContainer2/Panel2/QuestTab");
+		inventoryTab = GetNode<Button>("HBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/Panel2/InventoryTab");
+		questTab = GetNode<Button>("HBoxContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer2/Panel3/QuestTab");
 		currentScene = GetNode<Label>("HBoxContainer/VBoxContainer/MarginContainer/Panel/CurrentScene");
 		currentScene.Text = globals.currentScene;
 		inventoryList = GetNode<Node2D>("HBoxContainer/MarginContainer/MarginContainer3/Panel/InventoryPanel");

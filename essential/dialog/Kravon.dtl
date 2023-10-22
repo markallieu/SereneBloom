@@ -11,5 +11,5 @@ if {haveTalkedToKrovan} == "false":
 	krovan: Baiklah, aku akan membantu tugasmu.
 	krovan: Tapi sebelum itu aku ada permintaan, apakah kamu bisa mendemonstrasikan satu saja magic spell? Tidak usah yang terlalu kompleks.
 	[signal arg="tutorailKravon"]
-	[signal arg="kravon1"]
 else:
+	krovan: Bantulah orang-orang di desa ini, aku janji akan memberikanmu hadiah yang sangat manis pada akhirnya.

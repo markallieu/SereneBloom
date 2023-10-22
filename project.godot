@@ -43,10 +43,19 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 text/autopauses={}
 variables={
+"BuildingAStatue": {
+"Marble": "false",
+"Orchid": "false",
+"Sycamore": "false"
+},
+"BuildingAStatueComplete": "false",
 "haveFoundEleanorNecklace": "false",
+"haveTalkedToAeiri": "false",
 "haveTalkedToEleanor": "false",
+"haveTalkedToGriselda": "false",
 "haveTalkedToKrovan": "false",
-"haveTalkedToReva": "false"
+"haveTalkedToReva": "false",
+"haveTalkedToSigorius": "false"
 }
 layout/styles={
 "Default": {

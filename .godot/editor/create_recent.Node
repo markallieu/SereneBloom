@@ -1,3 +1,5 @@
+MarginContainer
+VBoxContainer
 Node
 Label
 AudioStreamPlayer2D
@@ -5,7 +7,6 @@ AnimationPlayer
 RichTextLabel
 Panel
 Button
-VBoxContainer
 CanvasLayer
 Node2D
 CollisionShape2D
@@ -24,7 +25,6 @@ TabBar
 TabContainer
 CheckButton
 ColorRect
-MarginContainer
 NinePatchRect
 Camera2D
 CollisionPolygon2D
