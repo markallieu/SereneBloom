@@ -31,6 +31,3 @@ res://essential/scenes/worlds/Dummy.cs
 res://essential/scenes/worlds/ivory_lake.cs
 res://essential/scenes/worlds/serenavon.cs
 res://essential/scenes/worlds/solace_haven.cs
-res://essential/scenes/interact/dialogic.gd
-res://essential/dialog/Quest1Kravon.dtl
-res://essential/scenes/gui/dialogic_on_signal.gd
