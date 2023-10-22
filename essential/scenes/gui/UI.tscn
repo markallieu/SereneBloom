@@ -158,19 +158,43 @@ size_flags_vertical = 4
 theme = ExtResource("4_7bh1x")
 theme_override_styles/panel = SubResource("StyleBoxTexture_yi3xr")
 
-[node name="Label" type="Label" parent="Notif"]
+[node name="Title" type="Label" parent="Notif"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 2.0
 anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 2.0
+offset_right = -28.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "test test"
 horizontal_alignment = 1
 vertical_alignment = 1
 text_overrun_behavior = 2
+
+[node name="Description" type="Label" parent="Notif"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 2.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 15.0
+offset_right = 63.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Berkenalanlah bersama semua penduduk Desa Serenavon."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 4
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Notif"]
 stream = ExtResource("7_xuvjd")

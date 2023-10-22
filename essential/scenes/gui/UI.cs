@@ -6,14 +6,18 @@ public partial class UI : CanvasLayer
 	Panel notif;
 	AnimationPlayer anim;
 	
-	Label notifText;
+	Label notifTitle;
+	Label notifDescription;
 	bool test = true;
+
+	public int warmGreetingProgress = 1;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		notif = GetNode<Panel>("Notif");
-		notifText = GetNode<Label>("Notif/Label");
+		notifTitle = GetNode<Label>("Notif/Title");
+		notifDescription = GetNode<Label>("Notif/Description");
 		notif.Hide();
 		anim = GetNode<AnimationPlayer>("AnimationPlayer");
 	}
@@ -25,11 +29,14 @@ public partial class UI : CanvasLayer
 
 	public void _on_dialogic_signal(string arg){
         GD.Print(arg);
-		GlobalNotif("arg");
+		if(arg == "WarmGreeting"){
+			GlobalNotif("Warm Greetings (" + warmGreetingProgress.ToString() + "/7)","Berkenalanlah bersama semua penduduk Desa Serenavon.");
+		}
     }
-	async void GlobalNotif(string text){
+	async void GlobalNotif(string title,string description){
 		_Ready();
-        notifText.Text = text;
+		notifTitle.Text = title;
+		notifDescription.Text = description;
 		notif.Show();
 		anim.Play("NotifEnter");
 		await ToSignal(GetTree().CreateTimer(3), "timeout");

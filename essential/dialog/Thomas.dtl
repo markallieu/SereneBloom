@@ -1,0 +1,13 @@
+Join thomas 1
+Join kaine 1
+thomas: Selamat datang! Aku Thomas dan pemilik toko ini, ada yang ingin kamu beli?
+kaine: Halo juga, namaku Kaine.
+thomas: Oh Kaine? Kamu lagi jalan-jalan ke desa kami?
+kaine: Betul, sebenarnya saya ada tugas untuk membantu penduduk yang butuh bantuan. Apakah ada yang bisa saya bantu?
+thomas: Aku tidak perlu, tapi sepertinya Reva, tetangga sebelahku, butuh bantuan sedikit.
+if {haveTalkedToReva} == "true":
+	kaine: Baik, terimakasih!
+else:
+	krovan: Iya, dia tadi minta bantuan untuk membuat patung yang diminta Kepala Desa.
+	thomas: Oho, baik tolong bantu Reva ya!
+[signal arg="WarmGreeting"]

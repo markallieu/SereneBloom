@@ -1,0 +1,21 @@
+Join kaine 1
+Join reva 1
+if {haveTalkedToReva} == "true":
+	if {BuildingAStatueComplete} == "true":
+		Ini semua barang yang kamu minta.
+		Tunggu sebentar, saya cek dulu.
+		Iya benar ini semua barangnya yang kubutuhkan, terimakasih banyak Kaine.
+		Sama-sama dan Griselda ngomong kalau jangan terlalu memaksakan diri.
+	else:
+		Aeiri harusnya ada di Village Center yang berbentuk lingkaran itu, tapi aku gak tahu dimana Sigorius dan Griselda.
+else:
+	reva: Selamat datang, kamu sedang berkunjung ke Desa ini ya?
+	kaine: Benar, namaku Kaine.
+	reva: Salam kenal, namaku Reva.
+	kaine: Apakah kamu butuh bantuan? Sebenarnya aku ada tugas dari akademi untuk membantu orang-orang di desa ini.
+	reva: Wah, kebetulan aku butuh barang untuk membuat patung yang diminta Kepala Desa.
+	kaine: Barang apa saja yang perlu?
+	reva: 10 Sycamore Wood dari Griselda, 50 Marble dari Sigorius sama 2 Orchid dari Aeiri.
+	kaine: Oke, akan ku ambilkan.
+	VAR {haveTalkedToReva} = "true"
+	[signal arg="WarmGretting"]
