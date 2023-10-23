@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://ctxspuk5rfrqp"]
+[gd_scene load_steps=28 format=3 uid="uid://ctxspuk5rfrqp"]
 
+[ext_resource type="Script" path="res://essential/scenes/worlds/thomas_shop.cs" id="1_6dd2m"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_k1bxg"]
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="3_k43aj"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="4_e8mnd"]
@@ -894,6 +895,7 @@ texture = ExtResource("9_0jarf")
 10:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:0/0/physics_layer_0/angular_velocity = 0.0
 11:0/0 = 0
+11:0/0/y_sort_origin = 5
 11:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
@@ -1170,6 +1172,7 @@ texture = ExtResource("9_0jarf")
 5:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:7/0/physics_layer_0/angular_velocity = 0.0
 6:7/0 = 0
+6:7/0/y_sort_origin = 7
 6:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:7/0/physics_layer_0/angular_velocity = 0.0
 7:7/0 = 0
@@ -1622,6 +1625,7 @@ texture = ExtResource("10_3f50c")
 10:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:0/0/physics_layer_0/angular_velocity = 0.0
 11:0/0 = 0
+11:0/0/y_sort_origin = -5
 11:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
@@ -1660,8 +1664,10 @@ texture = ExtResource("10_3f50c")
 10:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:1/0/physics_layer_0/angular_velocity = 0.0
 11:1/0 = 0
+11:1/0/y_sort_origin = -7
 11:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:1/0/physics_layer_0/angular_velocity = 0.0
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.54074, -2.38649, -4.59619, -4.33103, -2.2981, -4.33103, -2.12132, -8, 2.47487, -8, 2.65165, -4.15425, 5.3033, -4.33103, 6.54074, -2.03293, 2.2981, 2.03293, -2.2981, 2.03293)
 12:1/0 = 0
 12:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:1/0/physics_layer_0/angular_velocity = 0.0
@@ -3518,6 +3524,7 @@ size = Vector2(28, 26)
 
 [node name="Thomas_Shop" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_6dd2m")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_k1bxg")]
 
@@ -3565,9 +3572,11 @@ layer_4/y_sort_origin = 0
 layer_4/z_index = 1
 layer_4/tile_data = PackedInt32Array(589833, 65540, 3, 589834, 131076, 1, 262155, 196612, 3, 917515, 327684, 6, 589836, 4, 3, 327695, 5, 10, 393231, 5, 11, 393232, 458756, 1, 524304, 5, 16, 589840, 5, 17, 262164, 65540, 1)
 
-[node name="shop_exitpoint" type="Area2D" parent="."]
+[node name="thomas_shop_exitpoint" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="shop_exitpoint"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="thomas_shop_exitpoint"]
 z_index = 1
-position = Vector2(251, 340)
+position = Vector2(251, 339)
 shape = SubResource("RectangleShape2D_c5rer")
+
+[connection signal="body_entered" from="thomas_shop_exitpoint" to="." method="_on_thomas_shop_exitpoint_body_entered"]

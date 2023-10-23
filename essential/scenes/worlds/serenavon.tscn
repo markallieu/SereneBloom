@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=34 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -3345,6 +3345,11 @@ size = Vector2(67.75, 130)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rk05q"]
 size = Vector2(129.5, 58.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbg6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0laea"]
+size = Vector2(40.5, 20)
+
 [node name="Serenavon" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_s47pv")
@@ -3436,6 +3441,19 @@ shape = SubResource("RectangleShape2D_mrq2d")
 position = Vector2(481.25, 371.25)
 shape = SubResource("RectangleShape2D_rk05q")
 
+[node name="thomas_shop_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="thomas_shop_transition_point"]
+position = Vector2(889, 1080)
+shape = SubResource("RectangleShape2D_gbg6a")
+
+[node name="reva_house_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="reva_house_transition_point"]
+z_index = 2
+position = Vector2(359.75, 1067)
+shape = SubResource("RectangleShape2D_0laea")
+
 [node name="Kravon" parent="." instance=ExtResource("15_icioc")]
 position = Vector2(905, 1192)
 
@@ -3447,3 +3465,5 @@ position = Vector2(848, 829)
 [connection signal="body_entered" from="ivory_lake_transition_point" to="." method="_on_ivory_lake_transition_point_body_entered"]
 [connection signal="body_entered" from="ivory_lake_transition_point/ivory_lake_checkpoint" to="." method="_on_ivory_lake_checkpoint_body_entered"]
 [connection signal="body_entered" from="solace_haven_transition_point" to="." method="_on_solace_haven_transition_point_body_entered"]
+[connection signal="body_entered" from="thomas_shop_transition_point" to="." method="_on_thomas_shop_transition_point_body_entered"]
+[connection signal="body_entered" from="reva_house_transition_point" to="." method="_on_reva_house_transition_point_body_entered"]

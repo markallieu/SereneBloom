@@ -12,7 +12,17 @@ public partial class serenavon : Node2D
         //ui.GlobalNotif("test");
         globals.currentScene = "serenavon";
         Node2D player = GetNode<Node2D>("playerKaine");
-        if (globals.firstSolaceLoad == false)
+        if (globals.firstThomasShopLoad == false)
+        {
+            Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon3X, globals.PlayerExitSerenavon3Y);
+            player.Position = newPositionSerenavon;
+        }
+        else if (globals.firstRevaHouseLoad == false)
+        {
+            Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon4X, globals.PlayerExitSerenavon4Y);
+            player.Position = newPositionSerenavon;
+        }
+        else if (globals.firstSolaceLoad == false)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon2X, globals.PlayerExitSerenavon2Y);
             player.Position = newPositionSerenavon;
@@ -49,7 +59,6 @@ public partial class serenavon : Node2D
 
         }
     }
-
     public void _on_ivory_lake_transition_point_body_entered(Node2D body)
     {
         if (body is playerKaine)
@@ -58,7 +67,6 @@ public partial class serenavon : Node2D
             globals.targetScene = "ivory_lake"; 
         }
     }
-
     public void _on_solace_haven_transition_point_body_entered(Node2D body)
     {
         if (body is playerKaine)
@@ -66,6 +74,23 @@ public partial class serenavon : Node2D
 
             globals.transitionScene = true;
             globals.targetScene = "solace_haven";
+        }
+    }
+    public void _on_thomas_shop_transition_point_body_entered(Node2D body)
+    {
+        if (body is playerKaine)
+        {
+
+            globals.transitionScene = true;
+            globals.targetScene = "thomas_shop";
+        }
+    }
+    public void _on_reva_house_transition_point_body_entered(Node2D body)
+    {
+        if (body is playerKaine)
+        {
+            globals.transitionScene = true;
+            globals.targetScene = "reva_house";
         }
     }
 
@@ -90,6 +115,23 @@ public partial class serenavon : Node2D
                 globals.firstGameLoad = false;
                 globals.firstIvoryLoad = false;
                 globals.firstSolaceLoad = false;
+            }
+            else if (globals.targetScene == "thomas_shop")
+            {
+                GetTree().ChangeSceneToFile("res://essential/scenes/worlds/thomas_shop.tscn");
+                globals.firstGameLoad = false;
+                globals.firstIvoryLoad = false;
+                globals.firstSolaceLoad = false;
+                globals.firstThomasShopLoad = false;
+            }
+            else if (globals.targetScene == "reva_house")
+            {
+                GetTree().ChangeSceneToFile("res://essential/scenes/worlds/reva_house.tscn");
+                globals.firstGameLoad = false;
+                globals.firstIvoryLoad = false;
+                globals.firstSolaceLoad = false;
+                globals.firstThomasShopLoad = false;
+                globals.firstRevaHouseLoad = false;
             }
             globals.FinishChangeScene();
         }
