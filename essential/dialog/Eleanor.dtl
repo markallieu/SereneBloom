@@ -11,6 +11,7 @@ else:
 	Eleanor: Hai, kamu Magus yang sedang berjelajah ya?
 	kaine: Benar, namaku Kaine.
 	Eleanor: Namaku Eleanor, Junior Paladin yang sedang liburan saja ke desa ini.
+	[signal arg="WarmGreeting"]
 	kaine: Baru pertama kali aku melihat seorang Paladin, kamu dari sektor mana?
 	Eleanor: Sektor Fortress of Imperial Cathedral.
 	kaine: Menarik, semoga kamu lulus menjadi Paladin resmi ya! Soalnya aku juga Junior.
@@ -20,5 +21,5 @@ else:
 	Eleanor: Aku baru sadar hilang ketika aku sudah disini, apakah kamu membantuku untuk mencarinya?
 	kaine: Tidak apa-apa, akan ku carikan segera.
 	Eleanor: Terimakasih, Kaine.
+	VAR {haveTalkedToEleanor} = "true"
 	[signal arg="LostJewelry"]
-	[signal arg="WarmGretting"]

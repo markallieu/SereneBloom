@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://d0l2hut3dnm3g"]
+[gd_scene load_steps=30 format=3 uid="uid://d0l2hut3dnm3g"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_36myb"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/ivory_lake.cs" id="1_gkaks"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://qb0fq5xxo2h3" path="res://essential/audio/Background_Music/Lake.ogg" id="13_xfodh"]
 [ext_resource type="PackedScene" uid="uid://dnk16gpaulu0c" path="res://essential/scenes/player/Sigorius.tscn" id="15_ysxwt"]
 [ext_resource type="PackedScene" uid="uid://bdknn1un7ljiy" path="res://essential/scenes/player/Eleanor.tscn" id="16_6jwdt"]
+[ext_resource type="PackedScene" uid="uid://dsll7760gir0c" path="res://essential/scenes/player/EleanorNecklaces.tscn" id="17_l3mpg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_p1yj5")
@@ -3349,7 +3350,7 @@ metadata/_edit_horizontal_guides_ = [-10.0, 57.0]
 [node name="playerKaine" parent="." instance=ExtResource("1_36myb")]
 z_index = 1
 texture_filter = 1
-position = Vector2(899, 723)
+position = Vector2(896, 723)
 
 [node name="Ivory_LakeCamera" type="Camera2D" parent="playerKaine"]
 zoom = Vector2(0.8, 0.8)
@@ -3419,5 +3420,8 @@ position = Vector2(728, 282)
 
 [node name="Eleanor" parent="." instance=ExtResource("16_6jwdt")]
 position = Vector2(364, 576)
+
+[node name="Area2D" parent="." instance=ExtResource("17_l3mpg")]
+position = Vector2(86, 703)
 
 [connection signal="body_entered" from="ivory_lake_exit_point" to="." method="_on_ivory_lake_exit_point_body_entered"]

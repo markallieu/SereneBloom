@@ -17,6 +17,7 @@ texture = ExtResource("1_hlefy")
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_1oajc")
 
-[node name="Area2D" parent="CollisionShape2D" instance=ExtResource("2_33ja6")]
+[node name="Area2D" parent="." instance=ExtResource("2_33ja6")]
+position = Vector2(0, 9)
 
-[node name="dialogic" parent="CollisionShape2D/Area2D" instance=ExtResource("3_jwtvw")]
+[node name="dialogic" parent="Area2D" instance=ExtResource("3_jwtvw")]

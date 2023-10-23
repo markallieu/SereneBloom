@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dwj180gv51iw4"]
+[gd_scene load_steps=29 format=3 uid="uid://dwj180gv51iw4"]
 
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="1_kb0dp"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/reva_house.cs" id="1_lc03e"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="11_7yn3u"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="12_dp0ng"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="13_usa08"]
+[ext_resource type="PackedScene" uid="uid://dccclnyjpfovh" path="res://essential/scenes/player/Reva.tscn" id="15_0vj2n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("3_gwfw8")
@@ -3618,5 +3619,9 @@ layer_4/tile_data = PackedInt32Array(65554, 458756, 4, 65559, 327684, 6, 20, 4, 
 z_index = 1
 position = Vector2(251, 339)
 shape = SubResource("RectangleShape2D_c5rer")
+
+[node name="Reva" parent="." instance=ExtResource("15_0vj2n")]
+z_index = 1
+position = Vector2(116, 190)
 
 [connection signal="body_entered" from="reva_house_exitpoint" to="." method="_on_reva_house_exitpoint_body_entered"]

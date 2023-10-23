@@ -12,7 +12,13 @@ func dialog(timeline):
 	Dialogic.start(timeline)
 	get_viewport().set_input_as_handled()
 	return 
-
+	
+func setNecklace():
+	Dialogic.VAR.haveFoundEleanorNecklace = "true"
+	return
+func setBuildStatue():
+	Dialogic.VAR.BuildingAStatueComplete = "true"
+	return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

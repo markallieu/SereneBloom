@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://by3t5nuhly3if"]
+[gd_scene load_steps=25 format=3 uid="uid://by3t5nuhly3if"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/solace_haven.cs" id="1_8yokk"]
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_mdqm0"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="9_ojrd4"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_xwmwg"]
 [ext_resource type="AudioStream" uid="uid://choa211w3uqv1" path="res://essential/audio/Background_Music/Tomb.ogg" id="12_adfok"]
-[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="14_81nwc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_np7gk")
@@ -3354,7 +3353,5 @@ shape = SubResource("RectangleShape2D_daore")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(752, 672)
-
-[node name="dialogic" parent="." instance=ExtResource("14_81nwc")]
 
 [connection signal="body_entered" from="solace_haven_exit_point" to="." method="_on_solace_haven_exit_point_body_entered"]

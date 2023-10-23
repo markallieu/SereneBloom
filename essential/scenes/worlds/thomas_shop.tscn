@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://ctxspuk5rfrqp"]
+[gd_scene load_steps=29 format=3 uid="uid://ctxspuk5rfrqp"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/thomas_shop.cs" id="1_6dd2m"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_k1bxg"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="11_n15au"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="12_yxfhh"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="13_y67qt"]
+[ext_resource type="PackedScene" uid="uid://cofgjxwbapqmu" path="res://essential/scenes/player/Thomas.tscn" id="15_7fwt8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("4_e8mnd")
@@ -3578,5 +3579,9 @@ layer_4/tile_data = PackedInt32Array(589833, 65540, 3, 589834, 131076, 1, 262155
 z_index = 1
 position = Vector2(251, 339)
 shape = SubResource("RectangleShape2D_c5rer")
+
+[node name="Thomas" parent="." instance=ExtResource("15_7fwt8")]
+z_index = 1
+position = Vector2(222, 136)
 
 [connection signal="body_entered" from="thomas_shop_exitpoint" to="." method="_on_thomas_shop_exitpoint_body_entered"]

@@ -1,10 +1,12 @@
-Camera2D
-CollisionShape2D
 Area2D
+Label
+CollisionShape2D
+Sprite2D
+CharacterBody2D
+Node
+Camera2D
 MarginContainer
 VBoxContainer
-Node
-Label
 AudioStreamPlayer2D
 AnimationPlayer
 RichTextLabel
@@ -14,9 +16,7 @@ CanvasLayer
 Node2D
 CollisionPolygon2D
 StaticBody2D
-CharacterBody2D
 TextureRect
-Sprite2D
 ProgressBar
 HBoxContainer
 ScrollContainer

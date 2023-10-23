@@ -3,7 +3,7 @@ Join kaine 1
 if {haveTalkedToSigorius} == "false":
 	sigorius: Halo, kamu mahasiswi Astrolite Tower ya?
 	kaine: Benar, saya Kaine, seorang Junior Magus dari Astrolite Tower.
-	sigorius: Namaku Sigorius, mantan anggota Guild Sky Piercer.”
+	sigorius: Namaku Sigorius, mantan anggota Guild Sky Piercer.
 	kaine: Sky Piercer yang mengalahkan Eldritch Beast itu!?
 	sigorius: Benar sekali, namun aku sudah mengundurkan diri karena usia.
 	kaine: Aku ga nyangka bisa ketemu orang yang sangat kuat disini.
@@ -16,7 +16,7 @@ if {haveTalkedToSigorius} == "false":
 	sigorius: Teruslah berjuang, potensi yang kamu miliki sangat besar, Magus.
 	kaine: Terimakasih banyak!
 	VAR {haveTalkedToSigorius} = "true"
-	[signal arg="WarmGretting"]
+	[signal arg="WarmGreeting"]
 if {haveTalkedToReva} == "true":
 	kaine: Reva bilang anda punya Marble, apakah itu benar?
 	sigorius: Benar, dia memesan Marble dari diriku.
@@ -24,6 +24,7 @@ if {haveTalkedToReva} == "true":
 	sigorius: Oh ya kalau kamu sudah memberi barang ini ke Reva, temui aku di Balai Desa.
 	sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
 	sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
+	[signal arg="Marble"]
 elif {haveTalkedToSigorius} == "true":
 	if {BuildingAStatue.Marble} == "true":
 		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.

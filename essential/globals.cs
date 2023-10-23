@@ -12,7 +12,6 @@ public partial class globals : Node
     public static bool firstThomasShopLoad = true;
     public static bool firstRevaHouseLoad = true;
 
-
     public static bool textPlayed = false;
 
     public static void FinishChangeScene()

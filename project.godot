@@ -23,6 +23,7 @@ aseprite_executable_path="C:/aseprite/build/bin/aseprite.exe"
 
 Globals="*res://essential/globals.cs"
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
+QuestVariables="*res://quest_variables.cs"
 
 [dialogic]
 
@@ -55,7 +56,8 @@ variables={
 "haveTalkedToGriselda": "false",
 "haveTalkedToKrovan": "false",
 "haveTalkedToReva": "false",
-"haveTalkedToSigorius": "false"
+"haveTalkedToSigorius": "false",
+"haveTalkedToThomas": "false"
 }
 layout/styles={
 "Default": {
