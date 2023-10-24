@@ -11,31 +11,42 @@ public partial class serenavon : Node2D
         //ui = GetNode<UI>("CanvasLayer");
         //ui.GlobalNotif("test");
         globals.currentScene = "serenavon";
+        globals.firstGameLoad = false;
         Node2D player = GetNode<Node2D>("playerKaine");
-        if (globals.firstThomasShopLoad == false)
+        if (globals.firstSerenavonLoad == true)
+        {
+            Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
+            player.Position = newPositionSerenavon;
+        }
+        else if (globals.firstThomasShopLoad == false)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon3X, globals.PlayerExitSerenavon3Y);
             player.Position = newPositionSerenavon;
+            globals.firstThomasShopLoad = true;
         }
         else if (globals.firstRevaHouseLoad == false)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon4X, globals.PlayerExitSerenavon4Y);
             player.Position = newPositionSerenavon;
+            globals.firstRevaHouseLoad = true;
         }
         else if (globals.firstSolaceLoad == false)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon2X, globals.PlayerExitSerenavon2Y);
             player.Position = newPositionSerenavon;
+            globals.firstSolaceLoad = true;
         }
         else if (globals.firstIvoryLoad == false)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon1X, globals.PlayerExitSerenavon1Y);
             player.Position = newPositionSerenavon;
+            globals.firstIvoryLoad = true;
         }
-        else if (globals.firstGameLoad == false)
+        else if (globals.firstTownhallLoad == false)
         {
-            Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
+            Vector2 newPositionSerenavon = new Vector2(globals.PlayerExitSerenavon5X, globals.PlayerExitSerenavon5Y);
             player.Position = newPositionSerenavon;
+            globals.firstTownhallLoad = true;
         }
         else
         {
@@ -64,7 +75,7 @@ public partial class serenavon : Node2D
         if (body is playerKaine)
         {
             globals.transitionScene = true;
-            globals.targetScene = "ivory_lake"; 
+            globals.targetScene = "ivory_lake";
         }
     }
     public void _on_solace_haven_transition_point_body_entered(Node2D body)
@@ -94,6 +105,15 @@ public partial class serenavon : Node2D
         }
     }
 
+    public void _on_townhall_transition_point_body_entered(Node2D body)
+    {
+        if (body is playerKaine)
+        {
+            globals.transitionScene = true;
+            globals.targetScene = "townhall";
+        }
+    }
+
     private void ChangeScene()
     {
         if (globals.transitionScene == true)
@@ -101,37 +121,38 @@ public partial class serenavon : Node2D
             if (globals.targetScene == "cliffside")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/cliffside.tscn");
+                globals.firstSerenavonLoad = false;
                 globals.firstGameLoad = false;
             }
             else if (globals.targetScene == "ivory_lake")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/ivory_lake.tscn");
+                globals.firstSerenavonLoad = false;
                 globals.firstGameLoad = false;
-                globals.firstIvoryLoad = false;
             }
             else if (globals.targetScene == "solace_haven")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/solace_haven.tscn");
+                globals.firstSerenavonLoad = false;
                 globals.firstGameLoad = false;
-                globals.firstIvoryLoad = false;
-                globals.firstSolaceLoad = false;
             }
             else if (globals.targetScene == "thomas_shop")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/thomas_shop.tscn");
+                globals.firstSerenavonLoad = false;
                 globals.firstGameLoad = false;
-                globals.firstIvoryLoad = false;
-                globals.firstSolaceLoad = false;
-                globals.firstThomasShopLoad = false;
             }
             else if (globals.targetScene == "reva_house")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/reva_house.tscn");
+                globals.firstSerenavonLoad = false;
                 globals.firstGameLoad = false;
-                globals.firstIvoryLoad = false;
-                globals.firstSolaceLoad = false;
-                globals.firstThomasShopLoad = false;
-                globals.firstRevaHouseLoad = false;
+            }
+            else if (globals.targetScene == "townhall")
+            {
+                GetTree().ChangeSceneToFile("res://essential/scenes/worlds/townhall.tscn");
+                globals.firstSerenavonLoad = false;
+                globals.firstGameLoad = false;
             }
             globals.FinishChangeScene();
         }

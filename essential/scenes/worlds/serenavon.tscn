@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=36 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://bpx2uppixnw6b" path="res://essential/audio/Background_Music/Village.ogg" id="13_y0cno"]
 [ext_resource type="PackedScene" uid="uid://so7q0lgm1ikh" path="res://essential/scenes/player/Kravon.tscn" id="15_icioc"]
 [ext_resource type="PackedScene" uid="uid://hwg7l60ycl4g" path="res://essential/scenes/player/Aeiri.tscn" id="16_yftan"]
+[ext_resource type="PackedScene" uid="uid://dbeud7kv4hhpr" path="res://essential/scenes/player/Griselda.tscn" id="17_ioau8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_k1sjv")
@@ -3350,6 +3351,8 @@ size = Vector2(129.5, 58.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0laea"]
 size = Vector2(40.5, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_no3g0"]
+
 [node name="Serenavon" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_s47pv")
@@ -3359,7 +3362,7 @@ script = ExtResource("1_s47pv")
 [node name="playerKaine" parent="." instance=ExtResource("1_eeq64")]
 z_index = 1
 texture_filter = 1
-position = Vector2(471, 405)
+position = Vector2(1000, 634)
 
 [node name="SerenavonCamera" type="Camera2D" parent="playerKaine"]
 zoom = Vector2(0.8, 0.8)
@@ -3454,11 +3457,20 @@ z_index = 2
 position = Vector2(359.75, 1067)
 shape = SubResource("RectangleShape2D_0laea")
 
+[node name="townhall_transition_point" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="townhall_transition_point"]
+position = Vector2(1000, 616)
+shape = SubResource("RectangleShape2D_no3g0")
+
 [node name="Kravon" parent="." instance=ExtResource("15_icioc")]
 position = Vector2(905, 1192)
 
 [node name="Aeiri" parent="." instance=ExtResource("16_yftan")]
 position = Vector2(848, 829)
+
+[node name="Griselda" parent="." instance=ExtResource("17_ioau8")]
+position = Vector2(166, 838)
 
 [connection signal="body_entered" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_entered"]
 [connection signal="body_exited" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_exited"]
@@ -3467,3 +3479,4 @@ position = Vector2(848, 829)
 [connection signal="body_entered" from="solace_haven_transition_point" to="." method="_on_solace_haven_transition_point_body_entered"]
 [connection signal="body_entered" from="thomas_shop_transition_point" to="." method="_on_thomas_shop_transition_point_body_entered"]
 [connection signal="body_entered" from="reva_house_transition_point" to="." method="_on_reva_house_transition_point_body_entered"]
+[connection signal="body_entered" from="townhall_transition_point" to="." method="_on_townhall_transition_point_body_entered"]

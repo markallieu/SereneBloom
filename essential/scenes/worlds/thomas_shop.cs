@@ -7,7 +7,7 @@ public partial class thomas_shop : Node2D
     {
         globals.currentScene = "thomas_house";
         Node2D player = GetNode<Node2D>("playerKaine");
-        if (globals.firstGameLoad == true)
+        if (globals.firstThomasShopLoad == true)
         {
             Vector2 newPositionThomasHouse = new Vector2(globals.PlayerStartThomasShopX, globals.PlayerStartThomasShopY);
             player.Position = newPositionThomasHouse;
@@ -35,7 +35,6 @@ public partial class thomas_shop : Node2D
             if (globals.targetScene == "serenavon")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
-                globals.firstGameLoad = false;
                 globals.firstThomasShopLoad = false;
                 globals.FinishChangeScene();
             }

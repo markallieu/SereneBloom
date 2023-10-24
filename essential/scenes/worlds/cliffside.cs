@@ -12,25 +12,26 @@ public partial class cliffside : Node2D
         globals.currentScene = "cliffside";
         Node2D player = GetNode<Node2D>("playerKaine");
         if (globals.firstGameLoad == true)
-        {                 
+        {
             Vector2 newPositionCliffiside = new Vector2(globals.PlayerStartCliffsideX, globals.PlayerStartCliffsideY);
             player.Position = newPositionCliffiside;
-        }    
+        }
         else if (globals.firstGameLoad == false)
-        {            
+        {
             Vector2 newPositionCliffiside = new Vector2(globals.PlayerExitCliffisideX, globals.PlayerExitCliffsideY);
             player.Position = newPositionCliffiside;
         }
         dialogic = (GDScript)GD.Load("res://addons/dialogic/Other/DialogicGameHandler.gd");
-        dialogicNode = (GodotObject) dialogic.New();
-        AddChild((Node) dialogicNode);
+        dialogicNode = (GodotObject)dialogic.New();
+        AddChild((Node)dialogicNode);
     }
 
     public override void _Process(double delta)
     {
         ChangeScene();
-        if(globals.textPlayed && !played){
-            var dialog = (Node) dialogicNode.Call("start","StartingTimeline");	
+        if (globals.textPlayed && !played)
+        {
+            var dialog = (Node)dialogicNode.Call("start", "StartingTimeline");
             AddChild(dialog);
             played = true;
         }
@@ -40,10 +41,11 @@ public partial class cliffside : Node2D
     {
         if (body is playerKaine)
         {
-            globals.transitionScene = true; 
+            globals.transitionScene = true;
+            globals.targetScene = "serenavon";
         }
     }
-    
+
     public void _on_serenavon_transition_point_body_exited(Node2D body)
     {
         if (body is playerKaine)
@@ -56,11 +58,11 @@ public partial class cliffside : Node2D
     {
         if (globals.transitionScene == true)
         {
-            if (globals.currentScene == "cliffside")
+            if (globals.targetScene == "serenavon")
             {
                 GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
                 globals.firstGameLoad = false;
-                globals.FinishChangeScene(); 
+                globals.FinishChangeScene();
             }
         }
     }

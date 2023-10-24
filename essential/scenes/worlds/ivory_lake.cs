@@ -25,7 +25,7 @@ public partial class ivory_lake : Node2D
         {
             globals.transitionScene = true;
             globals.targetScene = "serenavon";
-        }           
+        }
     }
 
     private void ChangeScene()
