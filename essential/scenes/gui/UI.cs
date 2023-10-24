@@ -36,7 +36,7 @@ public partial class UI : CanvasLayer
 	public void BuildingStatue(){
 		GlobalNotif("Building a Statue",$"Sycamore Wood: ({questVar.sycamore}/10), Marble: ({questVar.marble}/50), Orchid: ({questVar.orchid}/2)");
 		if(questVar.sycamore == 10 && questVar.marble == 50 && questVar.orchid ==2 ){
-			GlobalNotif("Building a Statue","Barang terpenuhi!, segera berikan kepada Reva.");
+			GlobalNotif("Building a Statue","Barang terpenuhi! Segera berikan kepada Reva.");
 			dialogic.Call("setBuildStatue");
 		}
 	}
@@ -69,6 +69,9 @@ public partial class UI : CanvasLayer
 				break;
 			case "EndLostJewelry":
 				GlobalNotif("Lost Jewelry","Quest Selesai!");
+				break;
+			case "StatueFinish":
+				GlobalNotif("Building a Statue","Quest Selesai!");
 				break;
 		}
     }
