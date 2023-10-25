@@ -1,0 +1,26 @@
+Join kaine 1
+Join thomas 1
+if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
+	if {BlessingEssenseFinished} == "false":
+		thomas: Selamat datang! Ada yang bisa kubantu?
+		kaine: Thomas, aku butuh beberapa informasi tentang barang-barang ini.
+		kaine: Vorten Rose dan Mana Crystal.
+		thomas: Hmm, apa tujuanmu mengumpulkan barang tersebut?
+		kaine: Untuk membuat potion Aieri untuk menyembuhkan mana poisoning di Heinrich.
+		thomas: Baiklah aku akan memberi beberapa lokasinya.
+		thomas: Aku sebenarnya sudah memiliki Mana Crystal, tapi aku ingin kamu menukar barang ini dengan suatu barang.
+		thomas: Blessings Essence, kamu harusnya bisa meminta barang ini dari Eleanor
+		thomas: Untuk Vorten Rose, aku sebenarnya tidak tahu detailnya tapi aku dengar Griselda pernah menemukan sebuah mawar berwarna hitam di Solace Haven.
+		kaine: Terimakasih banyak atas informasinya.
+		kaine: Aku akan mendapatkan Blessings Essence untuk kamu secepatnya.
+	else:
+		kaine: Ini Thomas, Blessing Essence yang kamu minta.
+		kaine: Aku sebenarnya penasaran, kamu butuh Blessing Essence itu untuk apa sih?
+		thomas: Aku punya kakak yang juga seorang Paladin.
+		thomas: Tapi ketika Imperial Cathedral melakukan ekspedisi ke Alberian Mountain, Squadnya tiba-tiba diserang Beast Tier Legendary secara mendadak.
+		thomas: Meskipun tidak ada korban tapi mereka terluka parah.
+		thomas: Aku berencana untuk memberikan Blessing Essence ini kepada Kakak-ku
+		kaine: Dengan Blessing Essence harusnya dia dapat sembuh dengan cepat.
+		thomas: Iya, karena itu aku sangat membutuhkannya.
+		thomas: Terimakasih Kaine, akan kutukarkan ini dengan Mana Crystal-ku.
+		[signal arg="Crystal"]

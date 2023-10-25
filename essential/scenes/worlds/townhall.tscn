@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bey80wxq3kxx2"]
+[gd_scene load_steps=30 format=3 uid="uid://bey80wxq3kxx2"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/townhall.cs" id="1_wcycq"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_kgjuw"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="12_diras"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="13_jo4gj"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="14_ljrql"]
+[ext_resource type="PackedScene" uid="uid://bdknn1un7ljiy" path="res://essential/scenes/player/Eleanor.tscn" id="15_hhfu8"]
+[ext_resource type="PackedScene" uid="uid://dnk16gpaulu0c" path="res://essential/scenes/player/Sigorius.tscn" id="16_dy7jx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("4_exry1")
@@ -3705,5 +3707,11 @@ layer_4/tile_data = PackedInt32Array(196625, 5, 16, 262161, 5, 17, 196617, 5, 16
 z_index = 1
 position = Vector2(251, 339)
 shape = SubResource("RectangleShape2D_c5rer")
+
+[node name="Eleanor" parent="." instance=ExtResource("15_hhfu8")]
+position = Vector2(39, 99)
+
+[node name="Sigorius" parent="." instance=ExtResource("16_dy7jx")]
+position = Vector2(39, 49)
 
 [connection signal="body_entered" from="townhall_exitpoint" to="." method="_on_townhall_exitpoint_body_entered"]

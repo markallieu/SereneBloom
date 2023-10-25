@@ -44,20 +44,29 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 text/autopauses={}
 variables={
+"BlessingEssenseFinished": "false",
 "BuildingAStatue": {
 "Marble": "false",
 "Orchid": "false",
 "Sycamore": "false"
 },
 "BuildingAStatueComplete": "false",
+"ManaAmbrosiaComplete": "false",
+"Timeline2": {
+"haveFInishedDialogManaPoisoning": "false"
+},
 "haveFoundEleanorNecklace": "false",
 "haveTalkedToAeiri": "false",
+"haveTalkedToAeiri2": "false",
 "haveTalkedToEleanor": "false",
 "haveTalkedToGriselda": "false",
+"haveTalkedToGriselda2": "false",
 "haveTalkedToKrovan": "false",
-"haveTalkedToReva": "false",
+"haveTalkedToReva": "falsei",
 "haveTalkedToSigorius": "false",
-"haveTalkedToThomas": "false"
+"haveTalkedToSigorius2": "false",
+"haveTalkedToThomas": "false",
+"haveTalkedToThomas2": "false"
 }
 layout/styles={
 "Default": {

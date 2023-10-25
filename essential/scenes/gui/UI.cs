@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel;
 
 public partial class UI : CanvasLayer
 {
@@ -43,6 +44,9 @@ public partial class UI : CanvasLayer
 
 	public void _on_dialogic_signal(string arg){
         GD.Print(arg);
+		if(questVar.IsQuestlineOneFinished()){
+			questVar.startQuestlineTwo();
+		}
 		
 		switch(arg){
 			case "WarmGreeting":
@@ -68,10 +72,24 @@ public partial class UI : CanvasLayer
 				GlobalNotif("Lost Jewelry","Temukan kalung Eleanor yang ada di tebing kiri danau.");
 				break;
 			case "EndLostJewelry":
+				questVar.NecklaceQuestFinished = true;
 				GlobalNotif("Lost Jewelry","Quest Selesai!");
 				break;
 			case "StatueFinish":
 				GlobalNotif("Building a Statue","Quest Selesai!");
+				questVar.StatueFinish = true;
+				break;
+			case "ManaDisease":
+				break;
+			case "ManaAmbrosia":
+				break;
+			case "ELeanorMagicGame":
+				break;
+			case "Lily":
+				break;
+			case "Rose":
+				break;
+			case "Crystal":
 				break;
 		}
     }

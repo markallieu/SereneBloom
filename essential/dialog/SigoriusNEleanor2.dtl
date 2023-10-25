@@ -1,0 +1,25 @@
+label start
+Join kaine 1
+Join sigorius 1
+Join Eleanor 1
+sigorius: Terimakasih telah datang Kaine.
+Eleanor: Seperti yang kamu lihat, pasien yang terbaring di sini adalah temanku bernama Heinrich yang terkena penyakit.
+sigorius: Tapi kita tidak tahu apa penyakitnya atau penyebabnya.
+kaine: (Aura ini, kayaknya ada hal yang bermasalah dengan Mana Core-nya.)
+kaine: Hm, kalau yang bisa saya rasakan sepertinya dia terkena Mana Poisoning.
+Eleanor: Mana Poisoning? Tapi Heinrich kan bukan seorang Magus dan tidak bisa menggunakan mana?
+sigorius: Mungkin Heinrich terdesak saat dalam perjalanannya dan memaksakan menggunakan magic.
+kaine: Apa yang Sigorius katakan benar.
+kaine: Seperti yang kita tahu, untuk menggunakan sebuah Magic Spell kita harus mengumpulkan mana dahulu ke dalam tubuh kita.
+kaine: Mana sendiri adalah energi di udara yang jika digunakan oleh Mana Core dalam tubuh, bisa menggunakan Core kita untuk melakukan Spell.
+kaine: Namun jika orang tersebut bukan Magus atau tidak bisa mengontrol Mana dengan baik...
+Eleanor: Maka jumlah Mana yang terlalu banyak bisa menyebabkan Mana Core retak dan Mana bisa tersebar pada organ vital.
+kaine: Benar sekali, Mana yang tidak terkontrol dapat merusak organ.
+kaine: Fenomena ini yang kita sebut Mana Poisoning.
+sigorius: Apakah kamu bisa membantunya?
+sigorius: Aku tadi bertanya kepada Aeiri tapi dia tidak bisa menyembuhkan karena ia tidak bisa mendiagnosa penyakit Heinrich.
+kaine: Aku akan menemuinya. Jika ku beritahu penyakit apa yang Heinrich alami, seharusnya dia bisa membuat potion untuk menyembuhkannya.
+Eleanor: Aeiri tadi sudah masuk ke rumahnya di sebelah kiri Village Center.
+Eleanor: Tolong bantu temanku, ya?
+[signal arg="ManaDisease"]
+VAR {Timeline2.haveFInishedDialogManaPoisoning} = "true"
