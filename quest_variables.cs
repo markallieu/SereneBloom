@@ -4,10 +4,16 @@ using System;
 public partial class quest_variables : Node
 {
 	public int currentQuestLine = 1;
-	public int warmGreetingProgress = 7;
-	public int sycamore = 10;
-	public int orchid = 2;
-	public int marble = 50;
+	public int warmGreetingProgress = 0;
+	public int sycamore = 0;
+	public int orchid = 0;
+	public int marble = 0;
+
+	// Questline 2
+
+	public int lily = 0;
+	public int rose = 0;
+	public int crystal = 0;
 
 	public bool NecklaceQuestFinished = true;
 	public bool StatueFinish = false;

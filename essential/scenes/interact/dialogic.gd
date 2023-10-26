@@ -19,6 +19,9 @@ func setNecklace():
 func setBuildStatue():
 	Dialogic.VAR.BuildingAStatueComplete = "true"
 	return
+func setManaAmbriosa():
+	Dialogic.VAR.ManaAmbrosiaComplete = "true"
+	return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

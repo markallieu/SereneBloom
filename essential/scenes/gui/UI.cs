@@ -42,6 +42,15 @@ public partial class UI : CanvasLayer
 		}
 	}
 
+	public void ManaAmbrosia(){
+		GlobalNotif("Mana Ambrosia", $"Lily of the Lake:({questVar.lily}/1) \nVorten Rose:({questVar.rose}/1) \nMana Crystal:({questVar.crystal}/1)");
+		if(questVar.lily == 1 && questVar.rose == 1 && questVar.crystal == 1 ){
+			GlobalNotif("Mana Ambrosia","Bahan terpenuhi! Segera berikan kepada Aeiri.");
+			dialogic.Call("setManaAmbriosa");
+		}
+	}
+
+
 	public void _on_dialogic_signal(string arg){
         GD.Print(arg);
 		if(questVar.IsQuestlineOneFinished()){
@@ -80,16 +89,23 @@ public partial class UI : CanvasLayer
 				questVar.StatueFinish = true;
 				break;
 			case "ManaDisease":
+				GlobalNotif("Mana Disease","Sembuhkan Heinrich yang terkena penyakit mana.");
 				break;
 			case "ManaAmbrosia":
+				ManaAmbrosia();
 				break;
 			case "ELeanorMagicGame":
 				break;
 			case "Lily":
+				questVar.lily += 1;
+				ManaAmbrosia();
 				break;
 			case "Rose":
+				questVar.rose +=1;
+				ManaAmbrosia();
 				break;
 			case "Crystal":
+				questVar.crystal +=1;
 				break;
 		}
     }
