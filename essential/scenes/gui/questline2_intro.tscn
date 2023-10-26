@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5r0a3i41bmaa"]
 
-[ext_resource type="Script" path="res://essential/scenes/gui/opening_text.cs" id="1_repna"]
+[ext_resource type="Script" path="res://essential/scenes/gui/questline2_intro2.cs" id="1_jxb2f"]
 [ext_resource type="FontFile" uid="uid://lnvsw5jj15lo" path="res://essential/art/gui/GUI Asset/ThaleahFat.ttf" id="2_q37fj"]
 
 [sub_resource type="Animation" id="Animation_qupli"]
@@ -89,7 +89,7 @@ _data = {
 }
 
 [node name="Questline2_intro" type="CanvasLayer"]
-script = ExtResource("1_repna")
+script = ExtResource("1_jxb2f")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

@@ -43,7 +43,7 @@ public partial class UI : CanvasLayer
 	}
 
 	public void ManaAmbrosia(){
-		GlobalNotif("Mana Ambrosia", $"Lily of the Lake:({questVar.lily}/1) \nVorten Rose:({questVar.rose}/1) \nMana Crystal:({questVar.crystal}/1)");
+		GlobalNotif("Mana Ambrosia", $"Lily of the Lake:({questVar.lily}/1) Vorten Rose:({questVar.rose}/1) \nMana Crystal:({questVar.crystal}/1)");
 		if(questVar.lily == 1 && questVar.rose == 1 && questVar.crystal == 1 ){
 			GlobalNotif("Mana Ambrosia","Bahan terpenuhi! Segera berikan kepada Aeiri.");
 			dialogic.Call("setManaAmbriosa");
@@ -53,9 +53,6 @@ public partial class UI : CanvasLayer
 
 	public void _on_dialogic_signal(string arg){
         GD.Print(arg);
-		if(questVar.IsQuestlineOneFinished()){
-			questVar.startQuestlineTwo();
-		}
 		
 		switch(arg){
 			case "WarmGreeting":
@@ -109,6 +106,10 @@ public partial class UI : CanvasLayer
 				questVar.crystal +=1;
 				break;
 		}
+		if(questVar.IsQuestlineOneFinished()){
+			//timer(5);
+			questVar.startQuestlineTwo();
+		}
     }
 	public async void GlobalNotif(string title,string description){
 		_Ready();
@@ -123,6 +124,10 @@ public partial class UI : CanvasLayer
 
 	public void _on_timeline_ended(){
 		questVar.isTalking = false;
+	}
+
+	async void timer(int second){
+		await ToSignal(GetTree().CreateTimer(second), "timeout");
 	}
 	
 }

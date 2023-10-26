@@ -4,7 +4,7 @@ using System;
 public partial class Lily : Area2D
 {
 	Label text;
-	Sprite2D necklace;
+	Sprite2D lily;
 
 	UI ui;
 	private Node2D dialogic;
@@ -15,7 +15,7 @@ public partial class Lily : Area2D
 	public override void _Ready()
 	{
 		text = GetNode<Label>("Label");
-		necklace = GetNode<Sprite2D>("Sprite2D");
+		lily = GetNode<Sprite2D>("Sprite2D");
 		ui = GetParent<Node2D>().GetNode<UI>("CanvasLayer");
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		text.Hide();
@@ -27,10 +27,11 @@ public partial class Lily : Area2D
 	{
 		if (Input.IsActionJustReleased("interact") && inside)
         {
-			necklace.Hide();
 			text.Hide();
-			ui.GlobalNotif("Kalung Diambil!","Kembalikan kepada Eleanor untuk menyelesaikan quest!");
-			dialogic.Call("setNecklace");
+			dialogic.Call("Lilylake");
+			//call Minigame
+			//ui.GlobalNotif("Kalung Diambil!","Kembalikan kepada Eleanor untuk menyelesaikan quest!");
+		
         }
 	}
 

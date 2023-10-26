@@ -4,7 +4,7 @@ using System;
 public partial class quest_variables : Node
 {
 	public bool isTalking = false;
-	public int currentQuestLine = 1;
+	public int currentQuestLine = 2;
 	public int warmGreetingProgress = 0;
 	public int sycamore = 0;
 	public int orchid = 0;
@@ -18,11 +18,11 @@ public partial class quest_variables : Node
 	public int rose = 0;
 	public int crystal = 0;
 
-	public bool NecklaceQuestFinished = true;
+	public bool NecklaceQuestFinished = false;
 	public bool StatueFinish = false;
-
+	public bool questline2_intro_played = false;
 	public bool IsQuestlineOneFinished(){
-		return (warmGreetingProgress > 7 && StatueFinish && NecklaceQuestFinished);
+		return (warmGreetingProgress >= 7 && StatueFinish && NecklaceQuestFinished);
 	}
 
 	public void startQuestlineTwo(){

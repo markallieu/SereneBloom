@@ -1,5 +1,12 @@
 Join sigorius 1
 Join kaine 1
+if {haveTalkedToSigorius} == "true":
+	if {haveTalkedToReva} == "false":
+		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
+		kaine: Terimakasih!
+	elif {BuildingAStatue.Marble} == "true":
+		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
+		kaine: Terimakasih!
 if {haveTalkedToSigorius} == "false":
 	sigorius: Halo, kamu mahasiswi Aetherius Tower ya?
 	kaine: Benar, saya Kaine, seorang Junior Magus dari Aetherius Tower.
@@ -18,17 +25,11 @@ if {haveTalkedToSigorius} == "false":
 	VAR {haveTalkedToSigorius} = "true"
 	[signal arg="WarmGreeting"]
 if {haveTalkedToReva} == "true":
-	kaine: Reva bilang anda punya Marble, apakah itu benar?
-	sigorius: Benar, dia memesan Marble dari diriku.
-	kaine: Terimakasih, Sigorius!
-	sigorius: Oh ya kalau kamu sudah memberi barang ini ke Reva, temui aku di Balai Desa.
-	sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
-	[signal arg="Marble"]
-	VAR {BuildingAStatue.Marble} = "true"
-elif {haveTalkedToSigorius} == "true":
-	if {haveTalkedToReva} == "false":
-		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
-		kaine: Terimakasih!
-	if {BuildingAStatue.Marble} == "true":
-		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
-		kaine: Terimakasih!
+	if {BuildingAStatue.Marble} == "false":
+		kaine: Reva bilang anda punya Marble, apakah itu benar?
+		sigorius: Benar, dia memesan Marble dari diriku.
+		kaine: Terimakasih, Sigorius!
+		sigorius: Oh ya kalau kamu sudah memberi barang ini ke Reva, temui aku di Balai Desa.
+		sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
+		[signal arg="Marble"]
+		VAR {BuildingAStatue.Marble} = "true"

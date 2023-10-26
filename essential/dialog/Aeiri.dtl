@@ -1,5 +1,10 @@
 Join kaine 1
 Join Aeiri 1
+if {haveTalkedToAeiri} == "true":
+	if {haveTalkedToReva} == "false":
+		Aeiri: Selamat siang!
+	elif {BuildingAStatue.Orchid} == "true":
+		Aeiri: Selamat siang!
 if {haveTalkedToAeiri} == "false":
 	kaine: Halo, namaku Kaine, Junior Magus.
 	Aeiri: Ooh Magus? Namaku Aeiri, Alchemist desa ini.
@@ -14,14 +19,10 @@ if {haveTalkedToAeiri} == "false":
 	VAR {haveTalkedToAeiri} = "true"
 	[signal arg="WarmGreeting"]
 if {haveTalkedToReva} == "true":
-	kaine: Oh ya, Reva bilang kamu ada Orchid. Apakah aku boleh minta 2?
-	Aeiri: Ini Orchidnya.
-	kaine: Terimakasih, Aeiri!
-	Aeiri: Sama-sama.
-	[signal arg="Orchid"]
-	VAR {BuildingAStatue.Orchid} = "true"
-elif {haveTalkedToAeiri} == "true":
-	if {haveTalkedToReva} == "false":
-		Aeiri: Selamat siang!
-	if {BuildingAStatue.Orchid} == "true":
-		Aeiri: Selamat siang!
+	if {BuildingAStatue.Orchid} == "false":
+		kaine: Oh ya, Reva bilang kamu ada Orchid. Apakah aku boleh minta 2?
+		Aeiri: Ini Orchidnya.
+		kaine: Terimakasih, Aeiri!
+		Aeiri: Sama-sama.
+		[signal arg="Orchid"]
+		VAR {BuildingAStatue.Orchid} = "true"

@@ -32,6 +32,9 @@ else:
 			kaine: Oke, akan ku sampaikan kepadanya.
 			[signal arg="Sycamore"]
 			VAR {BuildingAStatue.Sycamore} = "true"
+		else:
+			Griselda: Aku lihat kamu mulai membantu penduduk di desa ini.
+			Griselda: Terimakasih banyak tapi ingat jaga diri dan jangan terlalu memaksakan diri ya!
 	else:
 		Griselda: Aku lihat kamu mulai membantu penduduk di desa ini.
 		Griselda: Terimakasih banyak tapi ingat jaga diri dan jangan terlalu memaksakan diri ya!

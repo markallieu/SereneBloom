@@ -1,6 +1,10 @@
 Join kaine 1
 Join thomas 1
 if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
+	if {haveTalkedToThomas2} == "true":
+		if {BlessingEssenseFinished} == "false":
+			thomas: Tolong beri aku blessing essense untuk ditukarkan...
+			[end_timeline]
 	if {BlessingEssenseFinished} == "false":
 		thomas: Selamat datang! Ada yang bisa kubantu?
 		kaine: Thomas, aku butuh beberapa informasi tentang barang-barang ini.
@@ -13,6 +17,7 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 		thomas: Untuk Vorten Rose, aku sebenarnya tidak tahu detailnya tapi aku dengar Griselda pernah menemukan sebuah mawar berwarna hitam di Solace Haven.
 		kaine: Terimakasih banyak atas informasinya.
 		kaine: Aku akan mendapatkan Blessings Essence untuk kamu secepatnya.
+		VAR {haveTalkedToThomas2} = "true"
 	else:
 		kaine: Ini Thomas, Blessing Essence yang kamu minta.
 		kaine: Aku sebenarnya penasaran, kamu butuh Blessing Essence itu untuk apa sih?
@@ -24,3 +29,5 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 		thomas: Iya, karena itu aku sangat membutuhkannya.
 		thomas: Terimakasih Kaine, akan kutukarkan ini dengan Mana Crystal-ku.
 		[signal arg="Crystal"]
+else:
+	thomas: Apakah kamu ingin membeli sesuatu atau menukar barang?
