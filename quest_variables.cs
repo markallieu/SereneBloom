@@ -3,6 +3,7 @@ using System;
 
 public partial class quest_variables : Node
 {
+	public bool isTalking = false;
 	public int currentQuestLine = 1;
 	public int warmGreetingProgress = 0;
 	public int sycamore = 0;
@@ -10,6 +11,8 @@ public partial class quest_variables : Node
 	public int marble = 0;
 
 	// Questline 2
+
+	public bool ManaAmbrosiaStart = false;
 
 	public int lily = 0;
 	public int rose = 0;
@@ -19,11 +22,12 @@ public partial class quest_variables : Node
 	public bool StatueFinish = false;
 
 	public bool IsQuestlineOneFinished(){
-		return (warmGreetingProgress == 7 && StatueFinish && NecklaceQuestFinished);
+		return (warmGreetingProgress > 7 && StatueFinish && NecklaceQuestFinished);
 	}
 
 	public void startQuestlineTwo(){
 		currentQuestLine = 2;
+		GD.Print("Questline 2 started");
 		GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
 
 	}

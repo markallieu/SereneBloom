@@ -26,6 +26,9 @@ if {haveTalkedToReva} == "true":
 	[signal arg="Marble"]
 	VAR {BuildingAStatue.Marble} = "true"
 elif {haveTalkedToSigorius} == "true":
+	if {haveTalkedToReva} == "false":
+		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
+		kaine: Terimakasih!
 	if {BuildingAStatue.Marble} == "true":
 		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
 		kaine: Terimakasih!

@@ -93,6 +93,7 @@ public partial class UI : CanvasLayer
 				break;
 			case "ManaAmbrosia":
 				ManaAmbrosia();
+				questVar.ManaAmbrosiaStart = true;
 				break;
 			case "ELeanorMagicGame":
 				break;
@@ -119,5 +120,9 @@ public partial class UI : CanvasLayer
 		anim.Play("NotifExit");
 		notif.Hide();
     }
+
+	public void _on_timeline_ended(){
+		questVar.isTalking = false;
+	}
 	
 }

@@ -21,5 +21,7 @@ if {haveTalkedToReva} == "true":
 	[signal arg="Orchid"]
 	VAR {BuildingAStatue.Orchid} = "true"
 elif {haveTalkedToAeiri} == "true":
+	if {haveTalkedToReva} == "false":
+		Aeiri: Selamat siang!
 	if {BuildingAStatue.Orchid} == "true":
 		Aeiri: Selamat siang!

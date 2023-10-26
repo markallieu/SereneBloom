@@ -35,6 +35,7 @@ public partial class interactArea : Area2D
 			}else if(questVar.currentQuestLine ==2){
 				dialogic.Call("dialog",name + "2");
 			}
+			questVar.isTalking = true;
 	        //AddChild(dialog);
 			label.Hide();
         }

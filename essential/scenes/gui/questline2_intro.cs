@@ -7,7 +7,8 @@ public partial class Questline2_intro : CanvasLayer
 	quest_variables questVar;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
-	{	Hide();
+	{	
+		Hide();
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		if(questVar.currentQuestLine == 2){
 		Show();

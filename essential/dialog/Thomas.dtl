@@ -14,4 +14,4 @@ if {haveTalkedToThomas} == "false":
 	[signal arg="WarmGreeting"]
 	VAR {haveTalkedToThomas} = "true"
 else:
-	thomas: Apa yang kamu ingin membeli sesuatu atau menutkar barang?
+	thomas: Apakah kamu ingin membeli sesuatu atau menukar barang?
