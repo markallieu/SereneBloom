@@ -4,8 +4,8 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "false":
 	jump SigoriusNEleanor2/start
 else:
 	if {ManaAmbrosiaComplete} == "true":
-		Yaudh
-	elif {haveTalkedToAeiri2} == "":
+		Eleanor: Apa yang saya bisa bantu?
+	elif {haveTalkedToThomas2} == "true":
 		Eleanor: Hai Kaine, apakah kamu membutuhkan sesuatu?
 		kaine: Iya, salah satu material yang dibutuhkan untuk potion ada di Thomas.
 		kaine: Tapi dia mau menukarnya kalau kamu memberikannya Blessing Essence.

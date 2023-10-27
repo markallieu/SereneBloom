@@ -12,7 +12,7 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 		else:
 			Aeiri: Berikan barangnya padaku kalau kamu sudah menemukannya semua.
 	else:
-		Aeiri: Halo Kaine, ada yang bisa kubantu?"
+		Aeiri: Halo Kaine, ada yang bisa kubantu?
 		kaine: Kamu tahu kondisi Heinrich, kan?
 		kaine: Setelah aku periksa, ternyata penyakit yang dia dapat adalah mana poisoning.
 		Aeiri: Hmm, mana poisoning ya
@@ -22,10 +22,7 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 		Aeiri: Tapi yang kutakutkan itu bahan yang dibutuhkan agak susah untuk dicari.
 		kaine: Tidak apa-apa, aku akan mencarinya dan bertanya kepada penduduk lain di desa.
 		Aeiri: Baiklah, barang yang kamu butuhkan sedikit tapi agak langka.
-		Aeiri: Pertama, kita butuh wadah berupa gelas potion kaca yang berkualitas tinggi sehingga tidak mudah retak.
-		kaine: Ah, kebetulan seharusnya Reva memilikinya
-		Aeiri: Bagus sekali.
-		Aeiri: Lalu kita butuh Lily of the Lake, yang terdapat di tengah danau.
+		Aeiri: Kita butuh Lily of the Lake, yang terdapat di tengah danau.
 		Aeiri: Dua material terakhir ini yang sulit, karena aku tidak tahu letaknya.
 		Aeiri: Ada namanya Vorten Rose, yaitu sebuah mawar berwarna hitam dan Mana Crystal.
 		Aeiri: Seharusnya Thomas tahu beberapa informasi tentang barang tersebut, coba tanyalah pada dia.
@@ -33,3 +30,4 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 		VAR {haveTalkedToAeiri2} = "true"
 		[signal arg="ManaAmbrosia"]
 else:
+	Aeiri: Selamat siang!

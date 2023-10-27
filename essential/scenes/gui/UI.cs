@@ -9,6 +9,8 @@ public partial class UI : CanvasLayer
 	
 	Label notifTitle;
 	Label notifDescription;
+	
+	CharacterBody2D kaine;
 	bool test = true;
 
 	public int warmGreetingProgress = 0;
@@ -27,11 +29,28 @@ public partial class UI : CanvasLayer
 		anim = GetNode<AnimationPlayer>("AnimationPlayer");
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		dialogic = GetNode<Node2D>("dialogic");
+		kaine = GetParent().GetNode<CharacterBody2D>("playerKaine");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+	}
+
+	public void saveGame(){
+		GlobalNotif("Progres tersimpan!","Klik load untuk mengembalikan progres anda.");
+		questVar.position = kaine.Position;
+		questVar.save();
+		dialogic.Call("saveDialogic");
+		GD.Print("saved");
+	}
+	
+	public void loadGame(){
+		dialogic.Call("loadDialogic");
+		questVar.load();
+		GetTree().ChangeSceneToFile("res://essential/scenes/worlds/"  + globals.currentScene + ".tscn");
+		GD.Print("loaded");
+
 	}
 
 	public void BuildingStatue(){
@@ -106,7 +125,7 @@ public partial class UI : CanvasLayer
 				questVar.crystal +=1;
 				break;
 		}
-		if(questVar.IsQuestlineOneFinished()){
+		if(questVar.IsQuestlineOneFinished() && questVar.currentQuestLine == 1){
 			//timer(5);
 			questVar.startQuestlineTwo();
 		}

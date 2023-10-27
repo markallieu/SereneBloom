@@ -1,3 +1,7 @@
+Join Eleanor 1
+Join krovan 1
+if {NecklaceEnded} == "true":
+	Eleanor: Terimakasih atas bantuanmu...
 if {haveTalkedToEleanor} == "true":
 	if {haveFoundEleanorNecklace} == "true":
 		Eleanor: Terimakasih banyak, Kaine!
@@ -5,6 +9,7 @@ if {haveTalkedToEleanor} == "true":
 		kaine: Semoga kamu sukses menjadi Paladin resmi secepat mungkin!
 		Eleanor: Haha, semoga kamu juga bisa menjadi Magus yang hebat.
 		[signal arg="EndLostJewelry"]
+		VAR {NecklaceEnded} = "true"
 	else:
 		Eleanor: Tolong bantu temukan kalungku, ya?
 else:

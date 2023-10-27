@@ -13,6 +13,12 @@ public partial class playerKaine : CharacterBody2D
         walkingSound.Stream = GD.Load<AudioStream>("res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav");
         questVar = GetNode<quest_variables>("/root/QuestVariables");
         PauseMenu = GetNode<Control>("PauseMenu");   
+        if(questVar.needToChangePosition){
+            GD.Print("positionChanged");
+            Position = questVar.position;
+            GD.Print(Position);
+            questVar.needToChangePosition = false;
+        }
     }
 
     public override void _Process(double delta)

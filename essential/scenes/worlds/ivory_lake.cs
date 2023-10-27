@@ -6,6 +6,7 @@ public partial class ivory_lake : Node2D
     quest_variables questVar;
     CharacterBody2D sigorius;
     CharacterBody2D eleanor;
+    Area2D necklace;
     public override void _Ready()
     {
         questVar = GetNode<quest_variables>("/root/QuestVariables");
@@ -18,9 +19,13 @@ public partial class ivory_lake : Node2D
         }
         sigorius = GetNode<CharacterBody2D>("Sigorius");
         eleanor = GetNode<CharacterBody2D>("Eleanor");
-        if(questVar.currentQuestLine == 2){
+        if(questVar.currentQuestLine > 1){
         sigorius.Hide();
         eleanor.Hide();
+        }
+        necklace = GetNode<Area2D>("Area2D");
+        if(questVar.currentQuestLine > 1){
+            necklace.Hide();
         }
     }
 

@@ -1,6 +1,6 @@
 Join kaine 1
 Join thomas 1
-if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
+if {haveTalkedToAeiri2} == "true":
 	if {haveTalkedToThomas2} == "true":
 		if {BlessingEssenseFinished} == "false":
 			thomas: Tolong beri aku blessing essense untuk ditukarkan...
