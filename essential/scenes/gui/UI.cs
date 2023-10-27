@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel;
 
 public partial class UI : CanvasLayer
 {
@@ -8,6 +9,8 @@ public partial class UI : CanvasLayer
 	
 	Label notifTitle;
 	Label notifDescription;
+	
+	CharacterBody2D kaine;
 	bool test = true;
 
 	public int warmGreetingProgress = 0;
@@ -26,6 +29,7 @@ public partial class UI : CanvasLayer
 		anim = GetNode<AnimationPlayer>("AnimationPlayer");
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		dialogic = GetNode<Node2D>("dialogic");
+		kaine = GetParent().GetNode<CharacterBody2D>("playerKaine");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,13 +37,38 @@ public partial class UI : CanvasLayer
 	{
 	}
 
+	public void saveGame(){
+		GlobalNotif("Progres tersimpan!","Klik load untuk mengembalikan progres anda.");
+		questVar.position = kaine.Position;
+		questVar.save();
+		dialogic.Call("saveDialogic");
+		GD.Print("saved");
+	}
+	
+	public void loadGame(){
+		dialogic.Call("loadDialogic");
+		questVar.load();
+		GetTree().ChangeSceneToFile("res://essential/scenes/worlds/"  + globals.currentScene + ".tscn");
+		GD.Print("loaded");
+
+	}
+
 	public void BuildingStatue(){
 		GlobalNotif("Building a Statue",$"Sycamore Wood: ({questVar.sycamore}/10), Marble: ({questVar.marble}/50), Orchid: ({questVar.orchid}/2)");
 		if(questVar.sycamore == 10 && questVar.marble == 50 && questVar.orchid ==2 ){
-			GlobalNotif("Building a Statue","Barang terpenuhi!, segera berikan kepada Reva.");
+			GlobalNotif("Building a Statue","Barang terpenuhi! Segera berikan kepada Reva.");
 			dialogic.Call("setBuildStatue");
 		}
 	}
+
+	public void ManaAmbrosia(){
+		GlobalNotif("Mana Ambrosia", $"Lily of the Lake:({questVar.lily}/1) Vorten Rose:({questVar.rose}/1) \nMana Crystal:({questVar.crystal}/1)");
+		if(questVar.lily == 1 && questVar.rose == 1 && questVar.crystal == 1 ){
+			GlobalNotif("Mana Ambrosia","Bahan terpenuhi! Segera berikan kepada Aeiri.");
+			dialogic.Call("setManaAmbriosa");
+		}
+	}
+
 
 	public void _on_dialogic_signal(string arg){
         GD.Print(arg);
@@ -68,8 +97,37 @@ public partial class UI : CanvasLayer
 				GlobalNotif("Lost Jewelry","Temukan kalung Eleanor yang ada di tebing kiri danau.");
 				break;
 			case "EndLostJewelry":
+				questVar.NecklaceQuestFinished = true;
 				GlobalNotif("Lost Jewelry","Quest Selesai!");
 				break;
+			case "StatueFinish":
+				GlobalNotif("Building a Statue","Quest Selesai!");
+				questVar.StatueFinish = true;
+				break;
+			case "ManaDisease":
+				GlobalNotif("Mana Disease","Sembuhkan Heinrich yang terkena penyakit mana.");
+				break;
+			case "ManaAmbrosia":
+				ManaAmbrosia();
+				questVar.ManaAmbrosiaStart = true;
+				break;
+			case "ELeanorMagicGame":
+				break;
+			case "Lily":
+				questVar.lily += 1;
+				ManaAmbrosia();
+				break;
+			case "Rose":
+				questVar.rose +=1;
+				ManaAmbrosia();
+				break;
+			case "Crystal":
+				questVar.crystal +=1;
+				break;
+		}
+		if(questVar.IsQuestlineOneFinished() && questVar.currentQuestLine == 1){
+			//timer(5);
+			questVar.startQuestlineTwo();
 		}
     }
 	public async void GlobalNotif(string title,string description){
@@ -82,5 +140,13 @@ public partial class UI : CanvasLayer
 		anim.Play("NotifExit");
 		notif.Hide();
     }
+
+	public void _on_timeline_ended(){
+		questVar.isTalking = false;
+	}
+
+	async void timer(int second){
+		await ToSignal(GetTree().CreateTimer(second), "timeout");
+	}
 	
 }

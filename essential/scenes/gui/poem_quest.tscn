@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://cq5eh7t00v6d1"]
+
+[ext_resource type="Script" path="res://essential/scenes/gui/opening_text.cs" id="1_yyvqi"]
+[ext_resource type="Texture2D" uid="uid://c0t06snl5466i" path="res://essential/art/UI assets pack 2/UI books & more.png" id="2_uip6s"]
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="3_5g5tx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qmsy"]
+texture = ExtResource("2_uip6s")
+texture_margin_left = 40.0
+texture_margin_top = 56.0
+texture_margin_right = 40.0
+texture_margin_bottom = 56.0
+region_rect = Rect2(560, 16, 48, 64)
+
+[sub_resource type="Animation" id="Animation_qupli"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_8kpwk"]
+resource_name = "Show text"
+length = 8.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sc4j2"]
+_data = {
+"RESET": SubResource("Animation_qupli"),
+"Show text": SubResource("Animation_8kpwk")
+}
+
+[node name="Questline2_intro" type="CanvasLayer"]
+script = ExtResource("1_yyvqi")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -100.0
+offset_right = 83.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_8qmsy")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -93.0
+offset_right = 540.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.231954, 0.487322)
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("3_5g5tx")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Di alam tidur abadi ini,
+Dimana arwah berkeliaran dan menggerutu,
+Tiga di antara mereka, terikat ke bumi,
+Rahasia mereka terkubur di bawah tanah.
+
+Yang pertama adalah dia yang tersesat,
+Di kedalaman keputusasaan, dia hilang,
+Namanya terukir dalam warna kesedihan,
+Membimbingmu dimana kebenaran
+harus diberikan.
+
+Yang kedua adalah dia yang terlalu banyak
+mencintai,
+Hatinya dibakar oleh sentuhan api,
+Namanya berbisik tentang api yang
+tak berbalas,
+Membimbingmu dimana ketenangan
+ dapat diraih.
+
+Yang ketiga adalah dia yang mencari
+kekuatan yang tak terhingga,
+Ambisinya membawanya ke jalan yang gelap,
+Namanya terukir dalam 
+pengetahuan terlarang,
+Membimbingmu dimana rahasia tersimpan.
+
+Temukan nama mereka,
+dan kau akan membebaskan,
+Semua kesedihan setua tanah sendiri,
+Beserta apa yang kau ingin cari."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sc4j2")
+}
+
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

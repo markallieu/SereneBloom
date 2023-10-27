@@ -1,0 +1,19 @@
+Join Eleanor 1
+Join kaine 1
+if {Timeline2.haveFInishedDialogManaPoisoning} == "false":
+	jump SigoriusNEleanor2/start
+else:
+	if {ManaAmbrosiaComplete} == "true":
+		Eleanor: Apa yang saya bisa bantu?
+	elif {haveTalkedToThomas2} == "true":
+		Eleanor: Hai Kaine, apakah kamu membutuhkan sesuatu?
+		kaine: Iya, salah satu material yang dibutuhkan untuk potion ada di Thomas.
+		kaine: Tapi dia mau menukarnya kalau kamu memberikannya Blessing Essence.
+		Eleanor: Aku sebenarnya sudah mempelajari spell untuk membuat Blessing Essence sendiri tetapi kapasitas manaku tidak cukup.
+		kaine: Tenang saja, akan ku bantu. Magus bisa menyalurkan mana mereka ke orang lain.
+		Eleanor: Apakah tidak apa-apa? Kudengar resikonya lumayan besar.
+		kaine: Tenang saja, akan ku tunjukkan kemampuanku.
+		[signal arg="ELeanorMagicGame"]
+	else:
+		Eleanor: Semoga Aeiri bisa meracik potion yang efektif.
+		kaine: Tenang aja, Aeiri ini Alchemist yang sangat terkenal kehebatannya.

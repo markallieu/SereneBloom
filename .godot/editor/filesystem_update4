@@ -1,9 +1,18 @@
+res://essential/scenes/worlds/ivory_lake.tscn
 res://essential/scenes/magic_minigame/game/game_over.tscn
 res://UITheme.tres
 res://Themes/UI_theme_2.tres
+res://essential/dialog/Aeiri2.dtl
+res://essential/dialog/Thomas2.dtl
 res://Themes/UITheme.tres
 res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.tscn
 res://essential/scenes/worlds/serenavon.tscn
+res://essential/scenes/player/EleanorNecklaces.tscn
+res://essential/scenes/player/Lily.tscn
+res://essential/scenes/gui/questline2_intro.tscn
+res://essential/scenes/gui/UI.tscn
+res://essential/scenes/gui/pause_menu.tscn
+res://essential/scenes/player/playerKaine.tscn
 res://essential/scenes/magic_minigame/game/magic_complete.tscn
 res://essential/scenes/magic_minigame/game/tutorial_text.tscn
 res://essential/globals.cs
@@ -19,6 +28,7 @@ res://essential/scenes/gui/opening_text.cs
 res://essential/scenes/gui/OptionMenu.cs
 res://essential/scenes/gui/PauseOption.cs
 res://essential/scenes/gui/pause_menu.cs
+res://essential/scenes/gui/questline2_intro2.cs
 res://essential/scenes/gui/SFXSlider.cs
 res://essential/scenes/gui/text_panel.cs
 res://essential/scenes/gui/UI.cs
@@ -36,6 +46,7 @@ res://essential/scenes/magic_minigame/game/game_over.cs
 res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.cs
 res://essential/scenes/magic_minigame/game/tutorial_text.cs
 res://essential/scenes/player/EleanorNecklace.cs
+res://essential/scenes/player/Lily.cs
 res://essential/scenes/player/playerKaine.cs
 res://essential/scenes/worlds/cliffside.cs
 res://essential/scenes/worlds/Dummy.cs

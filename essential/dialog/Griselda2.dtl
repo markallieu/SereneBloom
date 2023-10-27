@@ -1,0 +1,22 @@
+Join  1
+Join  1
+if {haveTalkedToGriselda2} == "false":
+	if {haveTalkedToAeiri2} == "true":
+		kaine: Griselda, aku mau tanya sesuatu.
+		Griselda: Boleh aja, kamu mau apa?
+		kaine: Apakah kamu tahu cara mendapatkan Vorten Rose?
+		Griselda: Hmm, barang ini membutku agak bingung sih.
+		Griselda: Sekitar beberapa hari lalu, aku melihat mawar hitam saat berkunjung ke makam di bagian Utara Desa, Solace Haven.
+		Griselda: Aku mengunjungi makam Nenek-ku dan mengecek beberapa batu nisan lainnya.
+		Griselda: Lalu tiba-tiba ketika aku ingin pulang, aku melihat Vorten Rose di ujung makam.
+		Griselda: Tapi karena aku kecapekan, aku langsung pulang.
+		Griselda: Sebenarnya sih ada beberapa legenda yang konon bisa memunculkan bunga itu.
+		kaine: Seperti apa legendanya?
+		Griselda: Seharusnya ada kertas di Solace Haven tentang legendanya, coba kamu ke sana.
+		kaine: Terimakasih lagi Griselda! Aku akan kesana.
+		Griselda: Sama-sama.
+		VAR {haveTalkedToGriselda2} = "true"
+	else:
+		Griselda: Semangat terus ya buat kuliahnya, aku yakin kamu bisa jadi Magus yang hebat suatu hari.
+else:
+	Griselda: Semangat terus ya buat kuliahnya, aku yakin kamu bisa jadi Magus yang hebat suatu hari.

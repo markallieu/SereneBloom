@@ -5,13 +5,20 @@ public partial class playerKaine : CharacterBody2D
 {   
     private AudioStreamPlayer2D walkingSound;
     private Control PauseMenu;
+    quest_variables questVar;
     Random random = new Random();
     public override void _Ready()
     {
         walkingSound = GetNode<AudioStreamPlayer2D>("WalkingSound");
         walkingSound.Stream = GD.Load<AudioStream>("res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX/03_Step_grass_03.wav");
-       
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
         PauseMenu = GetNode<Control>("PauseMenu");   
+        if(questVar.needToChangePosition){
+            GD.Print("positionChanged");
+            Position = questVar.position;
+            GD.Print(Position);
+            questVar.needToChangePosition = false;
+        }
     }
 
     public override void _Process(double delta)
@@ -29,7 +36,7 @@ public partial class playerKaine : CharacterBody2D
     private Vector2 _velocity = Vector2.Zero;
     private Vector2 _moveDirection = Vector2.Zero;
     private string _currentDirection;
-    [Export] private const float _speed = 100f;
+    [Export] private const float _speed = 500f;
 
     public override void _PhysicsProcess(double delta)
     {
@@ -39,7 +46,7 @@ public partial class playerKaine : CharacterBody2D
     public void PlayerMovement()
     {
         _moveDirection = Vector2.Zero; // Reset movement direction each frame
-
+        if(!questVar.isTalking){
         // Move the character body based on the input direction and assigned a string variable direction 
         if (Input.IsActionPressed("ui_right"))
         {
@@ -60,6 +67,7 @@ public partial class playerKaine : CharacterBody2D
         {
             _currentDirection = "Up";
             _moveDirection.Y -= 1;
+        }
         }
 
         // Calculates the _moveDirection vector and then checks if it's >0

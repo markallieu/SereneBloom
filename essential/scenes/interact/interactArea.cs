@@ -3,8 +3,7 @@ using System;
 
 public partial class interactArea : Area2D
 {
-	[Export]
-	string timeline = "Quest1Kravon";
+	quest_variables questVar;
 	bool canInteract = true;
 	bool inside = false;
 	//private GDScript dialogic;
@@ -19,6 +18,7 @@ public partial class interactArea : Area2D
 		//dialogic = (GDScript)GD.Load("res://addons/dialogic/Other/DialogicGameHandler.gd");
         //dialogicNode = (GodotObject) dialogic.New();
         //AddChild((Node) dialogicNode);
+		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		label  = GetNode<Label>("Label");
 		label.Hide();
 		dialogic = GetNode<Node2D>("dialogic");
@@ -30,7 +30,12 @@ public partial class interactArea : Area2D
 	{
 		if (Input.IsActionJustReleased("interact") && inside)
         {
-			dialogic.Call("dialog",name);
+			if(questVar.currentQuestLine == 1){
+				dialogic.Call("dialog",name);
+			}else if(questVar.currentQuestLine ==2){
+				dialogic.Call("dialog",name + "2");
+			}
+			questVar.isTalking = true;
 	        //AddChild(dialog);
 			label.Hide();
         }

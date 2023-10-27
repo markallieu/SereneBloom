@@ -1,3 +1,8 @@
+ScrollContainer
+Label
+Panel
+TextureRect
+NinePatchRect
 AudioStreamPlayer2D
 AnimationPlayer
 CollisionShape2D
@@ -19,10 +24,17 @@ CharacterBody2D
 Node
 Camera2D
 MarginContainer
+VBoxContainer
+AudioStreamPlayer2D
+AnimationPlayer
 RichTextLabel
+Button
+CanvasLayer
+Node2D
 Panel
 CollisionPolygon2D
 StaticBody2D
+ProgressBar
 HBoxContainer
 ScrollContainer
 CheckBox
@@ -30,3 +42,7 @@ TabBar
 TabContainer
 CheckButton
 NinePatchRect
+ColorRect
+CollisionPolygon2D
+Timer
+HSlider

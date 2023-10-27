@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=37 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://so7q0lgm1ikh" path="res://essential/scenes/player/Kravon.tscn" id="15_icioc"]
 [ext_resource type="PackedScene" uid="uid://hwg7l60ycl4g" path="res://essential/scenes/player/Aeiri.tscn" id="16_yftan"]
 [ext_resource type="PackedScene" uid="uid://dbeud7kv4hhpr" path="res://essential/scenes/player/Griselda.tscn" id="17_ioau8"]
+[ext_resource type="PackedScene" uid="uid://c5r0a3i41bmaa" path="res://essential/scenes/gui/questline2_intro.tscn" id="18_62b77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_k1sjv")
@@ -3356,6 +3357,9 @@ size = Vector2(40.5, 20)
 [node name="Serenavon" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_s47pv")
+
+[node name="Questline2_intro" parent="." instance=ExtResource("18_62b77")]
+visible = false
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_eq8io")]
 

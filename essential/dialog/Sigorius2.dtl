@@ -1,0 +1,19 @@
+Join kaine 1
+Join sigorius 1
+if {Timeline2.haveFInishedDialogManaPoisoning} == "false":
+	jump questline2
+else:
+	if {haveTalkedToSigorius2} == "true":
+		sigorius: Semangat terus di Aetherius Tower, Kaine.
+	else:
+		kaine: Sigorius, aku mau tanya tentang sistem Tier-ing monster.
+		kaine: Aku dengar Eldritch Beast kan monster paling kuat di Benua ini.
+		sigorius: Monster atau Beast itu dibedakan menjadi 6 tingkat atau Tier.
+		sigorius: Underling, Dominant, Apex, Legendary, Primordial dan Eldritch.Guild-ku atau kelompok-ku dulu adalah yang pertama untuk mengalahkan Eldritch Beast.
+		sigorius: Aku masih bangga buat Guild-ku, meskipun sudah lama sejak Eldritch Beast pertama dikalahkan, tetapi generasi sekarang lebih kuat dari generasiku dulu.
+		kaine: Haha, Guild Sky Piercer sebenarnya itu salah satu Guild yang aku paling ingin masuki.
+		sigorius: Hehe, jika kemampuanmu bisa konsisten dan meningkat seperti ini.
+		sigorius: Aku jamin kamu akan lulus kualifikasinya secara gampang.
+		sigorius: Kembalilah ke desa ini kalau kamu sudah lulus, akan ku antarkan ke HQ mereka.
+		kaine: Terimakasih banyak!.
+		VAR {haveTalkedToSigorius2} = "true"

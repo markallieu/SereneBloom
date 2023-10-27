@@ -1,10 +1,3 @@
-Join krovan 1
 Join kaine 1
-krovan: Luar biasa, spellnya sangat simpel namun memiliki akurasi dan cepat.
-kaine: Hehe, terimakasih Pak.
-krovan: Silahkan kamu kenalan dengan semua penduduk desa ini.
-krovan: Setelah itu tolonglah mereka dengan hal yang mereka butuhkan.
-kaine: Baik Pak, terimakasih banyak.
-krovan: Hahaha, sama-sama, Junior Magus.
-[signal arg="WarmGreeting"]
-VAR {haveTalkedToKrovan} = "true"
+Join krovan 1
+krovan: Bantulah orang-orang di desa ini, aku janji akan memberikanmu hadiah yang sangat manis pada akhirnya.

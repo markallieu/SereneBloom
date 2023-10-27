@@ -6,6 +6,13 @@ if {haveTalkedToReva} == "true":
 		reva: Tunggu sebentar, saya cek dulu.
 		reva: Iya benar ini semua barangnya yang kubutuhkan, terimakasih banyak Kaine.
 		kaine: Sama-sama dan Griselda ngomong kalau jangan terlalu memaksakan diri.
+		reva: Haha maaf, tapi semua karyaku harus kubuat sebagus mungkin.
+		kaine: Hm… tapi jangan sampai berlebihan ya, aku nanti khawatir.
+		kaine: Semoga lancar ya pekerjaanmu, aku pergi dulu.
+		VAR {BuildingAStatueComplete} = "true2"
+		[signal arg="StatueFinish"]
+	elif {BuildingAStatueComplete} == "true2":
+		kaine: (Kayaknya Reva lagi sibuk nih, gak boleh aku ganggu.)
 	else:
 		reva: Aeiri harusnya ada di Village Center yang berbentuk lingkaran itu, tapi aku gak tahu dimana Sigorius dan Griselda.
 else:

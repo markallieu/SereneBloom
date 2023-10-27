@@ -1,0 +1,33 @@
+Join kaine 1
+Join Aeiri 1
+if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
+	if {haveTalkedToAeiri2} == "true":
+		if {ManaAmbrosiaComplete} == "true":
+			Aeiri: Aku ga nyangka kamu bisa nemu semua barang yang aku minta.
+			kaine: Memang agak ribet sih aku mencari barangnya, tapi akhirnya aku nemu semua.
+			Aeiri: Oke tunggu sebentar ya.
+			Aeiri: Proses pembuatan Mana Ambrosia memakan waktu lumayan lama.
+			Aeiri: Ini dia Mana Ambrosianya, berikan ini ke Heinrich secepat mungkin.
+			kaine: Terimakasih banyak atas potionnya, terimakasih!
+		else:
+			Aeiri: Berikan barangnya padaku kalau kamu sudah menemukannya semua.
+	else:
+		Aeiri: Halo Kaine, ada yang bisa kubantu?
+		kaine: Kamu tahu kondisi Heinrich, kan?
+		kaine: Setelah aku periksa, ternyata penyakit yang dia dapat adalah mana poisoning.
+		Aeiri: Hmm, mana poisoning ya
+		kaine: Bagaimana? Apakah kamu bisa meracik obat untuk menyembuhkannya
+		Aeiri: Harusnya bisa sih, aku akan membuat Mana Ambrosia.
+		kaine: Wah, namanya kedengarannya keren!
+		Aeiri: Tapi yang kutakutkan itu bahan yang dibutuhkan agak susah untuk dicari.
+		kaine: Tidak apa-apa, aku akan mencarinya dan bertanya kepada penduduk lain di desa.
+		Aeiri: Baiklah, barang yang kamu butuhkan sedikit tapi agak langka.
+		Aeiri: Kita butuh Lily of the Lake, yang terdapat di tengah danau.
+		Aeiri: Dua material terakhir ini yang sulit, karena aku tidak tahu letaknya.
+		Aeiri: Ada namanya Vorten Rose, yaitu sebuah mawar berwarna hitam dan Mana Crystal.
+		Aeiri: Seharusnya Thomas tahu beberapa informasi tentang barang tersebut, coba tanyalah pada dia.
+		kaine: Oke Nyonya Alchemist, akan kucarikan semua bahannya.
+		VAR {haveTalkedToAeiri2} = "true"
+		[signal arg="ManaAmbrosia"]
+else:
+	Aeiri: Selamat siang!

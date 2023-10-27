@@ -1,15 +1,22 @@
 Join sigorius 1
 Join kaine 1
+if {haveTalkedToSigorius} == "true":
+	if {haveTalkedToReva} == "false":
+		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
+		kaine: Terimakasih!
+	elif {BuildingAStatue.Marble} == "true":
+		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
+		kaine: Terimakasih!
 if {haveTalkedToSigorius} == "false":
-	sigorius: Halo, kamu mahasiswi Astrolite Tower ya?
-	kaine: Benar, saya Kaine, seorang Junior Magus dari Astrolite Tower.
+	sigorius: Halo, kamu mahasiswi Aetherius Tower ya?
+	kaine: Benar, saya Kaine, seorang Junior Magus dari Aetherius Tower.
 	sigorius: Namaku Sigorius, mantan anggota Guild Sky Piercer.
 	kaine: Sky Piercer yang mengalahkan Eldritch Beast itu!?
 	sigorius: Benar sekali, namun aku sudah mengundurkan diri karena usia.
 	kaine: Aku ga nyangka bisa ketemu orang yang sangat kuat disini.
-	sigorius: Hahaha! Ayolah, aku sudah tua jadi aku tidak sekuat dulu. Tapi seorang Junior Sanctum Tower ya? Berapa Luminous Duel yang sudah kamu menangkan.
+	sigorius: Hahaha! Ayolah, aku sudah tua jadi aku tidak sekuat dulu. Tapi seorang Junior Aetherius Tower ya? Berapa Luminous Duel yang sudah kamu menangkan.
 	kaine: Sekitar 27 kali kemenangan dari 30 pertandingan.
-	sigorius: Heh, memang pantas kamu masuk Sanctum Tower, talentamu sangat hebat. Apakah aku boleh tahu apa Branch Magic anda? Tidak apa-apa kalau kamu tidak mau beritahu.
+	sigorius: Heh, memang pantas kamu masuk Aetherius Tower, talentamu sangat hebat. Apakah aku boleh tahu apa Branch Magic anda? Tidak apa-apa kalau kamu tidak mau beritahu.
 	kaine: Tidak apa-apa, Branch Magicku adalah Vermillion Fortress.
 	sigorius: Kamu menang sebanyak itu hanya dengan defensif dan support spell?
 	kaine: Hahaha, 12 kemenanganku dulu berasal dari Branch lamaku Crimson Burst. Tapi setelah itu aku meningkatkan menjadi defensif yaitu Vermillion Fortress.
@@ -18,14 +25,11 @@ if {haveTalkedToSigorius} == "false":
 	VAR {haveTalkedToSigorius} = "true"
 	[signal arg="WarmGreeting"]
 if {haveTalkedToReva} == "true":
-	kaine: Reva bilang anda punya Marble, apakah itu benar?
-	sigorius: Benar, dia memesan Marble dari diriku.
-	kaine: Terimakasih, Sigorius!
-	sigorius: Oh ya kalau kamu sudah memberi barang ini ke Reva, temui aku di Balai Desa.
-	sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
-	sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
-	[signal arg="Marble"]
-elif {haveTalkedToSigorius} == "true":
-	if {BuildingAStatue.Marble} == "true":
-		sigorius: Semoga kamu menjadi salah satu Magus terkuat di Aetherius Tower, Kaine.
-		kaine: Terimakasih!
+	if {BuildingAStatue.Marble} == "false":
+		kaine: Reva bilang anda punya Marble, apakah itu benar?
+		sigorius: Benar, dia memesan Marble dari diriku.
+		kaine: Terimakasih, Sigorius!
+		sigorius: Oh ya kalau kamu sudah memberi barang ini ke Reva, temui aku di Balai Desa.
+		sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
+		[signal arg="Marble"]
+		VAR {BuildingAStatue.Marble} = "true"

@@ -5,6 +5,7 @@ public partial class pause_menu : Control
 {
 	private Control pauseOption;
 	private AudioStreamPlayer2D clickSound;
+	private UI ui;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -13,6 +14,7 @@ public partial class pause_menu : Control
 		pauseOption = GetParent().GetNode<Control>("PauseOption");
 		clickSound =  GetNode<AudioStreamPlayer2D>("UI_SFX");
 		clickSound.VolumeDb = 5;
+		ui = GetParent<UI>();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,8 +39,21 @@ public partial class pause_menu : Control
 		Hide();
 	}
 	public void _on_option_pressed(){
+		clickSound.Play();
 		Hide();
 		pauseOption.Show();
+	}
+	public void _on_save_pressed(){
+		clickSound.Play();
+		GetTree().Paused = false;
+		Hide();
+		ui.saveGame();
+	}
+	public void _on_load_pressed(){
+		clickSound.Play();
+		GetTree().Paused = false;
+		Hide();
+		ui.loadGame();
 	}
 	public void _on_quit_pressed(){
 		GetTree().Quit();
