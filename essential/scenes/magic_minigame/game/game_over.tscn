@@ -2,7 +2,22 @@
 
 [ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/game_over.cs" id="1_6rcdj"]
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="3_ci77l"]
-[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://Themes/UITheme.tres" id="3_n43qf"]
+[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="3_n43qf"]
+
+[sub_resource type="Animation" id="Animation_p0q6y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
 
 [sub_resource type="Animation" id="Animation_87nkl"]
 resource_name = "Text"
@@ -18,21 +33,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_p0q6y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8kq5b"]

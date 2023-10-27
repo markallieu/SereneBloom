@@ -62,7 +62,7 @@ public partial class UI : CanvasLayer
 	}
 
 	public void ManaAmbrosia(){
-		GlobalNotif("Mana Ambrosia", $"Lily of the Lake:({questVar.lily}/1) Vorten Rose:({questVar.rose}/1) \nMana Crystal:({questVar.crystal}/1)");
+		GlobalNotif("Mana Ambrosia", $"Lily of the Lake:({questVar.lily}/1) Vorten Rose:({questVar.rose}/1) Mana Crystal:({questVar.crystal}/1)");
 		if(questVar.lily == 1 && questVar.rose == 1 && questVar.crystal == 1 ){
 			GlobalNotif("Mana Ambrosia","Bahan terpenuhi! Segera berikan kepada Aeiri.");
 			dialogic.Call("setManaAmbriosa");
