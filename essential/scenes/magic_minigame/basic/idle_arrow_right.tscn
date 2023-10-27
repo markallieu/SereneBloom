@@ -1,0 +1,102 @@
+[gd_scene load_steps=10 format=3 uid="uid://cot3mbcrxpqjg"]
+
+[ext_resource type="Script" path="res://essential/scenes/magic_minigame/basic/idle_arrow_right.cs" id="1_qk6tu"]
+[ext_resource type="Texture2D" uid="uid://cvs8ifyttkaw0" path="res://essential/art/Magic_Minigame/AR_Idle.png" id="2_xivt4"]
+[ext_resource type="Texture2D" uid="uid://nysw4l7ujvrm" path="res://essential/art/Magic_Minigame/AR_Good.png" id="3_cxafw"]
+[ext_resource type="Texture2D" uid="uid://px1ww5s10ita" path="res://essential/art/Magic_Minigame/AR_Bad.png" id="4_gw4k0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlaqg"]
+size = Vector2(14, 13.0021)
+
+[sub_resource type="Animation" id="Animation_771mt"]
+resource_name = "Bad"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteBad:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1j3ov"]
+resource_name = "Good"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteGood:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4ly0e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteGood:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteBad:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xguat"]
+_data = {
+"Bad": SubResource("Animation_771mt"),
+"Good": SubResource("Animation_1j3ov"),
+"RESET": SubResource("Animation_4ly0e")
+}
+
+[node name="Idle_ArrowRight" type="Area2D" node_paths=PackedStringArray("animation")]
+script = ExtResource("1_qk6tu")
+animation = NodePath("AnimationPlayer")
+
+[node name="SpriteIdle" type="Sprite2D" parent="."]
+texture = ExtResource("2_xivt4")
+
+[node name="SpriteGood" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_cxafw")
+
+[node name="SpriteBad" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("4_gw4k0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.00103736)
+shape = SubResource("RectangleShape2D_hlaqg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xguat")
+}
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="area_shape_exited" from="." to="." method="_on_area_shape_exited"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv35py5ykmpx2"]
+
+[ext_resource type="Script" path="res://essential/scenes/magic_minigame/basic/move_arrow_right.cs" id="1_gd74x"]
+[ext_resource type="Texture2D" uid="uid://buftjj6a71rmw" path="res://essential/art/Magic_Minigame/AR_Move.png" id="2_d77xb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlaqg"]
+size = Vector2(14, 13.0021)
+
+[node name="Move_ArrowRight" type="Area2D"]
+script = ExtResource("1_gd74x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d77xb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.00103736)
+shape = SubResource("RectangleShape2D_hlaqg")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="area_shape_exited" from="." to="." method="_on_area_shape_exited"]

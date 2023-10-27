@@ -14,8 +14,17 @@ public partial class globals : Node
     public static bool firstRevaHouseLoad = true;
     public static bool firstTownhallLoad = true;
 
+    public static int sensorAL = 0;
+    public static int sensorAR = 0;
+    public static int sensorAU = 0;
+    public static int sensorAD = 0;
+
 
     public static bool textPlayed = false;
+    public async void Timer(int second)
+    {
+        await ToSignal(GetTree().CreateTimer(3), "timeout");
+    }
 
     public static void FinishChangeScene()
     {

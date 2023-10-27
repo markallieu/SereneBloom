@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2xv2y5k8cqpq"]
+
+[ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/game_over.cs" id="1_6rcdj"]
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="3_ci77l"]
+[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://Themes/UITheme.tres" id="3_n43qf"]
+
+[sub_resource type="Animation" id="Animation_87nkl"]
+resource_name = "Text"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_p0q6y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8kq5b"]
+_data = {
+"RESET": SubResource("Animation_p0q6y"),
+"Text": SubResource("Animation_87nkl")
+}
+
+[node name="GameOver" type="Node2D" node_paths=PackedStringArray("anim", "Retry", "Quit")]
+script = ExtResource("1_6rcdj")
+anim = NodePath("AnimationPlayer")
+Retry = NodePath("Retry")
+Quit = NodePath("Quit")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 416.0
+offset_bottom = 224.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 228.0
+offset_bottom = 72.0
+scale = Vector2(1.7, 1.7)
+theme = ExtResource("3_ci77l")
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 144.0
+offset_right = 192.0
+offset_bottom = 181.0
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("3_n43qf")
+text = "Retry"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 144.0
+offset_right = 330.0
+offset_bottom = 181.0
+scale = Vector2(0.8, 0.8)
+theme = ExtResource("3_n43qf")
+text = "Quit
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8kq5b")
+}
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

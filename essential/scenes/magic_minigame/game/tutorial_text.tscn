@@ -1,0 +1,402 @@
+[gd_scene load_steps=16 format=3 uid="uid://bfnjqigpigolr"]
+
+[ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/tutorial_text.cs" id="1_ggh4h"]
+[ext_resource type="Texture2D" uid="uid://ct8c07d5jft1f" path="res://essential/art/Magic_Minigame/Magic_Tutorial.jpg" id="1_hgkfo"]
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="2_3niol"]
+[ext_resource type="AudioStream" uid="uid://d2o1ijhkp2rtn" path="res://essential/audio/13-Flap.mp3" id="4_no8mt"]
+
+[sub_resource type="Animation" id="Animation_02kuk"]
+resource_name = "Anim"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_1qxn5"]
+resource_name = "Anim_2"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ku5dl"]
+resource_name = "Anim_3"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_s4oc8"]
+resource_name = "Anim_4"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_mlfi5"]
+resource_name = "Anim_5"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label5:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_uflcb"]
+resource_name = "Anim_6"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label6:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_1odjv"]
+resource_name = "Anim_7"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label7:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_71oy8"]
+resource_name = "Anim_8"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label8:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_0cap4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label4:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label5:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label6:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label8:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label7:visible_ratio")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("TextureRect:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8n3r3"]
+resource_name = "Fade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oqtxv"]
+_data = {
+"Anim": SubResource("Animation_02kuk"),
+"Anim_2": SubResource("Animation_1qxn5"),
+"Anim_3": SubResource("Animation_ku5dl"),
+"Anim_4": SubResource("Animation_s4oc8"),
+"Anim_5": SubResource("Animation_mlfi5"),
+"Anim_6": SubResource("Animation_uflcb"),
+"Anim_7": SubResource("Animation_1odjv"),
+"Anim_8": SubResource("Animation_71oy8"),
+"Fade": SubResource("Animation_8n3r3"),
+"RESET": SubResource("Animation_0cap4")
+}
+
+[node name="tutorial_text" type="Node2D" node_paths=PackedStringArray("image", "text1", "text2", "text3", "text4", "text5", "text6", "text7", "text8", "box", "animation")]
+script = ExtResource("1_ggh4h")
+image = NodePath("TextureRect")
+text1 = NodePath("Label")
+text2 = NodePath("Label2")
+text3 = NodePath("Label3")
+text4 = NodePath("Label4")
+text5 = NodePath("Label5")
+text6 = NodePath("Label6")
+text7 = NodePath("Label7")
+text8 = NodePath("Label8")
+box = NodePath("ColorRect")
+animation = NodePath("AnimationPlayer")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 416.0
+offset_bottom = 224.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1387.0
+offset_bottom = 747.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_hgkfo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 18.0
+offset_top = 179.0
+offset_right = 398.0
+offset_bottom = 213.0
+color = Color(1, 1, 1, 0.172549)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Untuk menggunakan Magic, semua Magus harus bisa 
+mengumpulkan Mana di udara."
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Setelah dikumpulkan, selanjutnya mereka akan 
+memvisualisasikan Spell mereka."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Setiap kali kamu mau menggunakan Magic, kamu harus 
+memainkan minigame terlebih dahulu."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Ada 4 panah abu-abu yang diam dan satu panah ungu 
+akan berjalan keatas. Ketika panah ungu sampai di atas,"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Tekan tombol panah kanan pada keyboard jika panah yang 
+bergerak mengarah kanan dan begitu untuk semua arah."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Jika kamu berhasil menekan panah dengan tepat di panah 
+abu-abu, Bar yang di atas akan terisi. "
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Bar akan berkurang jika kamu salah menekan panah atau 
+panahnya melewati panah abu-abu."
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 184.0
+offset_right = 780.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_3niol")
+text = "Kamu akan kalah jika Bar tetap kosong. Begitu saja
+penjelasannya, semoga beruntung!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_oqtxv")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_no8mt")
+autoplay = true
