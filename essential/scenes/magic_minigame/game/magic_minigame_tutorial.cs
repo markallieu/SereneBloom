@@ -19,7 +19,7 @@ public partial class magic_minigame_tutorial : Node2D
     public RandomNumberGenerator RNG = new RandomNumberGenerator();
 
     [Export] ProgressBar magicGaugeTutorial;
-    public static int magic = 90;
+    public static int magic = 0;
     public static int mana = 10;
 
     public static magic_minigame_tutorial Instance { get; private set; }

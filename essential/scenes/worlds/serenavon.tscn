@@ -3369,6 +3369,7 @@ script = ExtResource("1_s47pv")
 visible = false
 
 [node name="Questline2_intro2" parent="." instance=ExtResource("3_yrjmi")]
+visible = false
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_eq8io")]
 
@@ -3378,7 +3379,7 @@ texture_filter = 1
 position = Vector2(1000, 634)
 
 [node name="SerenavonCamera" type="Camera2D" parent="playerKaine"]
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.9, 0.9)
 limit_left = 0
 limit_top = 400
 limit_right = 1488
