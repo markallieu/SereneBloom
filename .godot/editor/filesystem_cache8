@@ -1,7 +1,7 @@
 cffcf7cc5eb03ca20a5c49cce30ef619
-::res://::1698484388
+::res://::1698487203
 default_bus_layout.tres::AudioBusLayout::6959820207855912746::1698425579::0::1::::<><>::
-quest_variables.cs::CSharpScript::-1::1698484570::0::1::::<><>::
+quest_variables.cs::CSharpScript::-1::1698486732::0::1::::<><>::
 README.md::TextFile::-1::1698425579::0::1::::<><>::
 Reva2.dtl::Resource::-1::1698425579::0::1::::<><>::
 UITheme.tres::Theme::1832913361037448250::1698483464::0::1::::<><>::uid://bdhfjrcav1v7::::res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png<>uid://bcisfkw4ji5h2::::res://essential/art/gui/GUI Asset/MenuCard.ttf<>uid://q2pprjbjd41j::::res://essential/art/grabber4.png<>uid://dqf2x21s5h403::::res://essential/art/Grabber2.png
@@ -758,7 +758,7 @@ bandit_battle.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 bandit_battle.tscn::PackedScene::2660981194735973601::1698425580::0::1::::<><>::res://essential/scenes/battle/bandit_battle.cs<>uid://bck6g1k1wynot
 battleKaine.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 battle_kaine.tscn::PackedScene::867742923701151353::1698425580::0::1::::<><>::uid://bhlxm2wikvy4l
-::res://essential/scenes/gui/::1698425580
+::res://essential/scenes/gui/::1698487245
 BackgroundMusic.tscn::PackedScene::3065347734206863107::1698425580::0::1::::<><>::uid://j65guk8w1d21
 dialogic_on_signal.gd::GDScript::-1::1698425580::0::1::::<>Node<>::
 DialogLayout.tscn::PackedScene::5781631465699201094::1698425580::0::1::::<><>::res://addons/dialogic/Modules/DefaultLayouts/RPG_BoxPortrait/DialogicRPGLayout.gd<>uid://c0t06snl5466i
@@ -782,6 +782,7 @@ quest2.tscn::PackedScene::8426772873823590898::1698425580::0::1::::<><>::uid://l
 quest3.tscn::PackedScene::1507016050499868081::1698425580::0::1::::<><>::uid://lnvsw5jj15lo
 questline2_intro2.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 questline2_intro.tscn::PackedScene::6915120507530015992::1698425580::0::1::::<><>::res://essential/scenes/gui/questline2_intro2.cs<>uid://lnvsw5jj15lo
+questline3_intro.tscn::PackedScene::4584552570110705252::1698487245::0::1::::<><>::res://essential/scenes/gui/questline2_intro2.cs<>uid://lnvsw5jj15lo::::res://essential/art/gui/GUI Asset/ThaleahFat.ttf
 SFXSlider.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 text_panel.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 text_panel.tscn::PackedScene::5637997409806854777::1698425580::0::1::::<><>::uid://cvq23knaly5qi
@@ -792,7 +793,7 @@ ui_sfx.tscn::PackedScene::4123594275024666676::1698425580::0::1::::<><>::uid://7
 dialogic.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 dialogic.gd::GDScript::-1::1698425580::0::1::::<>Node2D<>::
 dialogic.tscn::PackedScene::8822548391115658287::1698425580::0::1::::<><>::res://essential/scenes/interact/dialogic.gd
-interactArea.cs::CSharpScript::-1::1698485521::0::1::::<><>::
+interactArea.cs::CSharpScript::-1::1698486579::0::1::::<><>::
 interactArea.tscn::PackedScene::2519634354131264766::1698425580::0::1::::<><>::uid://lnvsw5jj15lo
 ::res://essential/scenes/magic_minigame/::1698425580
 ::res://essential/scenes/magic_minigame/basic/::1698425580
@@ -812,43 +813,43 @@ move_arrow_right.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 move_arrow_right.tscn::PackedScene::8692879949292063589::1698425580::0::1::::<><>::res://essential/scenes/magic_minigame/basic/move_arrow_right.cs<>uid://buftjj6a71rmw
 move_arrow_up.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 move_arrow_up.tscn::PackedScene::1813369688574441050::1698425580::0::1::::<><>::res://essential/scenes/magic_minigame/basic/move_arrow_up.cs<>uid://d1pyml0dvwugm
-::res://essential/scenes/magic_minigame/game/::1698485549
+::res://essential/scenes/magic_minigame/game/::1698486992
 game_over.cs::CSharpScript::-1::1698459118::0::1::::<><>::
-game_over.tscn::PackedScene::4330324730949965102::1698485549::0::1::::<><>::res://essential/scenes/magic_minigame/game/game_over.cs<>uid://cvq23knaly5qi::::res://Themes/UI_theme_2.tres<>uid://1d42ypfa3rje::::res://UITheme.tres
-magic_complete.tscn::PackedScene::7533917181973206230::1698459322::0::1::::<><>::uid://cvq23knaly5qi::::res://Themes/UI_theme_2.tres<>uid://u88witkpqjb7::::res://essential/art/Magic Spells/01.png
-magic_minigame_boulder.tscn::PackedScene::6148853724628258057::1698485549::0::1::::<><>::res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.cs<>uid://u88witkpqjb7::::res://essential/art/Magic Spells/01.png<>uid://dbvq6huvkvjp2::::res://essential/scenes/magic_minigame/basic/idle_arrow_left.tscn<>uid://cot3mbcrxpqjg::::res://essential/scenes/magic_minigame/basic/idle_arrow_right.tscn<>uid://piclphe4ql6g::::res://essential/scenes/magic_minigame/basic/idle_arrow_down.tscn<>uid://bswyo6omklpof::::res://essential/scenes/magic_minigame/basic/idle_arrow_up.tscn<>uid://dflqrrwdhdhvi::::res://essential/scenes/magic_minigame/game/magic_complete.tscn
+game_over.tscn::PackedScene::4330324730949965102::1698486991::0::1::::<><>::res://essential/scenes/magic_minigame/game/game_over.cs<>uid://cvq23knaly5qi::::res://Themes/UI_theme_2.tres<>uid://1d42ypfa3rje::::res://UITheme.tres
+magic_complete.tscn::PackedScene::7533917181973206230::1698459322::0::1::::<><>::uid://cvq23knaly5qi
+magic_minigame_boulder.tscn::PackedScene::6148853724628258057::1698486992::0::1::::<><>::res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.cs<>uid://u88witkpqjb7::::res://essential/art/Magic Spells/01.png<>uid://dbvq6huvkvjp2::::res://essential/scenes/magic_minigame/basic/idle_arrow_left.tscn<>uid://cot3mbcrxpqjg::::res://essential/scenes/magic_minigame/basic/idle_arrow_right.tscn<>uid://piclphe4ql6g::::res://essential/scenes/magic_minigame/basic/idle_arrow_down.tscn<>uid://bswyo6omklpof::::res://essential/scenes/magic_minigame/basic/idle_arrow_up.tscn<>uid://dflqrrwdhdhvi::::res://essential/scenes/magic_minigame/game/magic_complete.tscn
 magic_minigame_tutorial.cs::CSharpScript::-1::1698472686::0::1::::<><>::
-magic_minigame_tutorial.tscn::PackedScene::3563359849123221685::1698485549::0::1::::<><>::uid://dbvq6huvkvjp2::::res://essential/scenes/magic_minigame/basic/idle_arrow_left.tscn<>res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.cs<>uid://u88witkpqjb7::::res://essential/art/Magic Spells/01.png<>uid://cot3mbcrxpqjg::::res://essential/scenes/magic_minigame/basic/idle_arrow_right.tscn<>uid://piclphe4ql6g::::res://essential/scenes/magic_minigame/basic/idle_arrow_down.tscn<>uid://bswyo6omklpof::::res://essential/scenes/magic_minigame/basic/idle_arrow_up.tscn<>uid://dflqrrwdhdhvi::::res://essential/scenes/magic_minigame/game/magic_complete.tscn<>uid://dxxyc27w5ehrr::::res://essential/scenes/interact/dialogic.tscn
+magic_minigame_tutorial.tscn::PackedScene::3563359849123221685::1698486991::0::1::::<><>::uid://dbvq6huvkvjp2::::res://essential/scenes/magic_minigame/basic/idle_arrow_left.tscn<>res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.cs<>uid://u88witkpqjb7::::res://essential/art/Magic Spells/01.png<>uid://cot3mbcrxpqjg::::res://essential/scenes/magic_minigame/basic/idle_arrow_right.tscn<>uid://piclphe4ql6g::::res://essential/scenes/magic_minigame/basic/idle_arrow_down.tscn<>uid://bswyo6omklpof::::res://essential/scenes/magic_minigame/basic/idle_arrow_up.tscn<>uid://dflqrrwdhdhvi::::res://essential/scenes/magic_minigame/game/magic_complete.tscn<>uid://dxxyc27w5ehrr::::res://essential/scenes/interact/dialogic.tscn
 tutorial_text.cs::CSharpScript::-1::1698425580::0::1::::<><>::
-tutorial_text.tscn::PackedScene::2764777268471518671::1698485549::0::1::::<><>::res://essential/scenes/magic_minigame/game/tutorial_text.cs<>uid://ct8c07d5jft1f::::res://essential/art/Magic_Minigame/Magic_Tutorial.jpg<>uid://cvq23knaly5qi::::res://Themes/UI_theme_2.tres<>uid://d2o1ijhkp2rtn::::res://essential/audio/13-Flap.mp3
-::res://essential/scenes/player/::1698425580
+tutorial_text.tscn::PackedScene::2764777268471518671::1698486991::0::1::::<><>::res://essential/scenes/magic_minigame/game/tutorial_text.cs<>uid://ct8c07d5jft1f::::res://essential/art/Magic_Minigame/Magic_Tutorial.jpg<>uid://cvq23knaly5qi::::res://Themes/UI_theme_2.tres<>uid://d2o1ijhkp2rtn::::res://essential/audio/13-Flap.mp3
+::res://essential/scenes/player/::1698485719
 Aeiri.tscn::PackedScene::537160290230935676::1698425580::0::1::::<><>::uid://df24l405cyln1
 Eleanor.tscn::PackedScene::2618444925511582020::1698425580::0::1::::<><>::uid://cjxoujuyofvha
 EleanorNecklace.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 EleanorNecklaces.tscn::PackedScene::8446096153964311448::1698425580::0::1::::<><>::res://essential/scenes/player/EleanorNecklace.cs<>uid://lnvsw5jj15lo
 Griselda.tscn::PackedScene::7238929800159048787::1698425580::0::1::::<><>::uid://vhyrfe81btvt
+Heinrich.tscn::PackedScene::4248581343194827622::1698485719::0::1::::<><>::uid://bm7vlo8f16l6u::::res://essential/art/character/NPC Art/Sprite Character/HeinrichSprite.png<>uid://bb5salg3h8ru1::::res://essential/scenes/interact/interactArea.tscn<>uid://dxxyc27w5ehrr::::res://essential/scenes/interact/dialogic.tscn
 Kravon.tscn::PackedScene::1294273320878707211::1698425580::0::1::::<><>::uid://culvc5tuetc5l
 Lily.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 Lily.tscn::PackedScene::8414652439442703965::1698425580::0::1::::<><>::res://essential/scenes/player/Lily.cs<>uid://lnvsw5jj15lo
 playerKaine.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 playerKaine.tscn::PackedScene::2812167398017557647::1698425580::0::1::::<><>::res://essential/scenes/player/playerKaine.cs<>uid://cbt206dwwm0b5
-Heinrich.tscn::PackedScene::4248581343194827622::1698485652::0::1::::<><>::uid://culvc5tuetc5l::::res://essential/art/character/NPC Art/Sprite Character/Krovan.png<>uid://bb5salg3h8ru1::::res://essential/scenes/interact/interactArea.tscn<>uid://dxxyc27w5ehrr::::res://essential/scenes/interact/dialogic.tscn
 Reva.tscn::PackedScene::7303910291890009409::1698425580::0::1::::<><>::uid://gu87vd15s47s
 Sigorius.tscn::PackedScene::8093995135676651900::1698425580::0::1::::<><>::uid://df8q0d2harg2k
 Thomas.tscn::PackedScene::5766188683259491588::1698425580::0::1::::<><>::uid://ct31neorsx4j8
-::res://essential/scenes/worlds/::1698485566
+::res://essential/scenes/worlds/::1698486992
 cliffside.cs::CSharpScript::-1::1698471369::0::1::::<><>::
-cliffside.tscn::PackedScene::2550545563553412663::1698485549::0::1::::<><>::res://essential/scenes/worlds/cliffside.cs<>uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>uid://buavff6ixbmn::::res://essential/scenes/gui/opening_text.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://ypabrx62sf8y::::res://essential/scenes/gui/UI.tscn<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://c15xu5e3qdje7::::res://essential/audio/Background_Music/Cliff.ogg
+cliffside.tscn::PackedScene::2550545563553412663::1698486992::0::1::::<><>::res://essential/scenes/worlds/cliffside.cs<>uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>uid://buavff6ixbmn::::res://essential/scenes/gui/opening_text.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://ypabrx62sf8y::::res://essential/scenes/gui/UI.tscn<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://c15xu5e3qdje7::::res://essential/audio/Background_Music/Cliff.ogg
 Dummy.cs::CSharpScript::-1::1698425580::0::1::::<><>::
 ivory_lake.cs::CSharpScript::-1::1698471411::0::1::::<><>::
 ivory_lake.tscn::PackedScene::8938344237781812550::1698425580::0::1::::<><>::uid://bgch8sa6ik2hf
-reva_house.cs::CSharpScript::-1::1698472156::0::1::::<><>::
-reva_house.tscn::PackedScene::8723634907261189241::1698425580::0::1::::<><>::uid://ypabrx62sf8y
-serenavon.cs::CSharpScript::-1::1698485163::0::1::::<><>::
-serenavon.tscn::PackedScene::6398375932374715080::1698485566::0::1::::<><>::uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>res://essential/scenes/worlds/serenavon.cs<>uid://ypabrx62sf8y::::res://essential/scenes/gui/UI.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://cdofo5io3m6uy::::res://essential/art/tilemap/Objects_Tilemap2.png<>uid://cp4qbuyjsm4sb::::res://essential/art/tilemap/TopDownHouse_SmallItems.png<>uid://b7ey3kouedc15::::res://essential/art/tilemap/TopDownHouse_FurnitureState2.png<>uid://4yyy4j7rgcf2::::res://essential/art/tilemap/TopDownHouse_FurnitureState1.png<>uid://dfjrx5x4of782::::res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png<>uid://c30yyhhpu1frg::::res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png<>uid://xfc78n2skaol::::res://essential/art/tilemap/cliff.png<>uid://bpx2uppixnw6b::::res://essential/audio/Background_Music/Village.ogg<>uid://so7q0lgm1ikh::::res://essential/scenes/player/Kravon.tscn<>uid://hwg7l60ycl4g::::res://essential/scenes/player/Aeiri.tscn<>uid://dbeud7kv4hhpr::::res://essential/scenes/player/Griselda.tscn<>uid://c5r0a3i41bmaa::::res://essential/scenes/gui/questline2_intro.tscn<>uid://dxxyc27w5ehrr::::res://essential/scenes/interact/dialogic.tscn<>uid://bdknn1un7ljiy::::res://essential/scenes/player/Eleanor.tscn<>uid://dccclnyjpfovh::::res://essential/scenes/player/Reva.tscn<>uid://dnk16gpaulu0c::::res://essential/scenes/player/Sigorius.tscn<>uid://cofgjxwbapqmu::::res://essential/scenes/player/Thomas.tscn
+reva_house.cs::CSharpScript::-1::1698486496::0::1::::<><>::
+reva_house.tscn::PackedScene::8723634907261189241::1698486992::0::1::::<><>::uid://ypabrx62sf8y::::res://essential/scenes/gui/UI.tscn<>res://essential/scenes/worlds/reva_house.cs<>uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://r3k7sajvhiyr::::res://essential/art/tilemap/void.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://cdofo5io3m6uy::::res://essential/art/tilemap/Objects_Tilemap2.png<>uid://cp4qbuyjsm4sb::::res://essential/art/tilemap/TopDownHouse_SmallItems.png<>uid://b7ey3kouedc15::::res://essential/art/tilemap/TopDownHouse_FurnitureState2.png<>uid://4yyy4j7rgcf2::::res://essential/art/tilemap/TopDownHouse_FurnitureState1.png<>uid://dfjrx5x4of782::::res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png<>uid://c30yyhhpu1frg::::res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png<>uid://xfc78n2skaol::::res://essential/art/tilemap/cliff.png<>uid://dccclnyjpfovh::::res://essential/scenes/player/Reva.tscn
+serenavon.cs::CSharpScript::-1::1698486981::0::1::::<><>::
+serenavon.tscn::PackedScene::6398375932374715080::1698486991::0::1::::<><>::uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>res://essential/scenes/worlds/serenavon.cs<>uid://ypabrx62sf8y::::res://essential/scenes/gui/UI.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://cdofo5io3m6uy::::res://essential/art/tilemap/Objects_Tilemap2.png<>uid://cp4qbuyjsm4sb::::res://essential/art/tilemap/TopDownHouse_SmallItems.png<>uid://b7ey3kouedc15::::res://essential/art/tilemap/TopDownHouse_FurnitureState2.png<>uid://4yyy4j7rgcf2::::res://essential/art/tilemap/TopDownHouse_FurnitureState1.png<>uid://dfjrx5x4of782::::res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png<>uid://c30yyhhpu1frg::::res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png<>uid://xfc78n2skaol::::res://essential/art/tilemap/cliff.png<>uid://bpx2uppixnw6b::::res://essential/audio/Background_Music/Village.ogg<>uid://so7q0lgm1ikh::::res://essential/scenes/player/Kravon.tscn<>uid://hwg7l60ycl4g::::res://essential/scenes/player/Aeiri.tscn<>uid://dbeud7kv4hhpr::::res://essential/scenes/player/Griselda.tscn<>uid://c5r0a3i41bmaa::::res://essential/scenes/gui/questline2_intro.tscn<>uid://dxxyc27w5ehrr::::res://essential/scenes/interact/dialogic.tscn<>uid://bdknn1un7ljiy::::res://essential/scenes/player/Eleanor.tscn<>uid://dccclnyjpfovh::::res://essential/scenes/player/Reva.tscn<>uid://dnk16gpaulu0c::::res://essential/scenes/player/Sigorius.tscn<>uid://cofgjxwbapqmu::::res://essential/scenes/player/Thomas.tscn<>uid://b1sbrqget264i::::res://essential/scenes/player/Heinrich.tscn
 solace_haven.cs::CSharpScript::-1::1698471454::0::1::::<><>::
 solace_haven.tscn::PackedScene::4129963418832625493::1698485550::0::1::::<><>::res://essential/scenes/worlds/solace_haven.cs<>uid://bgch8sa6ik2hf::::res://essential/scenes/player/playerKaine.tscn<>uid://ypabrx62sf8y::::res://essential/scenes/gui/UI.tscn<>uid://25vy1bd20iug::::res://essential/art/tilemap/Nature_Tilemap.png<>uid://dn1ehmub35n7k::::res://essential/art/tilemap/Objects_Tilemap.png<>uid://8b16xsmjctxf::::res://essential/art/tilemap/Village_Tilemap.png<>uid://cdofo5io3m6uy::::res://essential/art/tilemap/Objects_Tilemap2.png<>uid://cp4qbuyjsm4sb::::res://essential/art/tilemap/TopDownHouse_SmallItems.png<>uid://b7ey3kouedc15::::res://essential/art/tilemap/TopDownHouse_FurnitureState2.png<>uid://4yyy4j7rgcf2::::res://essential/art/tilemap/TopDownHouse_FurnitureState1.png<>uid://dfjrx5x4of782::::res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png<>uid://c30yyhhpu1frg::::res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png<>uid://choa211w3uqv1::::res://essential/audio/Background_Music/Tomb.ogg
-thomas_shop.cs::CSharpScript::-1::1698473716::0::1::::<><>::
+thomas_shop.cs::CSharpScript::-1::1698486450::0::1::::<><>::
 thomas_shop.tscn::PackedScene::6155030844931606251::1698425580::0::1::::<><>::res://essential/scenes/worlds/thomas_shop.cs<>uid://ypabrx62sf8y
 townhall.cs::CSharpScript::-1::1698472088::0::1::::<><>::
 townhall.tscn::PackedScene::2718770621760590293::1698425580::0::1::::<><>::res://essential/scenes/worlds/townhall.cs<>uid://ypabrx62sf8y

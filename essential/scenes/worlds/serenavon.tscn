@@ -1,10 +1,11 @@
-[gd_scene load_steps=43 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=44 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_eq8io"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="2_k1sjv"]
 [ext_resource type="Texture2D" uid="uid://dn1ehmub35n7k" path="res://essential/art/tilemap/Objects_Tilemap.png" id="3_ilhfk"]
+[ext_resource type="PackedScene" uid="uid://b6k158ewowcee" path="res://essential/scenes/gui/questline3_intro.tscn" id="3_yrjmi"]
 [ext_resource type="Texture2D" uid="uid://8b16xsmjctxf" path="res://essential/art/tilemap/Village_Tilemap.png" id="4_ivvmx"]
 [ext_resource type="Texture2D" uid="uid://cdofo5io3m6uy" path="res://essential/art/tilemap/Objects_Tilemap2.png" id="5_8rfii"]
 [ext_resource type="Texture2D" uid="uid://cp4qbuyjsm4sb" path="res://essential/art/tilemap/TopDownHouse_SmallItems.png" id="6_r1ocw"]
@@ -3366,6 +3367,8 @@ script = ExtResource("1_s47pv")
 
 [node name="Questline2_intro" parent="." instance=ExtResource("18_62b77")]
 visible = false
+
+[node name="Questline2_intro2" parent="." instance=ExtResource("3_yrjmi")]
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_eq8io")]
 
