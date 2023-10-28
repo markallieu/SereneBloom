@@ -1,12 +1,13 @@
-[gd_scene load_steps=38 format=3 uid="uid://ctusytgt4fy30"]
+[gd_scene load_steps=39 format=3 uid="uid://ctusytgt4fy30"]
 
-[ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.cs" id="1_yw4d2"]
+[ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/magic_minigame_boulder.cs" id="1_80u0f"]
 [ext_resource type="Texture2D" uid="uid://u88witkpqjb7" path="res://essential/art/Magic Spells/01.png" id="2_uo026"]
 [ext_resource type="PackedScene" uid="uid://dbvq6huvkvjp2" path="res://essential/scenes/magic_minigame/basic/idle_arrow_left.tscn" id="3_hocxx"]
 [ext_resource type="PackedScene" uid="uid://cot3mbcrxpqjg" path="res://essential/scenes/magic_minigame/basic/idle_arrow_right.tscn" id="4_g63b5"]
 [ext_resource type="PackedScene" uid="uid://piclphe4ql6g" path="res://essential/scenes/magic_minigame/basic/idle_arrow_down.tscn" id="5_xmqfo"]
 [ext_resource type="PackedScene" uid="uid://bswyo6omklpof" path="res://essential/scenes/magic_minigame/basic/idle_arrow_up.tscn" id="6_0jjww"]
 [ext_resource type="PackedScene" uid="uid://dflqrrwdhdhvi" path="res://essential/scenes/magic_minigame/game/magic_complete.tscn" id="7_0tpn6"]
+[ext_resource type="AudioStream" uid="uid://d2o1ijhkp2rtn" path="res://essential/audio/13-Flap.mp3" id="8_tmpmc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y7s4w"]
 atlas = ExtResource("2_uo026")
@@ -207,15 +208,15 @@ bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0wu3"]
 bg_color = Color(0.74902, 0.329412, 0.92549, 1)
 
-[node name="Magic_Minigame_Tutorial" type="Node2D" node_paths=PackedStringArray("timer", "animation", "ADMarker", "ALMarker", "ARMarker", "AUMarker", "magicGaugeTutorial")]
-script = ExtResource("1_yw4d2")
+[node name="Magic_Minigame_Boulder" type="Node2D" node_paths=PackedStringArray("timer", "animation", "ADMarker", "ALMarker", "ARMarker", "AUMarker", "magicGauge")]
+script = ExtResource("1_80u0f")
 timer = NodePath("Timer")
 animation = NodePath("AnimatedSprite2D")
 ADMarker = NodePath("Create/Marker2D_AD")
 ALMarker = NodePath("Create/Marker2D_AL")
 ARMarker = NodePath("Create/Marker2D_AR")
 AUMarker = NodePath("Create/Marker2D_AU")
-magicGaugeTutorial = NodePath("VBoxContainer/MagicGauge")
+magicGauge = NodePath("VBoxContainer/MagicGauge")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 416.0
@@ -234,16 +235,16 @@ frame_progress = 0.0784678
 [node name="Create" type="Node2D" parent="."]
 
 [node name="Marker2D_AL" type="Marker2D" parent="Create"]
-position = Vector2(88, 184)
+position = Vector2(88, 192)
 
 [node name="Marker2D_AD" type="Marker2D" parent="Create"]
-position = Vector2(248, 184)
+position = Vector2(248, 192)
 
 [node name="Marker2D_AR" type="Marker2D" parent="Create"]
-position = Vector2(328, 184)
+position = Vector2(328, 192)
 
 [node name="Marker2D_AU" type="Marker2D" parent="Create"]
-position = Vector2(168, 184)
+position = Vector2(168, 192)
 
 [node name="Overlimit" type="Area2D" parent="."]
 
@@ -277,11 +278,16 @@ custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_r0aqm")
 theme_override_styles/fill = SubResource("StyleBoxFlat_n0wu3")
+max_value = 150.0
 value = 50.0
 show_percentage = false
 
 [node name="Magic_Complete" parent="." instance=ExtResource("7_0tpn6")]
 visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_tmpmc")
+autoplay = true
 
 [connection signal="area_shape_entered" from="Overlimit" to="." method="_on_overlimit_area_shape_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

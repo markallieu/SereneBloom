@@ -19,6 +19,8 @@ public partial class globals : Node
     public static int sensorAU = 0;
     public static int sensorAD = 0;
 
+    public static string magicMinigame = "";
+
 
     public static bool textPlayed = false;
     public async void Timer(int second)

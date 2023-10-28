@@ -23,11 +23,36 @@ public partial class game_over : Node2D
     }
     private void _on_retry_pressed()
     {       
-        GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.tscn");
-        magic_minigame_tutorial.overLimitCount = 0;
+        if (globals.magicMinigame == "Tutorial")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.tscn");
+            magic_minigame_tutorial.overLimitCount = 0;
+        }
+        if (globals.magicMinigame == "Boulder")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_boulder.tscn");
+            magic_minigame_boulder.overLimitCount = 0;
+        }
+        if (globals.magicMinigame == "Lily")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_lily.tscn");
+            magic_minigame_lily.overLimitCount = 0;
+        }
+
     }
     private void _on_quit_pressed()
     {
-        GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/game_over.tscn");
+        if (globals.magicMinigame == "Tutorial")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
+        }
+        if (globals.magicMinigame == "Boulder")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/worlds/ivory_lake.tscn");
+        }
+        if(globals.magicMinigame == "Lily")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/worlds/ivory_lake.tscn");
+        }
     }
 }

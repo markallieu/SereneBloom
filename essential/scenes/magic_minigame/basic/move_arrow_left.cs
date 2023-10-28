@@ -1,12 +1,26 @@
 using Godot;
 using System;
-using System.Security.Cryptography;
-using Godot.Collections;
 
 public partial class move_arrow_left : Area2D
 {
-    public int speed = 50*4;
+    public int speed;
     public int sensor = 0;
+
+    public override void _Ready()
+    {
+        if (globals.magicMinigame == "Tutorial")
+        {
+            speed = 100;
+        }
+        if (globals.magicMinigame == "Boulder")
+        {
+            speed = 200;
+        }
+        if (globals.magicMinigame == "Lily")
+        {
+            speed = 200;
+        }
+    }
 
     public override void _Process(double delta)
     {
@@ -16,6 +30,8 @@ public partial class move_arrow_left : Area2D
         {
             QueueFree();
             magic_minigame_tutorial.DecreaseGauge(10);
+            magic_minigame_boulder.DecreaseGauge(5);
+            magic_minigame_lily.DecreaseGauge(5);
         }
         if (sensor == 1)
         {

@@ -13,7 +13,9 @@ public partial class idle_arrow_down : Area2D
             if (Input.IsActionJustPressed("ui_down"))
             { 
                 animation.Play("Good");
-                magic_minigame_tutorial.IncreaseGauge(5);
+                magic_minigame_tutorial.IncreaseGauge(10);
+                magic_minigame_boulder.IncreaseGauge(5);
+                magic_minigame_lily.IncreaseGauge(5);
             }
         }
         if (sensor == 0)
@@ -21,7 +23,9 @@ public partial class idle_arrow_down : Area2D
             if (Input.IsActionJustPressed("ui_down"))
             {
                 animation.Play("Bad");
-                magic_minigame_tutorial.DecreaseGauge(5);
+                magic_minigame_tutorial.DecreaseGauge(10);
+                magic_minigame_boulder.DecreaseGauge(5);
+                magic_minigame_lily.DecreaseGauge(5);
             }
         }
     }
