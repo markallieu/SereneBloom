@@ -20,7 +20,7 @@ public partial class magic_minigame_boulder : Node2D
     public RandomNumberGenerator RNG = new RandomNumberGenerator();
 
     [Export] ProgressBar magicGauge;
-    public static int magic = 0;
+    public static int magic = 150;
     public static int mana = 10;
     public static AnimationPlayer Fail;
 
@@ -33,6 +33,7 @@ public partial class magic_minigame_boulder : Node2D
 
     public static int overLimitCount = 0;
     private const int maxEntries = 3;
+    quest_variables questVar;
     
     
 
@@ -47,6 +48,7 @@ public partial class magic_minigame_boulder : Node2D
         magicComplete = GetNode<CanvasLayer>("Magic_Complete");
         magicSpell = GetNode<AnimatedSprite2D>("Magic_Complete/AnimatedSprite2D");
         magicChant = GetNode<Label>("Magic_Complete/Label");
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
         magicComplete.Hide();
 
     }
@@ -154,6 +156,9 @@ public partial class magic_minigame_boulder : Node2D
         magicSpell.Show();
         magicSpell.Play("Spell");
         await ToSignal(GetTree().CreateTimer(1), "timeout");
+        questVar.boulderDestroyed  = true;
+        questVar.needToChangePosition = true;
+        questVar.positionChanged = true;
         GetTree().ChangeSceneToFile("res://essential/scenes/worlds/ivory_lake.tscn");
     }
 }

@@ -5,6 +5,8 @@ public partial class solace_haven : Node2D
 {
 
     quest_variables questVar;
+    Area2D rose;
+    CanvasLayer poem;
 
     public override void _Ready()
     {
@@ -18,6 +20,8 @@ public partial class solace_haven : Node2D
             player.Position = newPositionSolaceHaven;
         }
         }
+        rose = GetNode<Area2D>("Area2D13");
+        poem = GetNode<CanvasLayer>("Poem");
     }
 
     public override void _Process(double delta)
@@ -34,6 +38,14 @@ public partial class solace_haven : Node2D
         }
     }
 
+    public void showRose(){
+        rose.Show();
+    }
+
+    public void showPoem(){
+        poem.Show();
+        questVar.roseStarted = true;
+    }
     private void ChangeScene()
     {
         if (globals.transitionScene == true)

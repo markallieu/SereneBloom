@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://d0l2hut3dnm3g"]
+[gd_scene load_steps=32 format=3 uid="uid://d0l2hut3dnm3g"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_36myb"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/ivory_lake.cs" id="1_gkaks"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bdknn1un7ljiy" path="res://essential/scenes/player/Eleanor.tscn" id="16_6jwdt"]
 [ext_resource type="PackedScene" uid="uid://dsll7760gir0c" path="res://essential/scenes/player/EleanorNecklaces.tscn" id="17_l3mpg"]
 [ext_resource type="PackedScene" uid="uid://dr5edjkipob8x" path="res://essential/scenes/player/Lily.tscn" id="18_4g6em"]
+[ext_resource type="PackedScene" uid="uid://bmhvoy7mfqiik" path="res://essential/scenes/player/Rock.tscn" id="19_eo44l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_p1yj5")
@@ -3430,5 +3431,8 @@ position = Vector2(86, 703)
 
 [node name="Area2D2" parent="." instance=ExtResource("18_4g6em")]
 position = Vector2(460, 346)
+
+[node name="Area2D3" parent="." instance=ExtResource("19_eo44l")]
+position = Vector2(718, 107)
 
 [connection signal="body_entered" from="ivory_lake_exit_point" to="." method="_on_ivory_lake_exit_point_body_entered"]

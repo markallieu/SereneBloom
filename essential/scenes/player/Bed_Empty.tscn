@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0owxrno4v6an"]
+
+[ext_resource type="Texture2D" uid="uid://0qqu2o4tfkyk" path="res://essential/art/NormalBed.png" id="1_jej2u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkscj"]
+size = Vector2(34.5, 47)
+
+[node name="Bed" type="CharacterBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jej2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wkscj")

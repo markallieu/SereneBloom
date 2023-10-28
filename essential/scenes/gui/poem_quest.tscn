@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cq5eh7t00v6d1"]
 
-[ext_resource type="Script" path="res://essential/scenes/gui/opening_text.cs" id="1_yyvqi"]
+[ext_resource type="Script" path="res://essential/scenes/gui/poem_quest.cs" id="1_e077i"]
 [ext_resource type="Texture2D" uid="uid://c0t06snl5466i" path="res://essential/art/UI assets pack 2/UI books & more.png" id="2_uip6s"]
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="3_5g5tx"]
 
@@ -26,7 +26,7 @@ _data = {
 }
 
 [node name="Questline2_intro" type="CanvasLayer"]
-script = ExtResource("1_yyvqi")
+script = ExtResource("1_e077i")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 8

@@ -30,6 +30,10 @@ public partial class UI : CanvasLayer
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		dialogic = GetNode<Node2D>("dialogic");
 		kaine = GetParent().GetNode<CharacterBody2D>("playerKaine");
+		if(questVar.crystalJustFInished){
+			dialogic.Call("dialog","EleanorAfterGame");
+			questVar.crystalJustFInished = false;
+		}
 		if(questVar.lilyJustFinished){
 			questVar.lilyJustFinished = false;
 			ManaAmbrosia();
@@ -119,7 +123,7 @@ public partial class UI : CanvasLayer
 			case "ELeanorMagicGame":
 				questVar.position = kaine.Position;
 				questVar.isTalking = false;
-				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_lily.tscn");
+				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_bless.tscn");
 				break;
 			case "Lily":
 				questVar.position = kaine.Position;
@@ -131,7 +135,7 @@ public partial class UI : CanvasLayer
 				ManaAmbrosia();
 				break;
 			case "Crystal":
-				questVar.crystal +=1;
+				ManaAmbrosia();
 				break;
 			case "tutorialKravon":
 				questVar.position = kaine.Position;

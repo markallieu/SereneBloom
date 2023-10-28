@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bey80wxq3kxx2"]
+[gd_scene load_steps=32 format=3 uid="uid://bey80wxq3kxx2"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/townhall.cs" id="1_wcycq"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_kgjuw"]
@@ -16,7 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="14_ljrql"]
 [ext_resource type="PackedScene" uid="uid://bdknn1un7ljiy" path="res://essential/scenes/player/Eleanor.tscn" id="15_hhfu8"]
 [ext_resource type="PackedScene" uid="uid://dnk16gpaulu0c" path="res://essential/scenes/player/Sigorius.tscn" id="16_dy7jx"]
-[ext_resource type="PackedScene" path="res://essential/scenes/player/Bed.tscn" id="17_w6hcc"]
+[ext_resource type="PackedScene" uid="uid://gu6ty10sircn" path="res://essential/scenes/player/Bed.tscn" id="17_w6hcc"]
+[ext_resource type="PackedScene" uid="uid://d0owxrno4v6an" path="res://essential/scenes/player/Bed_Empty.tscn" id="18_y6ggo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("4_exry1")
@@ -3716,6 +3717,10 @@ position = Vector2(39, 99)
 position = Vector2(39, 49)
 
 [node name="Bed" parent="." instance=ExtResource("17_w6hcc")]
+visible = false
 position = Vector2(-15, 60)
+
+[node name="Bed2" parent="." instance=ExtResource("18_y6ggo")]
+position = Vector2(-14, 61)
 
 [connection signal="body_entered" from="townhall_exitpoint" to="." method="_on_townhall_exitpoint_body_entered"]

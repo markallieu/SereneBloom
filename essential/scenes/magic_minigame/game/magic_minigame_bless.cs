@@ -19,7 +19,7 @@ public partial class magic_minigame_bless : Node2D
     public RandomNumberGenerator RNG = new RandomNumberGenerator();
 
     [Export] ProgressBar magicGauge;
-    public static int magic = 0;
+    public static int magic = 349;
     public static int mana = 10;
     public static AnimationPlayer Fail;
 
@@ -32,11 +32,12 @@ public partial class magic_minigame_bless : Node2D
 
     public static int overLimitCount = 0;
     private const int maxEntries = 3;
-
+    quest_variables questVar;
 
 
     public override void _Ready()
     {
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
         globals.magicMinigame = "Blessing";
         Instance = this;
         magicGauge.Value = magic;
@@ -153,6 +154,10 @@ public partial class magic_minigame_bless : Node2D
         magicSpell.Show();
         magicSpell.Play("Ignite");
         await ToSignal(GetTree().CreateTimer(1.5), "timeout");
+        questVar.needToChangePosition = true;
+        questVar.positionChanged = true;
+        questVar.crystal +=1;
+        questVar.crystalJustFInished = true;
         GetTree().ChangeSceneToFile("res://essential/scenes/worlds/townhall.tscn");
     }
 }
