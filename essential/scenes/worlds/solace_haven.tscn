@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://by3t5nuhly3if"]
+[gd_scene load_steps=40 format=3 uid="uid://by3t5nuhly3if"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/solace_haven.cs" id="1_8yokk"]
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_mdqm0"]
@@ -13,6 +13,21 @@
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="9_ojrd4"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_xwmwg"]
 [ext_resource type="AudioStream" uid="uid://choa211w3uqv1" path="res://essential/audio/Background_Music/Tomb.ogg" id="12_adfok"]
+[ext_resource type="PackedScene" uid="uid://hns6bo1raudg" path="res://essential/scenes/player/FakeTomb.tscn" id="14_730s4"]
+[ext_resource type="PackedScene" uid="uid://hakrcfxlu3u1" path="res://essential/scenes/player/FakeTomb2.tscn" id="15_2n6yu"]
+[ext_resource type="PackedScene" uid="uid://egxm2birs382" path="res://essential/scenes/player/FakeTomb3.tscn" id="16_0hd06"]
+[ext_resource type="PackedScene" uid="uid://5nu1olgt0665" path="res://essential/scenes/player/FakeTomb4.tscn" id="17_jk255"]
+[ext_resource type="PackedScene" uid="uid://b1e0klphlg2yh" path="res://essential/scenes/player/FakeTomb5.tscn" id="18_h2q2h"]
+[ext_resource type="PackedScene" uid="uid://cx1ai7kbs3hqp" path="res://essential/scenes/player/FakeTomb6.tscn" id="19_vb6ua"]
+[ext_resource type="PackedScene" uid="uid://bvbe6nlfp3lls" path="res://essential/scenes/player/FakeTomb7.tscn" id="20_m21o5"]
+[ext_resource type="PackedScene" uid="uid://d2s88q3fskltq" path="res://essential/scenes/player/FakeTomb8.tscn" id="21_shlb8"]
+[ext_resource type="PackedScene" uid="uid://6b4vc0ns3vlu" path="res://essential/scenes/player/FakeTomb9.tscn" id="22_43p04"]
+[ext_resource type="PackedScene" uid="uid://0bm154ud23wp" path="res://essential/scenes/player/TrueTomb.tscn" id="23_m7lu8"]
+[ext_resource type="PackedScene" uid="uid://bqdypb2826f5" path="res://essential/scenes/player/TrueTomb2.tscn" id="24_rf2a6"]
+[ext_resource type="PackedScene" uid="uid://bqhe01yvk7wg4" path="res://essential/scenes/player/TrueTomb3.tscn" id="25_u528h"]
+[ext_resource type="PackedScene" uid="uid://bl68xcl8xxib7" path="res://essential/scenes/player/VortenRose.tscn" id="26_j817y"]
+[ext_resource type="PackedScene" uid="uid://cq5eh7t00v6d1" path="res://essential/scenes/gui/poem_quest.tscn" id="27_fgpow"]
+[ext_resource type="PackedScene" uid="uid://djvudx7hwfvdd" path="res://essential/scenes/player/Notebook.tscn" id="28_bpxpq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_np7gk")
@@ -3325,7 +3340,7 @@ layer_3/modulate = Color(1, 1, 1, 1)
 layer_3/y_sort_enabled = true
 layer_3/y_sort_origin = 0
 layer_3/z_index = 1
-layer_3/tile_data = PackedInt32Array(1245205, 524291, 4, 1245208, 524291, 4, 1769475, 786435, 4, 2097155, 786435, 4, 2424835, 786435, 4, 1769480, 786435, 4, 2097160, 786435, 4, 2424840, 786435, 4, 1769485, 786435, 4, 2097165, 786435, 4, 2424845, 786435, 4, 2097170, 786435, 4, 2424850, 786435, 4, 2097179, 786435, 4, 2424859, 786435, 4, 1769504, 786435, 4, 2097184, 786435, 4, 2424864, 786435, 4, 1769509, 786435, 4, 2097189, 786435, 4, 2424869, 786435, 4, 1769514, 786435, 4, 2097194, 786435, 4, 2424874, 786435, 4, 1441828, 3, 4, 1441833, 3, 4, 1441801, 3, 4, 1441796, 3, 4, 1179684, 3, 4, 1179689, 3, 4, 1179657, 3, 4, 1179652, 3, 4, 196611, 786435, 4, 524291, 786435, 4, 851971, 786435, 4, 196616, 786435, 4, 524296, 786435, 4, 851976, 786435, 4, 196621, 786435, 4, 524301, 786435, 4, 851981, 786435, 4, 196626, 786435, 4, 524306, 786435, 4, 196635, 786435, 4, 524315, 786435, 4, 196640, 786435, 4, 524320, 786435, 4, 852000, 786435, 4, 196645, 786435, 4, 524325, 786435, 4, 852005, 786435, 4, 196650, 786435, 4, 524330, 786435, 4, 852010, 786435, 4, 524312, 3, 4, 524309, 3, 4, 196632, 3, 4, 196629, 3, 4, 2621460, 3, 6, 2621465, 3, 6, 983057, 3, 6, 983068, 3, 6, 1638428, 3, 6, 1638417, 3, 6, 1179662, 3, 4, 2490402, 131073, 0, 2031632, 131073, 0, 1572867, 131073, 0, 1114113, 131073, 0, 393257, 131073, 0, 65555, 131073, 0, 2621481, 196609, 1, 2293779, 196609, 1, 2621446, 196609, 1, 1310736, 196609, 1, 1048620, 196609, 1, 1441824, 196609, 1, 131100, 196609, 1, 65538, 196609, 1, 720912, 131073, 1, 65577, 131073, 1, 2162693, 131073, 1, 2555919, 1, 0, 1376285, 1, 0, 983077, 1, 0, 1310759, 1, 0, 720933, 1, 0, 589854, 1, 0, 262183, 1, 0, 196637, 1, 0, 393241, 1, 0, 196628, 1, 0, 327698, 1, 0, 131087, 1, 0, 458764, 1, 0, 393220, 1, 0, 786437, 1, 0, 1245186, 1, 0, 1245195, 1, 0, 1638410, 1, 0, 2293802, 1, 0, 1966118, 1, 0, 1703970, 1, 0, 2228253, 1, 0, 2621475, 1, 0, 2490392, 1, 0, 2031637, 1, 0, 2097163, 1, 0, 2555909, 1, 0, 1966084, 1, 0, 1703961, 1, 0, 1179673, 1, 0, 1179668, 1, 0)
+layer_3/tile_data = PackedInt32Array(1245205, 524291, 4, 1245208, 524291, 4, 983068, 3, 6, 2490402, 131073, 0, 2031632, 131073, 0, 1572867, 131073, 0, 1114113, 131073, 0, 393257, 131073, 0, 65555, 131073, 0, 2621481, 196609, 1, 2293779, 196609, 1, 2621446, 196609, 1, 1310736, 196609, 1, 1048620, 196609, 1, 1441824, 196609, 1, 131100, 196609, 1, 65538, 196609, 1, 720912, 131073, 1, 65577, 131073, 1, 2162693, 131073, 1, 2555919, 1, 0, 1376285, 1, 0, 983077, 1, 0, 1310759, 1, 0, 720933, 1, 0, 589854, 1, 0, 262183, 1, 0, 196637, 1, 0, 393241, 1, 0, 196628, 1, 0, 327698, 1, 0, 131087, 1, 0, 458764, 1, 0, 393220, 1, 0, 786437, 1, 0, 1245186, 1, 0, 1245195, 1, 0, 1638410, 1, 0, 2293802, 1, 0, 1966118, 1, 0, 1703970, 1, 0, 2228253, 1, 0, 2621475, 1, 0, 2490392, 1, 0, 2031637, 1, 0, 2097163, 1, 0, 2555909, 1, 0, 1966084, 1, 0, 1703961, 1, 0, 1179673, 1, 0, 1179668, 1, 0)
 layer_4/name = "tree"
 layer_4/enabled = true
 layer_4/modulate = Color(1, 1, 1, 1)
@@ -3353,5 +3368,51 @@ shape = SubResource("RectangleShape2D_daore")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(752, 672)
+
+[node name="Area2D" parent="." instance=ExtResource("14_730s4")]
+position = Vector2(241, 435)
+
+[node name="Area2D2" parent="." instance=ExtResource("15_2n6yu")]
+position = Vector2(570, 371)
+
+[node name="Area2D3" parent="." instance=ExtResource("16_0hd06")]
+position = Vector2(143, 321)
+
+[node name="Area2D4" parent="." instance=ExtResource("17_jk255")]
+position = Vector2(641, 601)
+
+[node name="Area2D5" parent="." instance=ExtResource("18_h2q2h")]
+position = Vector2(658, 180)
+
+[node name="Area2D6" parent="." instance=ExtResource("19_vb6ua")]
+position = Vector2(149, 60)
+
+[node name="Area2D7" parent="." instance=ExtResource("20_m21o5")]
+position = Vector2(391, 108)
+
+[node name="Area2D8" parent="." instance=ExtResource("21_shlb8")]
+position = Vector2(121, 562)
+
+[node name="Area2D9" parent="." instance=ExtResource("22_43p04")]
+position = Vector2(488, 536)
+
+[node name="Area2D10" parent="." instance=ExtResource("23_m7lu8")]
+position = Vector2(591, 263)
+
+[node name="Area2D11" parent="." instance=ExtResource("24_rf2a6")]
+position = Vector2(254, 273)
+
+[node name="Area2D13" parent="." instance=ExtResource("26_j817y")]
+visible = false
+position = Vector2(372, 376)
+
+[node name="Area2D12" parent="." instance=ExtResource("25_u528h")]
+position = Vector2(247, 549)
+
+[node name="Poem" parent="." instance=ExtResource("27_fgpow")]
+visible = false
+
+[node name="Area2D14" parent="." instance=ExtResource("28_bpxpq")]
+position = Vector2(368, 442)
 
 [connection signal="body_entered" from="solace_haven_exit_point" to="." method="_on_solace_haven_exit_point_body_entered"]

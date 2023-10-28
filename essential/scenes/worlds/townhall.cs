@@ -6,9 +6,13 @@ public partial class townhall : Node2D
     quest_variables questVar;
     CharacterBody2D sigorius;
     CharacterBody2D eleanor;
+    CharacterBody2D bed;
+    CharacterBody2D emptyBed;
 
     public override void _Ready()
     {
+        bed = GetNode<CharacterBody2D>("Bed");
+        emptyBed = GetNode<CharacterBody2D>("Bed2");
         questVar = GetNode<quest_variables>("/root/QuestVariables");
         globals.currentScene = "townhall";
         Node2D player = GetNode<Node2D>("playerKaine");
@@ -28,6 +32,8 @@ public partial class townhall : Node2D
         if (questVar.currentQuestLine == 2){
             sigorius.Show();
             eleanor.Show();
+            bed.Show();
+            emptyBed.Hide();
         }
     }
 

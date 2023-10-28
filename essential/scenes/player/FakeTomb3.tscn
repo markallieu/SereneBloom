@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://egxm2birs382"]
+
+[ext_resource type="Script" path="res://essential/scenes/player/FakeTomb.cs" id="1_pv025"]
+[ext_resource type="FontFile" uid="uid://lnvsw5jj15lo" path="res://essential/art/gui/GUI Asset/ThaleahFat.ttf" id="2_g6jhu"]
+[ext_resource type="Texture2D" uid="uid://djg5hwxkhshck" path="res://essential/art/tomb/TombstoneFalse3.png" id="3_xkosq"]
+[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="4_h7pap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h0i3k"]
+radius = 33.1361
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_pv025")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h0i3k")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 5
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -35.0
+offset_right = 65.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_g6jhu")
+theme_override_font_sizes/font_size = 16
+text = "[E] To Choose
+Blackmore 343-437"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_xkosq")
+
+[node name="dialogic" parent="." instance=ExtResource("4_h7pap")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

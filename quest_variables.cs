@@ -23,8 +23,16 @@ public partial class quest_variables : Node
 	public bool lilyJustFinished = false;
 	public bool lilyHidden = false;
 	public int rose = 0;
+	public bool roseFinished = false;
+	public bool roseStarted = false;
+	public bool rosePickedUp = false;
+	public bool poemShowed = false;
+	public int tombChosen = 0;
+	public int trueTombChosen = 0;
 	public int crystal = 0;
+	public bool crystalJustFInished = false;
 
+	public bool boulderDestroyed = false;
 	public bool NecklaceQuestFinished = false;
 	public bool StatueFinish = false;
 	public bool questline2_intro_played = false;
