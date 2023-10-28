@@ -6,7 +6,7 @@ public partial class quest_variables : Node
 {
 	public string savePath = "user://variable.save";
 	public bool isTalking = false;
-	public int currentQuestLine = 1;
+	public int currentQuestLine = 2;
 	public int warmGreetingProgress = 0;
 	public int sycamore = 0;
 	public int orchid = 0;
@@ -20,6 +20,8 @@ public partial class quest_variables : Node
 
 
 	public int lily = 0;
+	public bool lilyJustFinished = false;
+	public bool lilyHidden = false;
 	public int rose = 0;
 	public int crystal = 0;
 

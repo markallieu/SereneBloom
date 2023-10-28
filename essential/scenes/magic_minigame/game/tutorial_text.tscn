@@ -276,17 +276,17 @@ _data = {
 
 [node name="tutorial_text" type="Node2D" node_paths=PackedStringArray("image", "text1", "text2", "text3", "text4", "text5", "text6", "text7", "text8", "box", "animation")]
 script = ExtResource("1_ggh4h")
-image = NodePath("TextureRect")
-text1 = NodePath("Label")
-text2 = NodePath("Label2")
-text3 = NodePath("Label3")
-text4 = NodePath("Label4")
-text5 = NodePath("Label5")
-text6 = NodePath("Label6")
-text7 = NodePath("Label7")
-text8 = NodePath("Label8")
-box = NodePath("ColorRect")
-animation = NodePath("AnimationPlayer")
+image = NodePath("")
+text1 = NodePath("")
+text2 = NodePath("")
+text3 = NodePath("")
+text4 = NodePath("")
+text5 = NodePath("")
+text6 = NodePath("")
+text7 = NodePath("")
+text8 = NodePath("")
+box = NodePath("")
+animation = NodePath("")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 416.0

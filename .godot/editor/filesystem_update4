@@ -1,14 +1,11 @@
-res://essential/scenes/worlds/serenavon.tscn
+res://essential/scenes/magic_minigame/game/magic_complete.tscn
 res://Themes/UI_theme_2.tres
 res://UITheme.tres
-res://essential/dialog/Aeiri2.dtl
-res://essential/dialog/Sigorius2.dtl
-res://essential/scenes/magic_minigame/game/magic_complete.tscn
 res://essential/scenes/magic_minigame/game/tutorial_text.tscn
 res://essential/scenes/magic_minigame/game/magic_minigame_boulder.tscn
 res://essential/scenes/magic_minigame/game/magic_minigame_lily.tscn
 res://essential/scenes/magic_minigame/game/magic_complete2.tscn
-res://essential/scenes/worlds/ivory_lake.tscn
+res://essential/scenes/worlds/serenavon.tscn
 res://essential/globals.cs
 res://essential/scenes/battle/bandit.cs
 res://essential/scenes/battle/BanditGroup.cs
@@ -54,3 +51,4 @@ res://essential/scenes/worlds/solace_haven.cs
 res://essential/scenes/worlds/thomas_shop.cs
 res://essential/scenes/worlds/townhall.cs
 res://quest_variables.cs
+res://essential/scenes/worlds/ivory_lake.tscn
