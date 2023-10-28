@@ -52,6 +52,7 @@ variables={
 },
 "BuildingAStatueComplete": "false",
 "ManaAmbrosiaComplete": "false",
+"ManaAmbrosiaFinish": "false",
 "NecklaceEnded": "false",
 "Timeline2": {
 "haveFInishedDialogManaPoisoning": "false"

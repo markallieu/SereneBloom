@@ -1,6 +1,14 @@
+res://essential/scenes/gui/questline3_intro.tscn
 res://essential/scenes/magic_minigame/game/magic_minigame_boulder.tscn
 res://UITheme.tres
 res://Themes/UI_theme_2.tres
+res://essential/scenes/worlds/serenavon.tscn
+res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.tscn
+res://essential/scenes/magic_minigame/game/tutorial_text.tscn
+res://essential/scenes/magic_minigame/game/game_over.tscn
+res://essential/scenes/worlds/cliffside.tscn
+res://essential/scenes/magic_minigame/game/magic_minigame_boulder.tscn
+res://essential/scenes/worlds/reva_house.tscn
 res://essential/globals.cs
 res://essential/scenes/battle/bandit.cs
 res://essential/scenes/battle/BanditGroup.cs
@@ -15,6 +23,7 @@ res://essential/scenes/gui/OptionMenu.cs
 res://essential/scenes/gui/PauseOption.cs
 res://essential/scenes/gui/pause_menu.cs
 res://essential/scenes/gui/questline2_intro2.cs
+res://essential/scenes/gui/questline3_intro.cs
 res://essential/scenes/gui/SFXSlider.cs
 res://essential/scenes/gui/text_panel.cs
 res://essential/scenes/gui/UI.cs

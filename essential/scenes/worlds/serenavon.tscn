@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=44 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_eq8io"]
 [ext_resource type="Texture2D" uid="uid://25vy1bd20iug" path="res://essential/art/tilemap/Nature_Tilemap.png" id="2_k1sjv"]
 [ext_resource type="Texture2D" uid="uid://dn1ehmub35n7k" path="res://essential/art/tilemap/Objects_Tilemap.png" id="3_ilhfk"]
+[ext_resource type="PackedScene" uid="uid://b6k158ewowcee" path="res://essential/scenes/gui/questline3_intro.tscn" id="3_yrjmi"]
 [ext_resource type="Texture2D" uid="uid://8b16xsmjctxf" path="res://essential/art/tilemap/Village_Tilemap.png" id="4_ivvmx"]
 [ext_resource type="Texture2D" uid="uid://cdofo5io3m6uy" path="res://essential/art/tilemap/Objects_Tilemap2.png" id="5_8rfii"]
 [ext_resource type="Texture2D" uid="uid://cp4qbuyjsm4sb" path="res://essential/art/tilemap/TopDownHouse_SmallItems.png" id="6_r1ocw"]
@@ -18,6 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://hwg7l60ycl4g" path="res://essential/scenes/player/Aeiri.tscn" id="16_yftan"]
 [ext_resource type="PackedScene" uid="uid://dbeud7kv4hhpr" path="res://essential/scenes/player/Griselda.tscn" id="17_ioau8"]
 [ext_resource type="PackedScene" uid="uid://c5r0a3i41bmaa" path="res://essential/scenes/gui/questline2_intro.tscn" id="18_62b77"]
+[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="19_f0j65"]
+[ext_resource type="PackedScene" uid="uid://bdknn1un7ljiy" path="res://essential/scenes/player/Eleanor.tscn" id="20_hpqih"]
+[ext_resource type="PackedScene" uid="uid://dccclnyjpfovh" path="res://essential/scenes/player/Reva.tscn" id="21_ande4"]
+[ext_resource type="PackedScene" uid="uid://dnk16gpaulu0c" path="res://essential/scenes/player/Sigorius.tscn" id="22_6oql1"]
+[ext_resource type="PackedScene" uid="uid://cofgjxwbapqmu" path="res://essential/scenes/player/Thomas.tscn" id="23_oyiyr"]
+[ext_resource type="PackedScene" uid="uid://b1sbrqget264i" path="res://essential/scenes/player/Heinrich.tscn" id="24_117wq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_k1sjv")
@@ -3361,6 +3368,8 @@ script = ExtResource("1_s47pv")
 [node name="Questline2_intro" parent="." instance=ExtResource("18_62b77")]
 visible = false
 
+[node name="Questline2_intro2" parent="." instance=ExtResource("3_yrjmi")]
+
 [node name="CanvasLayer" parent="." instance=ExtResource("2_eq8io")]
 
 [node name="playerKaine" parent="." instance=ExtResource("1_eeq64")]
@@ -3471,10 +3480,40 @@ shape = SubResource("RectangleShape2D_no3g0")
 position = Vector2(905, 1192)
 
 [node name="Aeiri" parent="." instance=ExtResource("16_yftan")]
-position = Vector2(848, 829)
+position = Vector2(875, 831)
 
 [node name="Griselda" parent="." instance=ExtResource("17_ioau8")]
 position = Vector2(166, 838)
+
+[node name="dialogic" parent="." instance=ExtResource("19_f0j65")]
+
+[node name="Eleanor" parent="." instance=ExtResource("20_hpqih")]
+visible = false
+position = Vector2(800, 745)
+
+[node name="Griselda2" parent="." instance=ExtResource("17_ioau8")]
+visible = false
+position = Vector2(859, 723)
+
+[node name="Kravon2" parent="." instance=ExtResource("15_icioc")]
+visible = false
+position = Vector2(739, 773)
+
+[node name="Reva" parent="." instance=ExtResource("21_ande4")]
+visible = false
+position = Vector2(774, 838)
+
+[node name="Sigorius" parent="." instance=ExtResource("22_6oql1")]
+visible = false
+position = Vector2(843, 815)
+
+[node name="Thomas" parent="." instance=ExtResource("23_oyiyr")]
+visible = false
+position = Vector2(921, 745)
+
+[node name="Heinrich" parent="." instance=ExtResource("24_117wq")]
+visible = false
+position = Vector2(694, 799)
 
 [connection signal="body_entered" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_entered"]
 [connection signal="body_exited" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_exited"]

@@ -5,14 +5,31 @@ using System;
 public partial class serenavon : Node2D
 {
     private Node2D dialogic;
+    quest_variables questVar;
+
+    CharacterBody2D eleanor3;
+    CharacterBody2D griselda3;
+    CharacterBody2D kravon3;
+    CharacterBody2D Reva3;
+    CharacterBody2D Sigorius3;
+    CharacterBody2D Thomas3;
+
+    CharacterBody2D heinrich;
+
+    CharacterBody2D kravon;
+    CharacterBody2D aeiri;
+    CharacterBody2D griselda;
     //private UI ui;
     public override void _Ready()
     {
         //ui = GetNode<UI>("CanvasLayer");
         //ui.GlobalNotif("test");
+        dialogic = GetNode<Node2D>("dialogic");
         globals.currentScene = "serenavon";
         globals.firstGameLoad = false;
         Node2D player = GetNode<Node2D>("playerKaine");
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
+        if(!questVar.positionChanged){
         if (globals.firstSerenavonLoad == true)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
@@ -52,6 +69,42 @@ public partial class serenavon : Node2D
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
             player.Position = newPositionSerenavon;
+        }
+        }else{
+            questVar.positionChanged = false;
+        }
+        if(questVar.KravonAfterTutorialDialogStart){
+            GD.Print("KravonAfterTutorialDialog");
+            dialogic.Call("dialog","KravonAfterTutorial");
+            questVar.KravonAfterTutorialDialogStart = false;
+        }
+        // QUESTLINE 3
+        kravon = GetNode<CharacterBody2D>("Kravon");
+        aeiri = GetNode<CharacterBody2D>("Aeiri");
+        griselda = GetNode<CharacterBody2D>("Griselda");
+        eleanor3 = GetNode<CharacterBody2D>("Eleanor");
+        griselda3 = GetNode<CharacterBody2D>("Griselda2");
+        kravon3 = GetNode<CharacterBody2D>("Kravon2");
+        Reva3 = GetNode<CharacterBody2D>("Reva");
+        Sigorius3 = GetNode<CharacterBody2D>("Sigorius");
+        Thomas3 = GetNode<CharacterBody2D>("Thomas");
+        heinrich = GetNode<CharacterBody2D>("Heinrich");
+
+        if(questVar.currentQuestLine == 3){
+            kravon.Hide();
+            aeiri.Hide();
+            griselda.Hide();
+            eleanor3.Show();
+            griselda3.Show();
+            kravon3.Show();
+            Reva3.Show();
+            Sigorius3.Show();
+            Thomas3.Show();
+            heinrich .Show();
+            Vector2 kaineQ3_POS;
+            kaineQ3_POS.X = 481;
+            kaineQ3_POS.Y = 933;
+            player.Position = kaineQ3_POS;
         }
     }
 
