@@ -210,13 +210,13 @@ bg_color = Color(0.74902, 0.329412, 0.92549, 1)
 
 [node name="Magic_Minigame_Boulder" type="Node2D" node_paths=PackedStringArray("timer", "animation", "ADMarker", "ALMarker", "ARMarker", "AUMarker", "magicGauge")]
 script = ExtResource("1_80u0f")
-timer = NodePath("Timer")
-animation = NodePath("AnimatedSprite2D")
-ADMarker = NodePath("Create/Marker2D_AD")
-ALMarker = NodePath("Create/Marker2D_AL")
-ARMarker = NodePath("Create/Marker2D_AR")
-AUMarker = NodePath("Create/Marker2D_AU")
-magicGauge = NodePath("VBoxContainer/MagicGauge")
+timer = NodePath("")
+animation = NodePath("")
+ADMarker = NodePath("")
+ALMarker = NodePath("")
+ARMarker = NodePath("")
+AUMarker = NodePath("")
+magicGauge = NodePath("")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 416.0
@@ -252,17 +252,21 @@ position = Vector2(168, 192)
 position = Vector2(208, 4.5)
 shape = SubResource("RectangleShape2D_bd5l4")
 
-[node name="Idle_ArrowLeft" parent="." instance=ExtResource("3_hocxx")]
+[node name="Idle_ArrowLeft" parent="." node_paths=PackedStringArray("animation") instance=ExtResource("3_hocxx")]
 position = Vector2(88, 56)
+animation = NodePath("")
 
-[node name="Idle_ArrowRight" parent="." instance=ExtResource("4_g63b5")]
+[node name="Idle_ArrowRight" parent="." node_paths=PackedStringArray("animation") instance=ExtResource("4_g63b5")]
 position = Vector2(328, 56)
+animation = NodePath("")
 
-[node name="Idle_ArrowDown" parent="." instance=ExtResource("5_xmqfo")]
+[node name="Idle_ArrowDown" parent="." node_paths=PackedStringArray("animation") instance=ExtResource("5_xmqfo")]
 position = Vector2(248, 56)
+animation = NodePath("")
 
-[node name="Idle_ArrowUp" parent="." instance=ExtResource("6_0jjww")]
+[node name="Idle_ArrowUp" parent="." node_paths=PackedStringArray("animation") instance=ExtResource("6_0jjww")]
 position = Vector2(168, 56)
+animation = NodePath("")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

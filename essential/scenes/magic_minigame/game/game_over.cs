@@ -6,10 +6,15 @@ public partial class game_over : Node2D
     [Export] AnimationPlayer anim;
     [Export] Button Retry;
     [Export] Button Quit;
+    quest_variables questVar;
 
     public override void _Ready()
     {
         GameOver();
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
+        questVar.needToChangePosition = true;
+        questVar.positionChanged = true;
+        
     }
 
     private async void GameOver()

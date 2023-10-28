@@ -30,6 +30,10 @@ public partial class UI : CanvasLayer
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		dialogic = GetNode<Node2D>("dialogic");
 		kaine = GetParent().GetNode<CharacterBody2D>("playerKaine");
+		if(questVar.lilyJustFinished){
+			questVar.lilyJustFinished = false;
+			ManaAmbrosia();
+		}
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -113,11 +117,14 @@ public partial class UI : CanvasLayer
 				questVar.ManaAmbrosiaStart = true;
 				break;
 			case "ELeanorMagicGame":
-
+				questVar.position = kaine.Position;
+				questVar.isTalking = false;
+				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_lily.tscn");
 				break;
 			case "Lily":
-				questVar.lily += 1;
-				ManaAmbrosia();
+				questVar.position = kaine.Position;
+				questVar.isTalking = false;
+				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_lily.tscn");
 				break;
 			case "Rose":
 				questVar.rose +=1;

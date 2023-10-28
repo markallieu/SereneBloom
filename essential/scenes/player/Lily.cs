@@ -28,7 +28,7 @@ public partial class Lily : Area2D
 		if (Input.IsActionJustReleased("interact") && inside)
         {
 			text.Hide();
-			dialogic.Call("Lilylake");
+			dialogic.Call("dialog","LilyLake");
 			//call Minigame
 			//ui.GlobalNotif("Kalung Diambil!","Kembalikan kepada Eleanor untuk menyelesaikan quest!");
 		
