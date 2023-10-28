@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/13-Flap.mp3-0a27a39b2b108dd9de7e11221c08b890.
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

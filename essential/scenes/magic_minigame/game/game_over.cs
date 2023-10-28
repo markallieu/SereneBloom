@@ -38,7 +38,11 @@ public partial class game_over : Node2D
             GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_lily.tscn");
             magic_minigame_lily.overLimitCount = 0;
         }
-
+        if (globals.magicMinigame == "Blessing")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_bless.tscn");
+            magic_minigame_bless.overLimitCount = 0;
+        }
     }
     private void _on_quit_pressed()
     {
@@ -53,6 +57,10 @@ public partial class game_over : Node2D
         if(globals.magicMinigame == "Lily")
         {
             GetTree().ChangeSceneToFile("res://essential/scenes/worlds/ivory_lake.tscn");
+        }
+        if (globals.magicMinigame == "Blessing")
+        {
+            GetTree().ChangeSceneToFile("res://essential/scenes/worlds/townhall.tscn");
         }
     }
 }

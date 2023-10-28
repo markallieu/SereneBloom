@@ -278,7 +278,7 @@ custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_r0aqm")
 theme_override_styles/fill = SubResource("StyleBoxFlat_n0wu3")
-max_value = 150.0
+max_value = 180.0
 value = 50.0
 show_percentage = false
 

@@ -20,6 +20,10 @@ public partial class move_arrow_right : Area2D
         {
             speed = 200;
         }
+        if (globals.magicMinigame == "Blessing")
+        {
+            speed = 250;
+        }
     }
 
     public override void _Process(double delta)
@@ -32,6 +36,7 @@ public partial class move_arrow_right : Area2D
             magic_minigame_tutorial.DecreaseGauge(10);
             magic_minigame_boulder.DecreaseGauge(5);
             magic_minigame_lily.DecreaseGauge(5);
+            magic_minigame_bless.DecreaseGauge(5);
         }
         if (sensor == 1)
         {

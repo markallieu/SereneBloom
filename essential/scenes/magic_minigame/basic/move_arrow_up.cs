@@ -18,7 +18,11 @@ public partial class move_arrow_up : Area2D
         }
         if (globals.magicMinigame == "Lily")
         {
-            speed = 200;
+            speed = 250;
+        }
+        if (globals.magicMinigame == "Blessing")
+        {
+            speed = 250;
         }
     }
 
@@ -32,6 +36,7 @@ public partial class move_arrow_up : Area2D
             magic_minigame_tutorial.DecreaseGauge(10);
             magic_minigame_boulder.DecreaseGauge(5);
             magic_minigame_lily.DecreaseGauge(5);
+            magic_minigame_bless.DecreaseGauge(5);
         }
         if (sensor == 1)
         {
