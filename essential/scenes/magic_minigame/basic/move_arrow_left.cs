@@ -28,6 +28,10 @@ public partial class move_arrow_left : Area2D
         {
             speed = 250;
         }
+        if (globals.magicMinigame == "Credit")
+        {
+            speed = 400;
+        }
     }
 
     public override void _Process(double delta)

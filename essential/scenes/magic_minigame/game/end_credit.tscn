@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://jnctj55axfd6"]
+
+[ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="1_5ysld"]
+[ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/end_credit.cs" id="1_fqcse"]
+[ext_resource type="AudioStream" uid="uid://c0nxb8m4kuv0k" path="res://essential/audio/3-BattleField3.mp3" id="3_0r1cc"]
+
+[sub_resource type="Animation" id="Animation_4jlu0"]
+resource_name = "Credit"
+length = 25.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 22.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(72, 224), Vector2(72, -288)]
+}
+
+[sub_resource type="Animation" id="Animation_ghpn0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(72, -288)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o6j8q"]
+_data = {
+"Credit": SubResource("Animation_4jlu0"),
+"RESET": SubResource("Animation_ghpn0")
+}
+
+[node name="EndCredit" type="Node2D" node_paths=PackedStringArray("anim")]
+script = ExtResource("1_fqcse")
+anim = NodePath("AnimationPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 416.0
+offset_bottom = 224.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 72.0
+offset_top = -288.0
+offset_right = 630.0
+offset_bottom = 592.003
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("1_5ysld")
+text = "Serene Bloom
+
+Made by
+Marcellus Yonathan & James Soejono
+
+Programmer
+ Marcellus Yonathan & James Soejono
+
+Story Writer
+Marcellus Yonathan
+
+Pixel Artist Asset
+Marcellus Yonathan
+Peter Milko
+Cainos
+Penzilla
+
+UI Artist Asset
+Crusenho
+PaperHatLizard
+Sr.Toasty
+
+Potrait Art Asset
+Oceans Dream
+
+Music Artist
+PeriTune
+
+
+
+
+
+
+
+
+
+
+
+Let's play one more game
+This time it's for the last!
+
+
+Prepare youself!
+
+"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o6j8q")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0r1cc")
+autoplay = true

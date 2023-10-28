@@ -1,8 +1,8 @@
-ColorRect
-AnimationPlayer
 AudioStreamPlayer2D
-ScrollContainer
+AnimationPlayer
+ColorRect
 Label
+ScrollContainer
 Panel
 TextureRect
 NinePatchRect
@@ -11,7 +11,6 @@ Area2D
 Button
 VBoxContainer
 Node2D
-Label
 Control
 CanvasLayer
 TextureRect

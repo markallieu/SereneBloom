@@ -17,6 +17,7 @@ public partial class idle_arrow_left : Area2D
                 magic_minigame_boulder.IncreaseGauge(5);
                 magic_minigame_lily.IncreaseGauge(5);
                 magic_minigame_bless.IncreaseGauge(5);
+                magic_minigame_credit.IncreaseGauge(20);
             }
         }
         if (sensor == 0)
