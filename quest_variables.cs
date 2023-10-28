@@ -6,7 +6,7 @@ public partial class quest_variables : Node
 {
 	public string savePath = "user://variable.save";
 	public bool isTalking = false;
-	public int currentQuestLine = 2;
+	public int currentQuestLine = 1;
 	public int warmGreetingProgress = 0;
 	public int sycamore = 0;
 	public int orchid = 0;
@@ -15,6 +15,7 @@ public partial class quest_variables : Node
 
 	// Questline 2
 
+	public bool KravonAfterTutorialDialogStart = false;
 	public bool ManaAmbrosiaStart = false;
 
 	public int lily = 0;
@@ -30,6 +31,7 @@ public partial class quest_variables : Node
 	public Vector2 position;
 	public bool needToChangePosition = false;
 
+	public bool positionChanged = false;
 	public void startQuestlineTwo(){
 		currentQuestLine = 2;
 		GD.Print("Questline 2 started");
@@ -53,6 +55,8 @@ public partial class quest_variables : Node
 		file.StoreVar(StatueFinish);
 		file.StoreVar(questline2_intro_played);
 		file.StoreVar(globals.currentScene);
+		file.StoreVar(globals.firstSerenavonLoad);
+		file.StoreVar(globals.firstSerenavonLoad);
 	}
 
 	public void load(){
@@ -72,7 +76,10 @@ public partial class quest_variables : Node
 		StatueFinish = (bool) file.GetVar(false);
 		questline2_intro_played = (bool) file.GetVar(false);
 		globals.currentScene = (string) file.GetVar(false);
+		globals.firstSerenavonLoad = (bool) file.GetVar(false);
+		globals.firstSerenavonLoad = (bool) file.GetVar(false);
 		needToChangePosition = true;
+		positionChanged = true;
 	}
 
 	// Called when the node enters the scene tree for the first time.

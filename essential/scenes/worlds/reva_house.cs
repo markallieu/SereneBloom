@@ -3,14 +3,20 @@ using System;
 
 public partial class reva_house : Node2D
 {
+    quest_variables questVar;
     public override void _Ready()
     {
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
         globals.currentScene = "reva_house";
         Node2D player = GetNode<Node2D>("playerKaine");
+        if(!questVar.positionChanged){
         if (globals.firstGameLoad == true)
         {
             Vector2 newPositionRevaHouse = new Vector2(globals.PlayerStartRevaHouseX, globals.PlayerStartRevaHouseY);
             player.Position = newPositionRevaHouse;
+        }
+        }else{
+            questVar.positionChanged = false;
         }
     }
 

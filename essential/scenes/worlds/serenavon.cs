@@ -5,14 +5,18 @@ using System;
 public partial class serenavon : Node2D
 {
     private Node2D dialogic;
+    quest_variables questVar;
     //private UI ui;
     public override void _Ready()
     {
         //ui = GetNode<UI>("CanvasLayer");
         //ui.GlobalNotif("test");
+        dialogic = GetNode<Node2D>("dialogic");
         globals.currentScene = "serenavon";
         globals.firstGameLoad = false;
         Node2D player = GetNode<Node2D>("playerKaine");
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
+        if(!questVar.positionChanged){
         if (globals.firstSerenavonLoad == true)
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
@@ -52,6 +56,14 @@ public partial class serenavon : Node2D
         {
             Vector2 newPositionSerenavon = new Vector2(globals.PlayerStartSerenavonX, globals.PlayerStartSerenavonY);
             player.Position = newPositionSerenavon;
+        }
+        }else{
+            questVar.positionChanged = false;
+        }
+        if(questVar.KravonAfterTutorialDialogStart){
+            GD.Print("KravonAfterTutorialDialog");
+            dialogic.Call("dialog","KravonAfterTutorial");
+            questVar.KravonAfterTutorialDialogStart = false;
         }
     }
 

@@ -4,15 +4,19 @@ using System;
 public partial class solace_haven : Node2D
 {
 
+    quest_variables questVar;
 
     public override void _Ready()
     {
         globals.currentScene = "solace_haven";
         Node2D player = GetNode<Node2D>("playerKaine");
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
+        if(!questVar.positionChanged){
         if (globals.firstGameLoad == true)
         {
             Vector2 newPositionSolaceHaven = new Vector2(globals.PlayerStartSolaceHavenX, globals.PlayerStartSolaceHavenY);
             player.Position = newPositionSolaceHaven;
+        }
         }
     }
 

@@ -7,10 +7,13 @@ public partial class cliffside : Node2D
     private GDScript dialogic;
     private GodotObject dialogicNode; // This is a GodotObject
     private bool played = false;
+    quest_variables questVar;
     public override void _Ready()
     {
         globals.currentScene = "cliffside";
         Node2D player = GetNode<Node2D>("playerKaine");
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
+        if(!questVar.positionChanged){
         if (globals.firstGameLoad == true)
         {
             Vector2 newPositionCliffiside = new Vector2(globals.PlayerStartCliffsideX, globals.PlayerStartCliffsideY);
@@ -20,6 +23,10 @@ public partial class cliffside : Node2D
         {
             Vector2 newPositionCliffiside = new Vector2(globals.PlayerExitCliffisideX, globals.PlayerExitCliffsideY);
             player.Position = newPositionCliffiside;
+        }
+        }
+        else{
+            questVar.positionChanged = false;
         }
         dialogic = (GDScript)GD.Load("res://addons/dialogic/Other/DialogicGameHandler.gd");
         dialogicNode = (GodotObject)dialogic.New();

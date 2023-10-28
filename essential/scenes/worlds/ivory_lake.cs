@@ -12,10 +12,14 @@ public partial class ivory_lake : Node2D
         questVar = GetNode<quest_variables>("/root/QuestVariables");
         globals.currentScene = "ivory_lake";
         Node2D player = GetNode<Node2D>("playerKaine");
+        if(!questVar.positionChanged){
         if (globals.firstGameLoad == true)
         {
             Vector2 newPositionIvoryLake = new Vector2(globals.PlayerStartIvoryLakeX, globals.PlayerStartIvoryLakeY);
             player.Position = newPositionIvoryLake;
+        }
+        }else{
+            questVar.positionChanged = false;
         }
         sigorius = GetNode<CharacterBody2D>("Sigorius");
         eleanor = GetNode<CharacterBody2D>("Eleanor");

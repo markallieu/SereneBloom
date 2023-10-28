@@ -19,7 +19,7 @@ public partial class magic_minigame_tutorial : Node2D
     public RandomNumberGenerator RNG = new RandomNumberGenerator();
 
     [Export] ProgressBar magicGaugeTutorial;
-    public static int magic = 0;
+    public static int magic = 90;
     public static int mana = 10;
 
     public static magic_minigame_tutorial Instance { get; private set; }
@@ -32,10 +32,13 @@ public partial class magic_minigame_tutorial : Node2D
     public static int overLimitCount = 0;
     private const int maxEntries = 3;
 
+    quest_variables questVar;
+
 
     public override void _Ready()
     {
         Instance = this;
+        questVar = GetNode<quest_variables>("/root/QuestVariables");
         magicGaugeTutorial.Value = magic;
         animation.Play("Magic");
 
@@ -150,6 +153,9 @@ public partial class magic_minigame_tutorial : Node2D
         magicSpell.Show();
         magicSpell.Play("Spell");
         await ToSignal(GetTree().CreateTimer(1), "timeout");
+        questVar.needToChangePosition = true;
+        questVar.positionChanged = true;
+        questVar.KravonAfterTutorialDialogStart = true;
         GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
     }
 }

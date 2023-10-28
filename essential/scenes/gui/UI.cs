@@ -48,6 +48,7 @@ public partial class UI : CanvasLayer
 	public void loadGame(){
 		dialogic.Call("loadDialogic");
 		questVar.load();
+		GD.Print(globals.currentScene);
 		GetTree().ChangeSceneToFile("res://essential/scenes/worlds/"  + globals.currentScene + ".tscn");
 		GD.Print("loaded");
 
@@ -112,6 +113,7 @@ public partial class UI : CanvasLayer
 				questVar.ManaAmbrosiaStart = true;
 				break;
 			case "ELeanorMagicGame":
+
 				break;
 			case "Lily":
 				questVar.lily += 1;
@@ -123,6 +125,11 @@ public partial class UI : CanvasLayer
 				break;
 			case "Crystal":
 				questVar.crystal +=1;
+				break;
+			case "tutorialKravon":
+				questVar.position = kaine.Position;
+				questVar.isTalking = false;
+				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/tutorial_text.tscn");
 				break;
 		}
 		if(questVar.IsQuestlineOneFinished() && questVar.currentQuestLine == 1){
