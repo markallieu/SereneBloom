@@ -4,6 +4,7 @@ using System;
 public partial class reva_house : Node2D
 {
     quest_variables questVar;
+    CharacterBody2D reva;
     public override void _Ready()
     {
         questVar = GetNode<quest_variables>("/root/QuestVariables");
@@ -17,6 +18,10 @@ public partial class reva_house : Node2D
         }
         }else{
             questVar.positionChanged = false;
+        }
+        reva = GetNode<CharacterBody2D>("Reva");
+        if(questVar.currentQuestLine == 3){
+            reva.Hide();
         }
     }
 

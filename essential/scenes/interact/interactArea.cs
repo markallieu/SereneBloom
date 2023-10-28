@@ -11,6 +11,8 @@ public partial class interactArea : Area2D
 	private Label label;
 	private Node2D dialogic;
 	private string name;
+
+	CharacterBody2D sprite;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -22,18 +24,21 @@ public partial class interactArea : Area2D
 		label  = GetNode<Label>("Label");
 		label.Hide();
 		dialogic = GetNode<Node2D>("dialogic");
+		sprite = GetParent<CharacterBody2D>();
         
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustReleased("interact") && inside)
+		if (Input.IsActionJustReleased("interact") && inside && sprite.IsVisibleInTree())
         {
 			if(questVar.currentQuestLine == 1){
 				dialogic.Call("dialog",name);
 			}else if(questVar.currentQuestLine ==2){
 				dialogic.Call("dialog",name + "2");
+			}else if(questVar.currentQuestLine == 3){
+				dialogic.Call("dialog","final");
 			}
 			questVar.isTalking = true;
 	        //AddChild(dialog);

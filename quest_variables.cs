@@ -6,7 +6,7 @@ public partial class quest_variables : Node
 {
 	public string savePath = "user://variable.save";
 	public bool isTalking = false;
-	public int currentQuestLine = 1;
+	public int currentQuestLine = 3;
 	public int warmGreetingProgress = 0;
 	public int sycamore = 0;
 	public int orchid = 0;
@@ -17,6 +17,7 @@ public partial class quest_variables : Node
 
 	public bool KravonAfterTutorialDialogStart = false;
 	public bool ManaAmbrosiaStart = false;
+
 
 	public int lily = 0;
 	public int rose = 0;
@@ -37,6 +38,12 @@ public partial class quest_variables : Node
 		GD.Print("Questline 2 started");
 		GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
 
+	}
+
+	public void startQuestlineThree(){
+		currentQuestLine = 3;
+		GD.Print("Questline 3 started");
+		GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
 	}
 
 	public void save(){

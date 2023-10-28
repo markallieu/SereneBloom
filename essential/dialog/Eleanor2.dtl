@@ -3,8 +3,12 @@ Join kaine 1
 if {Timeline2.haveFInishedDialogManaPoisoning} == "false":
 	jump SigoriusNEleanor2/start
 else:
-	if {ManaAmbrosiaComplete} == "true":
-		Eleanor: Apa yang saya bisa bantu?
+	if {ManaAmbrosiaFinish} == "true":
+		Eleanor: Eleanor, ini potion yang dibuat oleh Aeiri. Namanya Mana Ambrosia.
+		Langsung suruh minumkan potion ini ke Heinrich dan dia seharusnya bakal membaik beberapa hari ke depan.
+		Terimkasih banyak ya Kaine, aku juga harus berterimakasih sama Aeiri nanti.
+		Sama-sama, memang kemampuan Aeiri sangat hebat dalam membuat potion.
+		[signal arg="ManaDeseaseFinish"]
 	elif {haveTalkedToThomas2} == "true":
 		Eleanor: Hai Kaine, apakah kamu membutuhkan sesuatu?
 		kaine: Iya, salah satu material yang dibutuhkan untuk potion ada di Thomas.

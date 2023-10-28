@@ -4,6 +4,7 @@ using System;
 public partial class thomas_shop : Node2D
 {
     quest_variables questVar;
+    CharacterBody2D thomas;
     public override void _Ready()
     {
         questVar = GetNode<quest_variables>("/root/QuestVariables");
@@ -17,6 +18,10 @@ public partial class thomas_shop : Node2D
         }
         }else{
             questVar.positionChanged = false;
+        }
+        thomas = GetNode<CharacterBody2D>("Thomas");
+        if(questVar.currentQuestLine == 3){
+            thomas.Hide();
         }
     }
 

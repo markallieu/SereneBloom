@@ -131,9 +131,12 @@ public partial class UI : CanvasLayer
 				questVar.isTalking = false;
 				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/tutorial_text.tscn");
 				break;
+			case "ManaDeseaseFinish":
+				questVar.startQuestlineThree();
+				break;
 		}
 		if(questVar.IsQuestlineOneFinished() && questVar.currentQuestLine == 1){
-			//timer(5);
+			timer(5);
 			questVar.startQuestlineTwo();
 		}
     }

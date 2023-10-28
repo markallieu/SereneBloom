@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1sbrqget264i"]
+
+[ext_resource type="Texture2D" uid="uid://bm7vlo8f16l6u" path="res://essential/art/character/NPC Art/Sprite Character/HeinrichSprite.png" id="1_kv5mf"]
+[ext_resource type="PackedScene" uid="uid://bb5salg3h8ru1" path="res://essential/scenes/interact/interactArea.tscn" id="2_mjti0"]
+[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="3_n6s0e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1oajc"]
+radius = 6.32456
+
+[node name="Heinrich" type="CharacterBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kv5mf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_1oajc")
+
+[node name="Area2D" parent="." instance=ExtResource("2_mjti0")]
+
+[node name="dialogic" parent="Area2D" instance=ExtResource("3_n6s0e")]

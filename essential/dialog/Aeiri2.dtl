@@ -8,7 +8,9 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 			Aeiri: Oke tunggu sebentar ya.
 			Aeiri: Proses pembuatan Mana Ambrosia memakan waktu lumayan lama.
 			Aeiri: Ini dia Mana Ambrosianya, berikan ini ke Heinrich secepat mungkin.
-			kaine: Terimakasih banyak atas potionnya, terimakasih!
+			kaine: Terimakasih banyak atas potionnya!
+			[signal arg="ManaAmbriosaFinish"]
+			VAR {ManaAmbrosiaFinish} = "ture"
 		else:
 			Aeiri: Berikan barangnya padaku kalau kamu sudah menemukannya semua.
 	else:
