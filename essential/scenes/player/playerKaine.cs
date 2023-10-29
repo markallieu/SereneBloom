@@ -36,7 +36,7 @@ public partial class playerKaine : CharacterBody2D
     private Vector2 _velocity = Vector2.Zero;
     private Vector2 _moveDirection = Vector2.Zero;
     private string _currentDirection;
-    [Export] private const float _speed = 500f;
+    [Export] private const float _speed = 100f;
 
     public override void _PhysicsProcess(double delta)
     {

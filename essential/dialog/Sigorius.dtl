@@ -29,7 +29,7 @@ if {haveTalkedToReva} == "true":
 		kaine: Reva bilang anda punya Marble, apakah itu benar?
 		sigorius: Benar, dia memesan Marble dari diriku.
 		kaine: Terimakasih, Sigorius!
-		sigorius: Oh ya kalau kamu sudah memberi barang ini ke Reva, temui aku di Balai Desa.
+		sigorius: Oh ya kalau kamu sudah membantu semua orang, temui aku di Balai Desa yang terletak diatas air mancur desa serenavon.
 		sigorius: Lokasinya ada di atas Village Center, aku perlu sedikit bantuan.
 		[signal arg="Marble"]
 		VAR {BuildingAStatue.Marble} = "true"

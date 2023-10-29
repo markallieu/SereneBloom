@@ -1,3 +1,6 @@
+/home/js/game
+res://essential/art
+res://essential/scenes/interact
 res://essential/art/Magic Spells
 res://essential/scenes/magic_minigame/game
 res://essential/scenes/gui
@@ -8,14 +11,11 @@ res://essential/art/character/NPC Art/Potrait Character
 res://essential/scenes/player
 res://essential/dialog
 res://essential/scenes/gui
-res://essential/scenes/interact
 res://essential/scenes/worlds
 res://essential/scenes
 res://essential/scenes/battle
 res://essential/art/battle/Battle Art
 res://essential
-res://essential/art
 res://essential/audio/RPG_Essentials_Free/12_Player_Movement_SFX
 res://essential/scenes
 res://essential/art/character
-C:/aseprite/build/bin

@@ -131,20 +131,32 @@ public partial class UI : CanvasLayer
 				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_lily.tscn");
 				break;
 			case "Rose":
-				questVar.rose +=1;
 				ManaAmbrosia();
 				break;
 			case "Crystal":
+				questVar.crystal = 1;
 				ManaAmbrosia();
+				break;
+			case "ManaAmbriosaFinish":
+				GlobalNotif("Obat Diperoleh!","Segera sembuhkan Heinrich!");
 				break;
 			case "tutorialKravon":
 				questVar.position = kaine.Position;
 				questVar.isTalking = false;
 				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/tutorial_text.tscn");
 				break;
+			case "gotEssense":
+				GlobalNotif("Blessings Essence diperoleh!","Segera tukarkan ke Thomas.");
+				break;
 			case "ManaDeseaseFinish":
 				questVar.startQuestlineThree();
 				break;
+			case "EndScreen":
+				questVar.position = kaine.Position;
+				questVar.isTalking = false;
+				GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/end_credit.tscn");
+				break;
+
 		}
 		if(questVar.IsQuestlineOneFinished() && questVar.currentQuestLine == 1){
 			timer(5);

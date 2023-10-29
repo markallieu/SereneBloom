@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cq5eh7t00v6d1"]
+[gd_scene load_steps=5 format=3 uid="uid://cq5eh7t00v6d1"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/poem_quest.cs" id="1_e077i"]
 [ext_resource type="Texture2D" uid="uid://c0t06snl5466i" path="res://essential/art/UI assets pack 2/UI books & more.png" id="2_uip6s"]
@@ -11,19 +11,6 @@ texture_margin_top = 56.0
 texture_margin_right = 40.0
 texture_margin_bottom = 56.0
 region_rect = Rect2(560, 16, 48, 64)
-
-[sub_resource type="Animation" id="Animation_qupli"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_8kpwk"]
-resource_name = "Show text"
-length = 8.0
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_sc4j2"]
-_data = {
-"RESET": SubResource("Animation_qupli"),
-"Show text": SubResource("Animation_8kpwk")
-}
 
 [node name="Questline2_intro" type="CanvasLayer"]
 script = ExtResource("1_e077i")
@@ -92,13 +79,10 @@ Membimbingmu dimana rahasia tersimpan.
 Temukan nama mereka,
 dan kau akan membebaskan,
 Semua kesedihan setua tanah sendiri,
-Beserta apa yang kau ingin cari."
+Beserta apa yang kau ingin cari.
+
+Pilih 3 nama yang sesuai 
+dengan deskripsi diatas lalu
+ Vorten Rose akan bangkit ."
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="anim" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_sc4j2")
-}
-
-[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

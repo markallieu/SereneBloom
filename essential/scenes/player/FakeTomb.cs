@@ -8,8 +8,9 @@ public partial class FakeTomb : Area2D
 
 	UI ui;
 	bool inside = false;
-	bool chosen = false;
+	public bool chosen = false;
 	quest_variables questVar;
+	solace_haven solaceHeaven;
 
 	public override void _Ready()
 	{
@@ -18,6 +19,7 @@ public partial class FakeTomb : Area2D
 		ui = GetParent<Node2D>().GetNode<UI>("CanvasLayer");
 		text.Hide();
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
+		solaceHeaven = GetParent<solace_haven>();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,11 +30,13 @@ public partial class FakeTomb : Area2D
 			text.Hide();
 			questVar.tombChosen +=1;
 			chosen = true;
-			ui.GlobalNotif("Batu Nisan dipilih!","(" + questVar.tombChosen + "/3)");
 			if(questVar.tombChosen == 3 && questVar.trueTombChosen < 3){
 			questVar.tombChosen = 0;
 			questVar.trueTombChosen = 0;
+			solaceHeaven.enable();
 			ui.GlobalNotif("Batu Nisan yang dipilih salah!", "coba ulangi (0/3)!");
+			}else{
+				ui.GlobalNotif("Batu Nisan dipilih!","(" + questVar.tombChosen + "/3)");
 			}
 			inside = false;
         }

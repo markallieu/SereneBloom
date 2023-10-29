@@ -555,7 +555,7 @@ texture = ExtResource("5_lewm7")
 18:2/0 = 0
 18:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:2/0/physics_layer_0/angular_velocity = 0.0
-18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0.75, 8, -8, -8, -8, -8, -0.25, -0.25, 2.25)
+18:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 1.25, -8, 1.75, -8, 8, -0.5, 8)
 18:3/0 = 0
 18:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:3/0/physics_layer_0/angular_velocity = 0.0
@@ -563,30 +563,29 @@ texture = ExtResource("5_lewm7")
 18:4/0 = 0
 18:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:4/0/physics_layer_0/angular_velocity = 0.0
+18:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.20971, 8, 2.56326, 8, -1.32583, -8, -1.67938)
 16:4/0 = 0
 16:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:4/0/physics_layer_0/angular_velocity = 0.0
-16:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0.75, 8, -8, -8, -8, -8, -0.25, -0.25, 2.25)
+16:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 2.56326, 8, -2.38649, -8, -2.74004, -8, 2.03293, -0.25, 2.25)
 15:4/0 = 0
 15:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:4/0/physics_layer_0/angular_velocity = 0.0
-15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 1.25, 8, -8, -8, -8, -8, 1.25)
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 1.25, 8, -4.77297, -8, -4.06586, -8, 1.25)
 14:4/0 = 0
 14:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:4/0/physics_layer_0/angular_velocity = 0.0
-14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 1.25, 8, -8, -8, -8, -8, 1.25)
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 3.125, 8, -3.375, -8, -2.875, -8, 3.125)
 14:3/0 = 0
 14:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:3/0/physics_layer_0/angular_velocity = 0.0
-14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 1.25, -2.75, 2.75, -4.25, -8, -8, -8, -8, 8, 0.75, 8)
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.24264, 8, 3.18198, 5.12652, -4.24264, 4.77297, -3.53553, -4.77297, -8, -4.06586, -8, 8, 0.75, 8)
 15:3/0 = 0
 15:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:3/0/physics_layer_0/angular_velocity = 0.0
-15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 8, 4.25, -8, 3.25, -8, 8, -0.75, 8)
 16:3/0 = 0
 16:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:3/0/physics_layer_0/angular_velocity = 0.0
-16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0.75, 8, -8, -8, -8, -8, -0.25, -0.25, 2.25)
 15:5/0 = 0
 15:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:5/0/physics_layer_0/angular_velocity = 0.0
@@ -3409,6 +3408,7 @@ layer_4/tile_data = PackedInt32Array(2555957, 655360, 6, 2752555, 655360, 6, 222
 polygon = PackedVector2Array(-77, -80, 911, -80, 912, 651, 989, 651, 989, 755, 912, 754, 912, 911, -80, 912, -80, -98, -110, -80, -133, 12, -216, 305, -223, 438, -238, 818, -224, 1007, 279, 1229, 1162, 1206, 1383, 709, 1282, 344, 1349, -240, 1031, -352, 505, -349, -146, -274, -77, -97, -80, -96, -80, -80)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(0.989879, 0.994617)
 stream = ExtResource("14_7eii2")
 volume_db = 9.412
 autoplay = true
@@ -3427,12 +3427,12 @@ position = Vector2(728, 282)
 position = Vector2(364, 576)
 
 [node name="Area2D" parent="." instance=ExtResource("17_l3mpg")]
-position = Vector2(86, 703)
+position = Vector2(85, 592)
 
 [node name="Area2D2" parent="." instance=ExtResource("18_4g6em")]
 position = Vector2(460, 346)
 
 [node name="Area2D3" parent="." instance=ExtResource("19_eo44l")]
-position = Vector2(718, 107)
+position = Vector2(708, 107)
 
 [connection signal="body_entered" from="ivory_lake_exit_point" to="." method="_on_ivory_lake_exit_point_body_entered"]

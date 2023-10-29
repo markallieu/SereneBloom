@@ -5,6 +5,11 @@ public partial class idle_arrow_down : Area2D
 {
     [Export] AnimationPlayer animation;
     private int sensor = 0;
+    Node2D parent;
+    public override void _Ready()
+    {
+        parent = GetParent<Node2D>();
+    }
 
     public override void _Process(double delta)
     {
@@ -13,11 +18,23 @@ public partial class idle_arrow_down : Area2D
             if (Input.IsActionJustPressed("ui_down"))
             { 
                 animation.Play("Good");
-                magic_minigame_tutorial.IncreaseGauge(10);
-                magic_minigame_boulder.IncreaseGauge(5);
-                magic_minigame_lily.IncreaseGauge(5);
-                magic_minigame_bless.IncreaseGauge(5);
-                magic_minigame_credit.IncreaseGauge(20);
+                switch (parent.Name){
+                    case "Magic_Minigame_Lily":
+                        magic_minigame_lily.IncreaseGauge(5);
+                        break;
+                    case "Magic_Minigame_Boulder":
+                        magic_minigame_boulder.IncreaseGauge(5);
+                        break;
+                    case "Magic_Minigame_Bless":
+                        magic_minigame_bless.IncreaseGauge(5);
+                        break;
+                    case "Magic_Minigame_Credit":
+                        magic_minigame_credit.IncreaseGauge(20);
+                        break;
+                    case "Magic_Minigame_Tutorial":
+                        magic_minigame_tutorial.IncreaseGauge(10);
+                        break;
+                } 
             }
         }
         if (sensor == 0)
@@ -25,10 +42,20 @@ public partial class idle_arrow_down : Area2D
             if (Input.IsActionJustPressed("ui_down"))
             {
                 animation.Play("Bad");
-                magic_minigame_tutorial.DecreaseGauge(10);
-                magic_minigame_boulder.DecreaseGauge(5);
-                magic_minigame_lily.DecreaseGauge(5);
-                magic_minigame_bless.DecreaseGauge(5);
+                  switch (parent.Name){
+                    case "Magic_Minigame_Lily":
+                         magic_minigame_lily.DecreaseGauge(5);
+                        break;
+                    case "Magic_Minigame_Boulder":
+                        magic_minigame_boulder.DecreaseGauge(5);
+                        break;
+                    case "Magic_Minigame_Bless":
+                        magic_minigame_bless.DecreaseGauge(5);
+                        break;
+                    case "Magic_Minigame_Tutorial":
+                        magic_minigame_tutorial.DecreaseGauge(10);
+                        break;
+                } 
             }
         }
     }

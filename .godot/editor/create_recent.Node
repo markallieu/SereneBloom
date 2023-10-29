@@ -1,3 +1,6 @@
+RigidBody2D
+CollisionShape2D
+Area2D
 AudioStreamPlayer2D
 AnimationPlayer
 ColorRect
@@ -6,8 +9,6 @@ ScrollContainer
 Panel
 TextureRect
 NinePatchRect
-CollisionShape2D
-Area2D
 Button
 VBoxContainer
 Node2D

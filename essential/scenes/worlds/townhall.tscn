@@ -3711,9 +3711,11 @@ position = Vector2(251, 339)
 shape = SubResource("RectangleShape2D_c5rer")
 
 [node name="Eleanor" parent="." instance=ExtResource("15_hhfu8")]
+visible = false
 position = Vector2(39, 99)
 
 [node name="Sigorius" parent="." instance=ExtResource("16_dy7jx")]
+visible = false
 position = Vector2(39, 49)
 
 [node name="Bed" parent="." instance=ExtResource("17_w6hcc")]

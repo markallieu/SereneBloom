@@ -6,12 +6,10 @@ public partial class end_credit : Node2D
     [Export] AnimationPlayer anim;
     public override void _Ready()
     {
-        Credit();
+        anim.Play("credit");
     }
-    private async void Credit()
-    {
-        anim.Play("Credit");
-        await ToSignal(GetTree().CreateTimer(25), "timeout");
+    
+    public void _on_animation_player_animation_finished(StringName animName){
         GetTree().ChangeSceneToFile("res://essential/scenes/magic_minigame/game/magic_minigame_credit.tscn");
     }
 }

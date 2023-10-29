@@ -1,5 +1,8 @@
 Join kaine 1
 Join Aeiri 1
+if {ManaAmbrosiaFinish} == "true":
+	Aeiri: Cuaca hari ini begitu indah, ya?
+	[end_timeline]
 if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 	if {haveTalkedToAeiri2} == "true":
 		if {ManaAmbrosiaComplete} == "true":
@@ -10,7 +13,7 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 			Aeiri: Ini dia Mana Ambrosianya, berikan ini ke Heinrich secepat mungkin.
 			kaine: Terimakasih banyak atas potionnya!
 			[signal arg="ManaAmbriosaFinish"]
-			VAR {ManaAmbrosiaFinish} = "ture"
+			VAR {ManaAmbrosiaFinish} = "true"
 		else:
 			Aeiri: Berikan barangnya padaku kalau kamu sudah menemukannya semua.
 	else:

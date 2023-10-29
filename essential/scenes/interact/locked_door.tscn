@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm8d32td3yixm"]
+
+[ext_resource type="Script" path="res://LockedDoor.cs" id="1_8u0an"]
+
+[node name="locked_door" type="Area2D"]
+script = ExtResource("1_8u0an")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

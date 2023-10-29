@@ -20,7 +20,11 @@ func setBuildStatue():
 	Dialogic.VAR.BuildingAStatueComplete = "true"
 	return
 func setManaAmbriosa():
+	print("mana ambriosa ingridient completed")
 	Dialogic.VAR.ManaAmbrosiaComplete = "true"
+	return
+func setManaAmbriosaFinish():
+	Dialogic.VAR.ManaAmbrosiaFinish = "true"
 	return
 func saveDialogic():
 	Dialogic.Save.save("save_slot")

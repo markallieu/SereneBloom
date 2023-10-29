@@ -3402,12 +3402,11 @@ position = Vector2(591, 263)
 [node name="Area2D11" parent="." instance=ExtResource("24_rf2a6")]
 position = Vector2(254, 273)
 
-[node name="Area2D13" parent="." instance=ExtResource("26_j817y")]
-visible = false
-position = Vector2(372, 376)
-
 [node name="Area2D12" parent="." instance=ExtResource("25_u528h")]
 position = Vector2(247, 549)
+
+[node name="Area2D13" parent="." instance=ExtResource("26_j817y")]
+position = Vector2(372, 376)
 
 [node name="Poem" parent="." instance=ExtResource("27_fgpow")]
 visible = false

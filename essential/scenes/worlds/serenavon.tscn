@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=48 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://dnk16gpaulu0c" path="res://essential/scenes/player/Sigorius.tscn" id="22_6oql1"]
 [ext_resource type="PackedScene" uid="uid://cofgjxwbapqmu" path="res://essential/scenes/player/Thomas.tscn" id="23_oyiyr"]
 [ext_resource type="PackedScene" uid="uid://b1sbrqget264i" path="res://essential/scenes/player/Heinrich.tscn" id="24_117wq"]
+[ext_resource type="PackedScene" uid="uid://dm8d32td3yixm" path="res://essential/scenes/interact/locked_door.tscn" id="26_3m2rt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("2_k1sjv")
@@ -459,7 +460,7 @@ texture = ExtResource("4_ivvmx")
 25:8/0 = 0
 25:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 25:8/0/physics_layer_0/angular_velocity = 0.0
-25:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(47, -24.5, 47, 18.5, 46.6691, 27.9307, 48, 55.5, 23, 55.5, 24, 22.5, -23.3345, 22.2739, -23, 55.5, -48, 55.5, -47, -23.5)
+25:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(47, -24.5, 47, 18.5, 46.6691, 27.9307, 48, 55.5, 23, 55.5, 21.2132, 48.7904, -21.2132, 48.7904, -23, 55.5, -48, 55.5, -47, -23.5)
 34:10/size_in_atlas = Vector2i(1, 3)
 34:10/0 = 0
 34:10/0/y_sort_origin = 14
@@ -470,7 +471,7 @@ texture = ExtResource("4_ivvmx")
 35:1/0 = 0
 35:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 35:1/0/physics_layer_0/angular_velocity = 0.0
-35:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.5, 31.5, -17.5, 31.5, -16.5, 63.5, -24.5, 63.5, -24.5, 55.5, -62.5, 55.5, -62.5, -25.5, 62.5, -25.5, 62.5, 56.5, 27.5, 56.5, 24.5, 63.5, 16.5, 63.5)
+35:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(12, 55, -8, 57, -16.5, 63.5, -24.5, 63.5, -24.5, 55.5, -62.5, 55.5, -62.5, -25.5, 62.5, -25.5, 62.5, 56.5, 27.5, 56.5, 24.5, 63.5, 16.5, 63.5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkbak"]
 texture = ExtResource("5_8rfii")
@@ -497,7 +498,7 @@ texture = ExtResource("5_8rfii")
 2:4/0 = 0
 2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:4/0/physics_layer_0/angular_velocity = 0.0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(21.75, 5.75, 22.25, -8.75, 15.25, -16.25, 1.25, -18.75, -12.25, -16.25, -20.25, -4.25, -20.75, 4.75, -11.25, 10.75, 5.75, 14.75)
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(21.75, 5.75, 26.163, -8.83884, 19.0919, -21.5668, 2.12132, -24.3952, -15.5563, -21.5668, -23.3345, -13.7886, -24.7487, 2.47487, -11.25, 10.75, 5.75, 14.75)
 8:4/size_in_atlas = Vector2i(2, 4)
 8:4/0 = 0
 8:4/0/y_sort_origin = 12
@@ -3361,6 +3362,15 @@ size = Vector2(40.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_no3g0"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3cry"]
+size = Vector2(30, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knq6t"]
+size = Vector2(20, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjlxm"]
+size = Vector2(27.875, 18.4375)
+
 [node name="Serenavon" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_s47pv")
@@ -3484,25 +3494,26 @@ position = Vector2(905, 1192)
 position = Vector2(875, 831)
 
 [node name="Griselda" parent="." instance=ExtResource("17_ioau8")]
-position = Vector2(166, 838)
+z_index = 1
+position = Vector2(185, 817)
 
 [node name="dialogic" parent="." instance=ExtResource("19_f0j65")]
 
 [node name="Eleanor" parent="." instance=ExtResource("20_hpqih")]
 visible = false
-position = Vector2(800, 745)
+position = Vector2(843, 775)
 
 [node name="Griselda2" parent="." instance=ExtResource("17_ioau8")]
 visible = false
-position = Vector2(859, 723)
+position = Vector2(865, 799)
 
 [node name="Kravon2" parent="." instance=ExtResource("15_icioc")]
 visible = false
-position = Vector2(739, 773)
+position = Vector2(827, 791)
 
 [node name="Reva" parent="." instance=ExtResource("21_ande4")]
 visible = false
-position = Vector2(774, 838)
+position = Vector2(827, 842)
 
 [node name="Sigorius" parent="." instance=ExtResource("22_6oql1")]
 visible = false
@@ -3510,11 +3521,60 @@ position = Vector2(843, 815)
 
 [node name="Thomas" parent="." instance=ExtResource("23_oyiyr")]
 visible = false
-position = Vector2(921, 745)
+position = Vector2(881, 783)
 
 [node name="Heinrich" parent="." instance=ExtResource("24_117wq")]
 visible = false
-position = Vector2(694, 799)
+position = Vector2(802, 815)
+
+[node name="locked_door" parent="." instance=ExtResource("26_3m2rt")]
+position = Vector2(165, 1048)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked_door"]
+position = Vector2(11, -6)
+shape = SubResource("RectangleShape2D_x3cry")
+
+[node name="locked_door2" parent="." instance=ExtResource("26_3m2rt")]
+position = Vector2(128, 819)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked_door2"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_knq6t")
+
+[node name="locked_door3" parent="." instance=ExtResource("26_3m2rt")]
+position = Vector2(134, 558)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked_door3"]
+position = Vector2(2, 4)
+shape = SubResource("RectangleShape2D_cjlxm")
+
+[node name="locked_door4" parent="." instance=ExtResource("26_3m2rt")]
+position = Vector2(634, 699)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked_door4"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_cjlxm")
+
+[node name="locked_door5" parent="." instance=ExtResource("26_3m2rt")]
+position = Vector2(702, 1061)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked_door5"]
+position = Vector2(1.875, -4.875)
+shape = SubResource("RectangleShape2D_cjlxm")
+
+[node name="locked_door6" parent="." instance=ExtResource("26_3m2rt")]
+position = Vector2(1373, 803)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked_door6"]
+position = Vector2(3, -1.4375)
+shape = SubResource("RectangleShape2D_cjlxm")
+
+[node name="locked_door7" parent="." instance=ExtResource("26_3m2rt")]
+position = Vector2(1207, 700)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="locked_door7"]
+position = Vector2(0.9375, 3.78125)
+shape = SubResource("RectangleShape2D_cjlxm")
 
 [connection signal="body_entered" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_entered"]
 [connection signal="body_exited" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_exited"]

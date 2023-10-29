@@ -2,14 +2,19 @@ Join Eleanor 1
 Join kaine 1
 if {Timeline2.haveFInishedDialogManaPoisoning} == "false":
 	jump SigoriusNEleanor2/start
+	[end_timeline]
 else:
 	if {ManaAmbrosiaFinish} == "true":
-		Eleanor: Eleanor, ini potion yang dibuat oleh Aeiri. Namanya Mana Ambrosia.
-		Langsung suruh minumkan potion ini ke Heinrich dan dia seharusnya bakal membaik beberapa hari ke depan.
-		Terimkasih banyak ya Kaine, aku juga harus berterimakasih sama Aeiri nanti.
-		Sama-sama, memang kemampuan Aeiri sangat hebat dalam membuat potion.
+		kaine: Eleanor, ini potion yang dibuat oleh Aeiri. Namanya Mana Ambrosia.
+		kaine: Langsung suruh minumkan potion ini ke Heinrich dan dia seharusnya bakal membaik beberapa hari ke depan.
+		Eleanor: Terimkasih banyak ya Kaine, aku juga harus berterimakasih sama Aeiri nanti.
+		kaine: Sama-sama, memang kemampuan Aeiri sangat hebat dalam membuat potion.
 		[signal arg="ManaDeseaseFinish"]
+		[end_timeline]
 	elif {haveTalkedToThomas2} == "true":
+		if {gotEsssense} == "true":
+			Eleanor: Semoga Aeiri bisa meracik potion yang efektif.
+			[end_timeline]
 		Eleanor: Hai Kaine, apakah kamu membutuhkan sesuatu?
 		kaine: Iya, salah satu material yang dibutuhkan untuk potion ada di Thomas.
 		kaine: Tapi dia mau menukarnya kalau kamu memberikannya Blessing Essence.
@@ -18,6 +23,7 @@ else:
 		Eleanor: Apakah tidak apa-apa? Kudengar resikonya lumayan besar.
 		kaine: Tenang saja, akan ku tunjukkan kemampuanku.
 		[signal arg="ELeanorMagicGame"]
+		VAR {gotEsssense} = "true"
 	else:
 		Eleanor: Semoga Aeiri bisa meracik potion yang efektif.
 		kaine: Tenang aja, Aeiri ini Alchemist yang sangat terkenal kehebatannya.

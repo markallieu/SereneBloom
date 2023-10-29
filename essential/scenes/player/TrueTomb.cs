@@ -8,7 +8,7 @@ public partial class TrueTomb : Area2D
 
 	UI ui;
 	bool inside = false;
-	bool chosen = false;
+	public bool chosen = false;
 	solace_haven solaceHeaven;
 	quest_variables questVar;
 
@@ -31,16 +31,19 @@ public partial class TrueTomb : Area2D
 			questVar.tombChosen +=1;
 			questVar.trueTombChosen +=1;
 			chosen = true;
-			ui.GlobalNotif("Batu Nisan dipilih!","(" + questVar.tombChosen + "/3)");
 			if(questVar.trueTombChosen == 3){
-			ui.GlobalNotif("Batu Nisan yang dipilih benar!", "Segera ambil Vorten Rose");
-			solaceHeaven.showRose();
-			questVar.roseFinished = true;
+				ui.GlobalNotif("Batu Nisan yang dipilih benar!", "Segera ambil Vorten Rose");
+				solaceHeaven.showRose();
+				questVar.roseStarted = false;
+				questVar.roseFinished = true;
 			}
-			if(questVar.tombChosen == 3 && questVar.trueTombChosen < 3){
-			questVar.tombChosen = 0;
-			questVar.trueTombChosen = 0;
-			ui.GlobalNotif("Batu Nisan yang dipilih salah!", "coba ulangi (0/3)!");
+			else if(questVar.tombChosen == 3 && questVar.trueTombChosen < 3){
+				questVar.tombChosen = 0;
+				questVar.trueTombChosen = 0;
+				solaceHeaven.enable();
+				ui.GlobalNotif("Batu Nisan yang dipilih salah!", "coba ulangi (0/3)!");
+			}else {
+				ui.GlobalNotif("Batu Nisan dipilih!","(" + questVar.tombChosen + "/3)");
 			}
 			inside = false;
         }

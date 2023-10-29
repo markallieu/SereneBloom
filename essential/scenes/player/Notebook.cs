@@ -11,9 +11,11 @@ public partial class Notebook : Area2D
 	bool inside = false;
 	quest_variables questVar;
 	solace_haven solaceHeaven;
+	CollisionShape2D coll;
 
 	public override void _Ready()
 	{
+		coll = GetNode<CollisionShape2D>("CollisionShape2D");
 		questVar = GetNode<quest_variables>("/root/QuestVariables");
 		text = GetNode<Label>("Label");
 		necklace = GetNode<Sprite2D>("Sprite2D");
@@ -34,7 +36,7 @@ public partial class Notebook : Area2D
 			text.Hide();
 			solaceHeaven.showPoem();
 			questVar.poemShowed = true;
-			ui.ManaAmbrosia();
+			coll.Disabled = true;
         }
 	}
 

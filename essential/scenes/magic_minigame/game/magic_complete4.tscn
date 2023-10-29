@@ -1,9 +1,11 @@
-[gd_scene load_steps=79 format=3 uid="uid://0iyi1u8l0ye6"]
+[gd_scene load_steps=81 format=3 uid="uid://0iyi1u8l0ye6"]
 
+[ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/magic_complete4.cs" id="1_gat24"]
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="1_nr4qn"]
 [ext_resource type="Texture2D" uid="uid://2imm8cmmc4d3" path="res://essential/art/Magic Spells/00.png" id="2_tjm0f"]
 [ext_resource type="Texture2D" uid="uid://u88witkpqjb7" path="res://essential/art/Magic Spells/01.png" id="3_4s1he"]
 [ext_resource type="AudioStream" uid="uid://cy6bd2tp3b8pt" path="res://essential/audio/RPG_Essentials_Free/8_Atk_Magic_SFX/13_Ice_explosion_01.wav" id="4_fccus"]
+[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="6_q2en3"]
 
 [sub_resource type="Animation" id="Animation_toxxk"]
 length = 0.001
@@ -541,6 +543,7 @@ animations = [{
 }]
 
 [node name="Magic_Complete4" type="CanvasLayer"]
+script = ExtResource("1_gat24")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 416.0
@@ -548,16 +551,16 @@ offset_bottom = 224.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 40.0
+offset_left = 24.0
 offset_top = 64.0
-offset_right = 614.0
+offset_right = 654.0
 offset_bottom = 216.0
 scale = Vector2(0.6, 0.6)
 theme = ExtResource("1_nr4qn")
 text = "The game is over, but the journey's not done,
 The lessons we learned, now let them be won.
-We helped so many, in the game's embrace,
-Now let's bring compassion to the human race.
+We helped so many, in the game's lifetime,
+Now let's bring compassion to the our surroundings.
 
 Thank you so much for playing."
 horizontal_alignment = 1
@@ -576,3 +579,18 @@ frame_progress = 0.68086
 
 [node name="SFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_fccus")
+
+[node name="Quit" type="Button" parent="."]
+visible = false
+offset_left = 184.0
+offset_top = 88.0
+offset_right = 241.0
+offset_bottom = 119.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("6_q2en3")
+theme_override_font_sizes/font_size = 14
+text = "Quit"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

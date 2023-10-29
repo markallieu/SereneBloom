@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://jnctj55axfd6"]
+[gd_scene load_steps=8 format=3 uid="uid://jnctj55axfd6"]
 
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="1_5ysld"]
 [ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/end_credit.cs" id="1_fqcse"]
@@ -12,7 +12,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Label:position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = true
+tracks/0/loop_wrap = false
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 22.1),
 "transitions": PackedFloat32Array(1, 1),
@@ -35,10 +35,27 @@ tracks/0/keys = {
 "values": [Vector2(72, -288)]
 }
 
+[sub_resource type="Animation" id="Animation_fkcn4"]
+resource_name = "credit"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 21.1, 25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(72, 224), Vector2(72, -300), Vector2(72, -300)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o6j8q"]
 _data = {
 "Credit": SubResource("Animation_4jlu0"),
-"RESET": SubResource("Animation_ghpn0")
+"RESET": SubResource("Animation_ghpn0"),
+"credit": SubResource("Animation_fkcn4")
 }
 
 [node name="EndCredit" type="Node2D" node_paths=PackedStringArray("anim")]
@@ -54,10 +71,20 @@ color = Color(0, 0, 0, 1)
 offset_left = 72.0
 offset_top = -288.0
 offset_right = 630.0
-offset_bottom = 592.003
+offset_bottom = 752.0
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("1_5ysld")
-text = "Serene Bloom
+text = "Kasih sayang dan kepedulian
+ adalah harta emas yang paling berharga,
+Dengannya, dunia menjadi lebih
+ indah dan penuh warna,
+Bahkan, hal-hal kecil pun dapat
+ menjadi bermakna,
+Mari kita wujudkan itu dengan
+ tindakan nyata.
+
+
+Serene Bloom
 
 Made by
 Marcellus Yonathan & James Soejono
@@ -68,22 +95,20 @@ Programmer
 Story Writer
 Marcellus Yonathan
 
+UI Design
+James Soejono
+
 Pixel Artist Asset
 Marcellus Yonathan
-Peter Milko
-Cainos
-Penzilla
-
-UI Artist Asset
-Crusenho
-PaperHatLizard
-Sr.Toasty
 
 Potrait Art Asset
 Oceans Dream
 
-Music Artist
-PeriTune
+Audio Assets From
+Itch.IO
+
+UI Artist Asset From
+Itch.IO
 
 
 
@@ -112,3 +137,5 @@ libraries = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_0r1cc")
 autoplay = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

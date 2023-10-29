@@ -19,7 +19,7 @@ public partial class magic_minigame_bless : Node2D
     public RandomNumberGenerator RNG = new RandomNumberGenerator();
 
     [Export] ProgressBar magicGauge;
-    public static int magic = 349;
+    public static int magic = 0;
     public static int mana = 10;
     public static AnimationPlayer Fail;
 
@@ -156,7 +156,6 @@ public partial class magic_minigame_bless : Node2D
         await ToSignal(GetTree().CreateTimer(1.5), "timeout");
         questVar.needToChangePosition = true;
         questVar.positionChanged = true;
-        questVar.crystal +=1;
         questVar.crystalJustFInished = true;
         GetTree().ChangeSceneToFile("res://essential/scenes/worlds/townhall.tscn");
     }

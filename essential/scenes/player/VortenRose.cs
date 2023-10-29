@@ -19,6 +19,9 @@ public partial class VortenRose : Area2D
 		ui = GetParent<Node2D>().GetNode<UI>("CanvasLayer");
 		text.Hide();
 		dialogic = GetNode<Node2D>("dialogic");
+		if(questVar.roseFinished){
+			Show();
+		}
 		if(questVar.rosePickedUp){
 			Hide();
 		}
@@ -31,6 +34,7 @@ public partial class VortenRose : Area2D
         {
 			necklace.Hide();
 			text.Hide();
+			questVar.rose = 1 ;
 			ui.ManaAmbrosia();
         }
 	}

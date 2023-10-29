@@ -11,6 +11,7 @@ public partial class interactArea : Area2D
 	private Label label;
 	private Node2D dialogic;
 	private string name;
+	CollisionShape2D coll;
 
 	CharacterBody2D sprite;
 	
@@ -25,14 +26,19 @@ public partial class interactArea : Area2D
 		label.Hide();
 		dialogic = GetNode<Node2D>("dialogic");
 		sprite = GetParent<CharacterBody2D>();
+		coll = GetParent().GetNode<CollisionShape2D>("CollisionShape2D");
+		if(!IsVisibleInTree()){
+			coll.Disabled = true;
+		}
         
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionJustReleased("interact") && inside && sprite.IsVisibleInTree())
+		if (Input.IsActionJustReleased("interact") && inside && sprite.IsVisibleInTree() && !questVar.isTalking)
         {
+
 			if(questVar.currentQuestLine == 1){
 				dialogic.Call("dialog",name);
 			}else if(questVar.currentQuestLine ==2){

@@ -19,7 +19,6 @@ kaine: Fenomena ini yang kita sebut Mana Poisoning.
 sigorius: Apakah kamu bisa membantunya?
 sigorius: Aku tadi bertanya kepada Aeiri tapi dia tidak bisa menyembuhkan karena ia tidak bisa mendiagnosa penyakit Heinrich.
 kaine: Aku akan menemuinya. Jika ku beritahu penyakit apa yang Heinrich alami, seharusnya dia bisa membuat potion untuk menyembuhkannya.
-Eleanor: Aeiri tadi sudah masuk ke rumahnya di sebelah kiri Village Center.
 Eleanor: Tolong bantu temanku, ya?
 [signal arg="ManaDisease"]
 VAR {Timeline2.haveFInishedDialogManaPoisoning} = "true"

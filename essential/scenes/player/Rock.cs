@@ -23,7 +23,7 @@ public partial class Rock : Area2D
 		text.Hide();
 		dialogic = GetNode<Node2D>("dialogic");
 		kaine = GetParent().GetNode<CharacterBody2D>("playerKaine");
-		coll = GetNode<CollisionShape2D>("CollisionShape2D");
+		coll = GetNode<CollisionShape2D>("RigidBody2D/CollisionShape2D2");
 		if(questVar.boulderDestroyed){
 			Hide();
 			coll.Disabled = true;
