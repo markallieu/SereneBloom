@@ -4,3 +4,5 @@
 
 [node name="UI_SFX" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_gaiv4")
+volume_db = 19.855
+bus = &"SFX"

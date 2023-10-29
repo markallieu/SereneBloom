@@ -19,7 +19,7 @@ public partial class magic_minigame_lily : Node2D
     public RandomNumberGenerator RNG = new RandomNumberGenerator();
 
     [Export] ProgressBar magicGauge;
-    public static int magic = 249;
+    public static int magic = 0;
     public static int mana = 10;
     public static AnimationPlayer Fail;
 

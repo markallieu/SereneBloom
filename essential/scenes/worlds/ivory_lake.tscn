@@ -3427,7 +3427,7 @@ position = Vector2(728, 282)
 position = Vector2(296, 612)
 
 [node name="Area2D" parent="." instance=ExtResource("17_l3mpg")]
-position = Vector2(85, 592)
+position = Vector2(83, 610)
 
 [node name="Area2D2" parent="." instance=ExtResource("18_4g6em")]
 position = Vector2(460, 346)

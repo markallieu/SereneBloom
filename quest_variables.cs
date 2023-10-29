@@ -34,6 +34,7 @@ public partial class quest_variables : Node
 
 	public bool boulderDestroyed = false;
 	public bool NecklaceQuestFinished = false;
+	public bool NeckCanInteract = false;
 	public bool StatueFinish = false;
 	public bool questline2_intro_played = false;
 	public bool IsQuestlineOneFinished(){
@@ -79,6 +80,7 @@ public partial class quest_variables : Node
 		file.StoreVar(rosePickedUp);
 		file.StoreVar(crystalJustFInished);
 		file.StoreVar(boulderDestroyed);
+		file.StoreVar(NeckCanInteract);
 		file.StoreVar(globals.currentScene);
 		file.StoreVar(globals.firstSerenavonLoad);
 		file.StoreVar(globals.firstSerenavonLoad);
@@ -107,6 +109,7 @@ public partial class quest_variables : Node
 		rosePickedUp = (bool) file.GetVar(false);
 		crystalJustFInished = (bool) file.GetVar(false);
 		boulderDestroyed = (bool) file.GetVar(false);
+		NeckCanInteract = (bool) file.GetVar(false);
 		globals.currentScene = (string) file.GetVar(false);
 		globals.firstSerenavonLoad = (bool) file.GetVar(false);
 		globals.firstSerenavonLoad = (bool) file.GetVar(false);

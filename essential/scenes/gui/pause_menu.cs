@@ -6,6 +6,7 @@ public partial class pause_menu : Control
 	private Control pauseOption;
 	private AudioStreamPlayer2D clickSound;
 	private UI ui;
+	quest_variables questVar;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -13,14 +14,14 @@ public partial class pause_menu : Control
 		Hide();
 		pauseOption = GetParent().GetNode<Control>("PauseOption");
 		clickSound =  GetNode<AudioStreamPlayer2D>("UI_SFX");
-		clickSound.VolumeDb = 5;
 		ui = GetParent<UI>();
+		questVar = GetNode<quest_variables>("/root/QuestVariables");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionPressed("ui_cancel"))
+		if (Input.IsActionPressed("ui_cancel") && !questVar.isTalking)
         {
             
             //PauseMenu.Position = GetViewport().GetVisibleRect().Size / 2;

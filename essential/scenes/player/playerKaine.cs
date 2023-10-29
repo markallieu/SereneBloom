@@ -23,7 +23,7 @@ public partial class playerKaine : CharacterBody2D
 
     public override void _Process(double delta)
 	{
-        if (Input.IsActionPressed("ui_cancel"))
+        if (Input.IsActionPressed("ui_cancel") && !questVar.isTalking)
         {
             GetTree().Paused = true;
             //PauseMenu.Position = GetViewport().GetVisibleRect().Size / 2;

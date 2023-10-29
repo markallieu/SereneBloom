@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bq1easu4ig7v2"]
+[gd_scene load_steps=40 format=3 uid="uid://bq1easu4ig7v2"]
 
 [ext_resource type="PackedScene" uid="uid://dbvq6huvkvjp2" path="res://essential/scenes/magic_minigame/basic/idle_arrow_left.tscn" id="1_ld3sr"]
 [ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/magic_minigame_tutorial.cs" id="1_o6ntj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bswyo6omklpof" path="res://essential/scenes/magic_minigame/basic/idle_arrow_up.tscn" id="5_j3vv8"]
 [ext_resource type="PackedScene" uid="uid://dflqrrwdhdhvi" path="res://essential/scenes/magic_minigame/game/magic_complete.tscn" id="7_jmqf1"]
 [ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="8_kkk03"]
+[ext_resource type="AudioStream" uid="uid://d2o1ijhkp2rtn" path="res://essential/audio/13-Flap.mp3" id="9_03gpo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y7s4w"]
 atlas = ExtResource("2_3q83f")
@@ -285,6 +286,11 @@ show_percentage = false
 visible = false
 
 [node name="dialogic" parent="." instance=ExtResource("8_kkk03")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_03gpo")
+autoplay = true
+bus = &"Music"
 
 [connection signal="area_shape_entered" from="Overlimit" to="." method="_on_overlimit_area_shape_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

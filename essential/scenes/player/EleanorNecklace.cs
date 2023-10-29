@@ -9,6 +9,7 @@ public partial class EleanorNecklace : Area2D
 	UI ui;
 	private Node2D dialogic;
 	bool inside = false;
+	quest_variables questVar;
 
 	public override void _Ready()
 	{
@@ -17,6 +18,7 @@ public partial class EleanorNecklace : Area2D
 		ui = GetParent<Node2D>().GetNode<UI>("CanvasLayer");
 		text.Hide();
 		dialogic = GetNode<Node2D>("dialogic");
+		questVar = GetNode<quest_variables>("/root/QuestVariables");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,7 +34,7 @@ public partial class EleanorNecklace : Area2D
 	}
 
 	public void _on_body_entered(Node2D node){
-		if( node.IsInGroup("player")){
+		if( node.IsInGroup("player") && questVar.NeckCanInteract){
 			text.Show();
 			inside = true;
 		}

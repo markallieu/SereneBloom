@@ -103,6 +103,7 @@ public partial class UI : CanvasLayer
 				BuildingStatue();
 				break;
 			case "LostJewelry":
+				questVar.NeckCanInteract = true;
 				GlobalNotif("Lost Jewelry","Temukan kalung Eleanor yang ada di tebing kiri danau.");
 				break;
 			case "EndLostJewelry":

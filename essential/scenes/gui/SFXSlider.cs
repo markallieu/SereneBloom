@@ -8,6 +8,7 @@ public partial class SFXSlider : HSlider
 	public override void _Ready()
 	{
 		busIndex = AudioServer.GetBusIndex("SFX");	
+		Value = Mathf.Exp(AudioServer.GetBusVolumeDb(busIndex)/ 20);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

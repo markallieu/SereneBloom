@@ -8,6 +8,7 @@ public partial class MusicSlider : HSlider
 	public override void _Ready()
 	{
 		busIndex = AudioServer.GetBusIndex("Music");	
+		Value = Mathf.Exp(AudioServer.GetBusVolumeDb(busIndex)/ 20);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
