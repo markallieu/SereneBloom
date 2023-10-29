@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cug57spgx0bmo"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/OptionMenu.cs" id="1_4jtcn"]
-[ext_resource type="Texture2D" uid="uid://bxav48w18j6li" path="res://essential/art/bg.jpeg" id="2_rncig"]
+[ext_resource type="Texture2D" uid="uid://ief4n0vgg06t" path="res://essential/art/Main_Background.jpg" id="2_hr772"]
 [ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="2_txriu"]
 [ext_resource type="Script" path="res://essential/scenes/gui/MasterSlider.cs" id="4_6ww0o"]
 [ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/MenuCard.ttf" id="4_vscxq"]
@@ -22,7 +22,7 @@ script = ExtResource("1_4jtcn")
 layout_mode = 0
 offset_right = 416.0
 offset_bottom = 224.0
-texture = ExtResource("2_rncig")
+texture = ExtResource("2_hr772")
 expand_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="."]

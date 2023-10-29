@@ -1,8 +1,7 @@
-[gd_scene load_steps=82 format=3 uid="uid://bm8qif420to4d"]
+[gd_scene load_steps=81 format=3 uid="uid://bm8qif420to4d"]
 
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="1_cgivd"]
 [ext_resource type="Texture2D" uid="uid://u88witkpqjb7" path="res://essential/art/Magic Spells/01.png" id="2_5y1bd"]
-[ext_resource type="AudioStream" uid="uid://cy6bd2tp3b8pt" path="res://essential/audio/RPG_Essentials_Free/8_Atk_Magic_SFX/13_Ice_explosion_01.wav" id="3_5xm1y"]
 [ext_resource type="Texture2D" uid="uid://2imm8cmmc4d3" path="res://essential/art/Magic Spells/00.png" id="3_hp77l"]
 
 [sub_resource type="Animation" id="Animation_toxxk"]
@@ -599,6 +598,3 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_udt66")
 animation = &"Ignite"
 frame_progress = 0.941351
-
-[node name="SFX" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_5xm1y")

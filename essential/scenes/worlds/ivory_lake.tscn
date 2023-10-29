@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dfjrx5x4of782" path="res://essential/art/tilemap/TopDownHouse_FloorsAndWalls.png" id="9_48wuw"]
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="10_jji58"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="12_pxr2v"]
-[ext_resource type="AudioStream" uid="uid://c4m0fcs5dsm6j" path="res://essential/audio/PerituneMaterial_Quiet_Ocean.mp3" id="14_7eii2"]
+[ext_resource type="AudioStream" uid="uid://qb0fq5xxo2h3" path="res://essential/audio/Background_Music/Lake.ogg" id="14_1o0m1"]
 [ext_resource type="PackedScene" uid="uid://dnk16gpaulu0c" path="res://essential/scenes/player/Sigorius.tscn" id="15_ysxwt"]
 [ext_resource type="PackedScene" uid="uid://bdknn1un7ljiy" path="res://essential/scenes/player/Eleanor.tscn" id="16_6jwdt"]
 [ext_resource type="PackedScene" uid="uid://dsll7760gir0c" path="res://essential/scenes/player/EleanorNecklaces.tscn" id="17_l3mpg"]
@@ -3409,7 +3409,7 @@ polygon = PackedVector2Array(-77, -80, 911, -80, 912, 651, 989, 651, 989, 755, 9
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(0.989879, 0.994617)
-stream = ExtResource("14_7eii2")
+stream = ExtResource("14_1o0m1")
 volume_db = 9.412
 autoplay = true
 bus = &"Music"
