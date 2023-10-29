@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b71sps4f00xig"]
+[gd_scene load_steps=7 format=3 uid="uid://b71sps4f00xig"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/menu.cs" id="1_xhrj1"]
 [ext_resource type="FontFile" uid="uid://bcisfkw4ji5h2" path="res://essential/art/gui/GUI Asset/MenuCard.ttf" id="2_1rb1u"]
+[ext_resource type="Texture2D" uid="uid://ief4n0vgg06t" path="res://essential/art/Main_Background.jpg" id="2_8w480"]
 [ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="3_sgel8"]
 [ext_resource type="AudioStream" uid="uid://j65guk8w1d21" path="res://essential/audio/Background_Music/Ambient 2.ogg" id="4_iv3f2"]
+[ext_resource type="PackedScene" uid="uid://dxxyc27w5ehrr" path="res://essential/scenes/interact/dialogic.tscn" id="6_rxhxh"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,34 +16,36 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xhrj1")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8w480")
+expand_mode = 1
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 416.0
 offset_bottom = 234.0
 color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 2
+offset_top = -15.0
 offset_right = 416.0
-offset_bottom = 131.0
-
-[node name="Title" type="Label" parent="VBoxContainer2"]
-layout_mode = 2
+offset_bottom = 116.0
 size_flags_vertical = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
 theme_override_fonts/font = ExtResource("2_1rb1u")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 32
 text = "Serene Bloom"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 1
@@ -50,15 +54,34 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = -5.0
-offset_right = 32.0
-offset_bottom = 16.0
+offset_left = -40.0
+offset_top = -33.0
+offset_right = 66.0
+offset_bottom = 4.00001
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 4
 theme = ExtResource("3_sgel8")
-text = "Play"
+text = "  Play  "
+
+[node name="Load" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = 4.0
+offset_right = 91.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.8)
+size_flags_horizontal = 4
+theme = ExtResource("3_sgel8")
+text = "  Load  "
 
 [node name="Option" type="Button" parent="."]
 layout_mode = 1
@@ -67,15 +90,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -51.0
-offset_top = 32.0
-offset_right = 55.0
-offset_bottom = 69.0
+offset_left = -40.0
+offset_top = 39.0
+offset_right = 66.0
+offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 4
 theme = ExtResource("3_sgel8")
-text = "Option"
+text = " Option "
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
@@ -84,21 +108,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
-offset_top = 83.0
-offset_right = 30.0
-offset_bottom = 104.0
+offset_left = -40.0
+offset_top = 74.0
+offset_right = 64.0
+offset_bottom = 111.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 size_flags_horizontal = 4
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("3_sgel8")
-text = "Quit"
+text = "  Quit  "
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_iv3f2")
+volume_db = 6.618
 autoplay = true
 
+[node name="dialogic" parent="." instance=ExtResource("6_rxhxh")]
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

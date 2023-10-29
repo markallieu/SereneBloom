@@ -57,6 +57,7 @@ variables={
 "Timeline2": {
 "haveFInishedDialogManaPoisoning": "false"
 },
+"crystalReceived": "false",
 "gotEsssense": "false",
 "haveFoundEleanorNecklace": "false",
 "haveTalkedToAeiri": "false",

@@ -5,6 +5,9 @@ if {haveTalkedToAeiri2} == "true":
 		if {BlessingEssenseFinished} == "false":
 			thomas: Tolong beri aku blessing essense untuk ditukarkan...
 			[end_timeline]
+		elif {crystalReceived} == "true":
+			thomas: Apakah kamu ingin membeli sesuatu atau menukar barang?
+			[end_timeline]
 	if {BlessingEssenseFinished} == "false":
 		thomas: Selamat datang! Ada yang bisa kubantu?
 		kaine: Thomas, aku butuh beberapa informasi tentang barang-barang ini.
@@ -29,5 +32,6 @@ if {haveTalkedToAeiri2} == "true":
 		thomas: Iya, karena itu aku sangat membutuhkannya.
 		thomas: Terimakasih Kaine, akan kutukarkan ini dengan Mana Crystal-ku.
 		[signal arg="Crystal"]
+		VAR {crystalReceived} = "true"
 else:
 	thomas: Apakah kamu ingin membeli sesuatu atau menukar barang?

@@ -3,9 +3,7 @@ using System;
 
 public partial class cliffside : Node2D
 {
-    //Script dialogic = ResourceLoader.Load("res://addons/dialogic/Other/DialogicGameHandler.gd") as Script;
-    private GDScript dialogic;
-    private GodotObject dialogicNode; // This is a GodotObject
+	private Node2D dialogic;
     private bool played = false;
     quest_variables questVar;
     public override void _Ready()
@@ -28,9 +26,7 @@ public partial class cliffside : Node2D
         else{
             questVar.positionChanged = false;
         }
-        dialogic = (GDScript)GD.Load("res://addons/dialogic/Other/DialogicGameHandler.gd");
-        dialogicNode = (GodotObject)dialogic.New();
-        AddChild((Node)dialogicNode);
+        dialogic = GetNode<Node2D>("dialogic");
     }
 
     public override void _Process(double delta)
@@ -38,8 +34,8 @@ public partial class cliffside : Node2D
         ChangeScene();
         if (globals.textPlayed && !played)
         {
-            var dialog = (Node)dialogicNode.Call("start", "StartingTimeline");
-            AddChild(dialog);
+            dialogic.Call("dialog","StartingTimeline");
+            questVar.isTalking = true;
             played = true;
         }
     }

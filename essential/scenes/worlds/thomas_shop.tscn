@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://ctxspuk5rfrqp"]
+[gd_scene load_steps=30 format=3 uid="uid://ctxspuk5rfrqp"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/thomas_shop.cs" id="1_6dd2m"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_k1bxg"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c30yyhhpu1frg" path="res://essential/art/tilemap/TopDownHouse_DoorsAndWindows.png" id="12_yxfhh"]
 [ext_resource type="Texture2D" uid="uid://xfc78n2skaol" path="res://essential/art/tilemap/cliff.png" id="13_y67qt"]
 [ext_resource type="PackedScene" uid="uid://cofgjxwbapqmu" path="res://essential/scenes/player/Thomas.tscn" id="15_7fwt8"]
+[ext_resource type="AudioStream" uid="uid://d3ldj82w0w0e4" path="res://essential/audio/PerituneMaterial_Forest_Sage.ogg" id="16_f6arf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("4_e8mnd")
@@ -3535,6 +3536,7 @@ texture_filter = 1
 position = Vector2(250, 313)
 
 [node name="ShopCamera" type="Camera2D" parent="playerKaine"]
+zoom = Vector2(0.9, 0.9)
 drag_top_margin = 1.0
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3583,5 +3585,12 @@ shape = SubResource("RectangleShape2D_c5rer")
 [node name="Thomas" parent="." instance=ExtResource("15_7fwt8")]
 z_index = 1
 position = Vector2(222, 136)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(222, 136)
+stream = ExtResource("16_f6arf")
+volume_db = -0.145
+autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="thomas_shop_exitpoint" to="." method="_on_thomas_shop_exitpoint_body_entered"]

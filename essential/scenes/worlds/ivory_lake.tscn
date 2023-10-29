@@ -3357,7 +3357,7 @@ texture_filter = 1
 position = Vector2(896, 723)
 
 [node name="Ivory_LakeCamera" type="Camera2D" parent="playerKaine"]
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.9, 0.9)
 limit_left = -80
 limit_top = -80
 limit_right = 912

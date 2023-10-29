@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bey80wxq3kxx2"]
+[gd_scene load_steps=33 format=3 uid="uid://bey80wxq3kxx2"]
 
 [ext_resource type="Script" path="res://essential/scenes/worlds/townhall.cs" id="1_wcycq"]
 [ext_resource type="PackedScene" uid="uid://ypabrx62sf8y" path="res://essential/scenes/gui/UI.tscn" id="2_kgjuw"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dnk16gpaulu0c" path="res://essential/scenes/player/Sigorius.tscn" id="16_dy7jx"]
 [ext_resource type="PackedScene" uid="uid://gu6ty10sircn" path="res://essential/scenes/player/Bed.tscn" id="17_w6hcc"]
 [ext_resource type="PackedScene" uid="uid://d0owxrno4v6an" path="res://essential/scenes/player/Bed_Empty.tscn" id="18_y6ggo"]
+[ext_resource type="AudioStream" uid="uid://d3ldj82w0w0e4" path="res://essential/audio/PerituneMaterial_Forest_Sage.ogg" id="19_u4pby"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhucq"]
 texture = ExtResource("4_exry1")
@@ -3665,6 +3666,7 @@ texture_filter = 1
 position = Vector2(250, 313)
 
 [node name="TownhallCamera" type="Camera2D" parent="playerKaine"]
+zoom = Vector2(0.9, 0.9)
 drag_top_margin = 1.0
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3724,5 +3726,11 @@ position = Vector2(-15, 60)
 
 [node name="Bed2" parent="." instance=ExtResource("18_y6ggo")]
 position = Vector2(-14, 61)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_u4pby")
+volume_db = -0.145
+autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="townhall_exitpoint" to="." method="_on_townhall_exitpoint_body_entered"]

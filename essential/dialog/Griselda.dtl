@@ -10,10 +10,10 @@ if {haveTalkedToGriselda} == "false":
 	VAR {haveTalkedToGriselda} = "true"
 	if {haveTalkedToReva} == "true":
 		kaine: Griselda, Reva bilang kamu ada Sycamore Wood, apakah ini benar?
-		Griselda: Ah oke, bilang ke Reva jangan terlalu memaksakan diri.
 		Griselda: Iya, kebetulan aku dan Thomas minggu lalu memotong pohon di Ivory Lake.
 		Griselda: Apakah kayu adalah bahan untuk sebuah patung?
 		kaine: Betul, Reva ada dapat kontrak Kepala Desa Kravon.
+		Griselda: Ah oke, bilang ke Reva jangan terlalu memaksakan diri.
 		kaine: Oke, akan ku sampaikan kepadanya.
 		VAR {BuildingAStatue.Sycamore} = "true"
 		[signal arg="Sycamore"]
