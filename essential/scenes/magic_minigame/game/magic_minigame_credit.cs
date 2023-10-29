@@ -27,7 +27,7 @@ public partial class magic_minigame_credit : Node2D
 
     public static AnimationPlayer magicText;
     public static AnimatedSprite2D magicSpell;
-    public static CanvasLayer magicComplete;
+    public static magic_complete4 magicComplete;
     public static Label magicChant;
 
     public static int overLimitCount = 0;
@@ -43,7 +43,7 @@ public partial class magic_minigame_credit : Node2D
         animation.Play("Magic");
 
         magicText = GetNode<AnimationPlayer>("Magic_Complete4/AnimationPlayer");
-        magicComplete = GetNode<CanvasLayer>("Magic_Complete4");
+        magicComplete = GetNode<magic_complete4>("Magic_Complete4");
         magicSpell = GetNode<AnimatedSprite2D>("Magic_Complete4/AnimatedSprite2D");
         magicChant = GetNode<Label>("Magic_Complete4/Label");
         magicComplete.Hide();
@@ -99,6 +99,7 @@ public partial class magic_minigame_credit : Node2D
             Instance.magicGauge.Value = magic;
             if (magic == 500)
             {
+                magicComplete.backHome();
                 Instance.StopGame();
             }
             if (magic <= amount)

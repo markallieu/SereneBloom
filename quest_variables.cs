@@ -41,6 +41,7 @@ public partial class quest_variables : Node
 	}
 	public Vector2 position;
 	public bool needToChangePosition = false;
+	public bool AfterMinigame = false;
 
 	public bool positionChanged = false;
 	public void startQuestlineTwo(){

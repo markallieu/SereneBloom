@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://ypabrx62sf8y"]
+[gd_scene load_steps=14 format=3 uid="uid://ypabrx62sf8y"]
 
 [ext_resource type="Script" path="res://essential/scenes/gui/UI.cs" id="1_dwbpl"]
 [ext_resource type="PackedScene" uid="uid://d3vaylse8fnu8" path="res://essential/scenes/gui/pause_menu.tscn" id="1_g65hy"]
 [ext_resource type="PackedScene" uid="uid://bjrhnkenmewxf" path="res://essential/scenes/gui/PauseOption.tscn" id="2_xhg0t"]
-[ext_resource type="PackedScene" uid="uid://h6doxtctw1dy" path="res://essential/scenes/gui/inventory.tscn" id="3_rbgse"]
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="4_7bh1x"]
 [ext_resource type="Texture2D" uid="uid://bdhfjrcav1v7" path="res://essential/art/gui/GUI Asset/Buttons/buttons_4x.png" id="5_0btx6"]
 [ext_resource type="AudioStream" uid="uid://dy00e8oirpy26" path="res://essential/audio/Retro Success Melody 01 - sawtooth lead 1.wav" id="7_xuvjd"]
@@ -134,9 +133,6 @@ _data = {
 [node name="UI" type="CanvasLayer"]
 layer = 3
 script = ExtResource("1_dwbpl")
-
-[node name="MarginContainer2" parent="." instance=ExtResource("3_rbgse")]
-visible = false
 
 [node name="PauseOption" parent="." instance=ExtResource("2_xhg0t")]
 process_mode = 2

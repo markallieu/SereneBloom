@@ -6,8 +6,8 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "false":
 else:
 	if {ManaAmbrosiaFinish} == "true":
 		kaine: Eleanor, ini potion yang dibuat oleh Aeiri. Namanya Mana Ambrosia.
-		kaine: Langsung suruh minumkan potion ini ke Heinrich dan dia seharusnya bakal membaik beberapa hari ke depan.
-		Eleanor: Terimkasih banyak ya Kaine, aku juga harus berterimakasih sama Aeiri nanti.
+		kaine: Langsung minumkan potion ini ke Heinrich dan dia seharusnya bakal membaik beberapa hari ke depan.
+		Eleanor: Terimakasih banyak ya Kaine, aku juga harus berterimakasih sama Aeiri nanti.
 		kaine: Sama-sama, memang kemampuan Aeiri sangat hebat dalam membuat potion.
 		[signal arg="ManaDeseaseFinish"]
 		[end_timeline]

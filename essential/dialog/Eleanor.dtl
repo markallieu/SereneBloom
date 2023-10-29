@@ -1,7 +1,7 @@
 Join Eleanor 1
 Join krovan 1
 if {NecklaceEnded} == "true":
-	Eleanor: Terimakasih atas bantuanmu...
+	Eleanor: Terimakasih atas bantuanmu.
 if {haveTalkedToEleanor} == "true":
 	if {haveFoundEleanorNecklace} == "true":
 		Eleanor: Terimakasih banyak, Kaine!

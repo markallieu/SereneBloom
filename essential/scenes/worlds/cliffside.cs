@@ -32,11 +32,11 @@ public partial class cliffside : Node2D
     public override void _Process(double delta)
     {
         ChangeScene();
-        if (globals.textPlayed && !played)
+        if (globals.textPlayed)
         {
             dialogic.Call("dialog","StartingTimeline");
             questVar.isTalking = true;
-            played = true;
+            globals.textPlayed = false;
         }
     }
 

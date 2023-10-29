@@ -4,10 +4,9 @@ using System;
 public partial class magic_complete4 : CanvasLayer
 {
 	// Called when the node enters the scene tree for the first time.
-	Button quit;
 	public override void _Ready()
 	{
-		quit = GetNode<Button>("Quit");
+
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,10 +15,10 @@ public partial class magic_complete4 : CanvasLayer
 	}
 
 	public void _on_animation_player_animation_finished(StringName s){
-		quit.Show();
 	}
 
-	public void _on_quit_pressed(){
-		GetTree().Quit();
+	public async void backHome(){
+		await ToSignal(GetTree().CreateTimer(22), "timeout");
+		GetTree().ChangeSceneToFile("res://essential/scenes/gui/Menu.tscn");
 	}
 }

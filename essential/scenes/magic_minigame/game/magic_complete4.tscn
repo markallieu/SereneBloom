@@ -1,10 +1,9 @@
-[gd_scene load_steps=80 format=3 uid="uid://0iyi1u8l0ye6"]
+[gd_scene load_steps=79 format=3 uid="uid://0iyi1u8l0ye6"]
 
 [ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/magic_complete4.cs" id="1_gat24"]
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="1_nr4qn"]
 [ext_resource type="Texture2D" uid="uid://2imm8cmmc4d3" path="res://essential/art/Magic Spells/00.png" id="2_tjm0f"]
 [ext_resource type="Texture2D" uid="uid://u88witkpqjb7" path="res://essential/art/Magic Spells/01.png" id="3_4s1he"]
-[ext_resource type="Theme" uid="uid://1d42ypfa3rje" path="res://UITheme.tres" id="6_q2en3"]
 
 [sub_resource type="Animation" id="Animation_toxxk"]
 length = 0.001
@@ -576,17 +575,4 @@ sprite_frames = SubResource("SpriteFrames_udt66")
 animation = &"Ignite"
 frame_progress = 0.68086
 
-[node name="Quit" type="Button" parent="."]
-visible = false
-offset_left = 184.0
-offset_top = 88.0
-offset_right = 241.0
-offset_bottom = 119.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("6_q2en3")
-theme_override_font_sizes/font_size = 14
-text = "Quit"
-
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

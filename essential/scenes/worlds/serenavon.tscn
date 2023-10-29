@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cxfok1hgjia8w"]
+[gd_scene load_steps=47 format=3 uid="uid://cxfok1hgjia8w"]
 
 [ext_resource type="PackedScene" uid="uid://bgch8sa6ik2hf" path="res://essential/scenes/player/playerKaine.tscn" id="1_eeq64"]
 [ext_resource type="Script" path="res://essential/scenes/worlds/serenavon.cs" id="1_s47pv"]
@@ -3349,9 +3349,6 @@ size = Vector2(142, 56.375)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2qjjv"]
 size = Vector2(54, 130)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrq2d"]
-size = Vector2(67.75, 130)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rk05q"]
 size = Vector2(129.5, 58.5)
 
@@ -3456,12 +3453,6 @@ shape = SubResource("RectangleShape2D_djelo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ivory_lake_transition_point"]
 position = Vector2(-27, 1109)
 shape = SubResource("RectangleShape2D_2qjjv")
-
-[node name="ivory_lake_checkpoint" type="Area2D" parent="ivory_lake_transition_point"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ivory_lake_transition_point/ivory_lake_checkpoint"]
-position = Vector2(-20, 1109)
-shape = SubResource("RectangleShape2D_mrq2d")
 
 [node name="solace_haven_transition_point" type="Area2D" parent="."]
 
@@ -3580,7 +3571,6 @@ shape = SubResource("RectangleShape2D_cjlxm")
 [connection signal="body_entered" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_entered"]
 [connection signal="body_exited" from="serenavon_exit_point1" to="." method="_on_serenavon_exit_point_1_body_exited"]
 [connection signal="body_entered" from="ivory_lake_transition_point" to="." method="_on_ivory_lake_transition_point_body_entered"]
-[connection signal="body_entered" from="ivory_lake_transition_point/ivory_lake_checkpoint" to="." method="_on_ivory_lake_checkpoint_body_entered"]
 [connection signal="body_entered" from="solace_haven_transition_point" to="." method="_on_solace_haven_transition_point_body_entered"]
 [connection signal="body_entered" from="thomas_shop_transition_point" to="." method="_on_thomas_shop_transition_point_body_entered"]
 [connection signal="body_entered" from="reva_house_transition_point" to="." method="_on_reva_house_transition_point_body_entered"]

@@ -21,7 +21,7 @@ if {haveTalkedToAeiri} == "false":
 if {haveTalkedToReva} == "true":
 	if {BuildingAStatue.Orchid} == "false":
 		kaine: Oh ya, Reva bilang kamu ada Orchid. Apakah aku boleh minta 2?
-		Aeiri: Ini Orchidnya.
+		Aeiri: Boleh, ini Orchidnya.
 		kaine: Terimakasih, Aeiri!
 		Aeiri: Sama-sama.
 		[signal arg="Orchid"]

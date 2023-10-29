@@ -52,12 +52,16 @@ public partial class interactArea : Area2D
         }
 	}
 	void _on_body_entered(Node2D node){
-		if(canInteract && node.IsInGroup("player")){
+		if(canInteract && node.IsInGroup("player") && !questVar.AfterMinigame){
 			label.Show();
 			inside = true;
 			name = GetParent().Name;
 			GD.Print(name);
 		}
+		if(node.IsInGroup("player") && questVar.AfterMinigame){
+			questVar.AfterMinigame = false;
+		}
+		
 	}
 //	public override void _Input(InputEvent @event)
 //{

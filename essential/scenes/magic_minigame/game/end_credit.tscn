@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://jnctj55axfd6"]
+[gd_scene load_steps=9 format=3 uid="uid://jnctj55axfd6"]
 
 [ext_resource type="Theme" uid="uid://cvq23knaly5qi" path="res://Themes/UI_theme_2.tres" id="1_5ysld"]
 [ext_resource type="Script" path="res://essential/scenes/magic_minigame/game/end_credit.cs" id="1_fqcse"]
@@ -34,6 +34,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(72, -288)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Morale:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Morale:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_fkcn4"]
 resource_name = "credit"
@@ -48,12 +72,41 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 21.1, 25),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(72, 224), Vector2(72, -300), Vector2(72, -300)]
+"values": [Vector2(72, 224), Vector2(72, -272), Vector2(72, -272)]
+}
+
+[sub_resource type="Animation" id="Animation_5miaa"]
+resource_name = "Morale"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Morale:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Morale:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(10.1, 14.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o6j8q"]
 _data = {
 "Credit": SubResource("Animation_4jlu0"),
+"Morale": SubResource("Animation_5miaa"),
 "RESET": SubResource("Animation_ghpn0"),
 "credit": SubResource("Animation_fkcn4")
 }
@@ -74,17 +127,7 @@ offset_right = 630.0
 offset_bottom = 752.0
 scale = Vector2(0.5, 0.5)
 theme = ExtResource("1_5ysld")
-text = "Kasih sayang dan kepedulian
- adalah harta emas yang paling berharga,
-Dengannya, dunia menjadi lebih
- indah dan penuh warna,
-Bahkan, hal-hal kecil pun dapat
- menjadi bermakna,
-Mari kita wujudkan itu dengan
- tindakan nyata.
-
-
-Serene Bloom
+text = "Serene Bloom
 
 Made by
 Marcellus Yonathan & James Soejono
@@ -128,6 +171,27 @@ Prepare youself!
 
 "
 horizontal_alignment = 1
+
+[node name="Morale" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 630.0
+offset_bottom = 232.0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+theme = ExtResource("1_5ysld")
+text = "Kasih sayang dan kepedulian
+ adalah harta emas yang paling berharga,
+Dengannya, dunia menjadi lebih
+ indah dan penuh warna,
+Bahkan, hal-hal kecil pun dapat
+ menjadi bermakna,
+Mari kita wujudkan itu dengan
+ tindakan nyata.
+"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

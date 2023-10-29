@@ -28,7 +28,7 @@ public partial class magic_minigame_tutorial : Node2D
     public static AnimatedSprite2D magicSpell;
     public static CanvasLayer magicComplete;
     public static Label magicChant;
-    public static AudioStreamPlayer2D magicSound;
+
 
     public static int overLimitCount = 0;
     private const int maxEntries = 3;
@@ -48,7 +48,6 @@ public partial class magic_minigame_tutorial : Node2D
         magicComplete = GetNode<CanvasLayer>("Magic_Complete");
         magicSpell = GetNode<AnimatedSprite2D>("Magic_Complete/AnimatedSprite2D");
         magicChant = GetNode<Label>("Magic_Complete/Label");
-        magicSound = GetNode<AudioStreamPlayer2D>("Magic_Complete/SFX");
         magicComplete.Hide();
     
     }
@@ -154,11 +153,11 @@ public partial class magic_minigame_tutorial : Node2D
         await ToSignal(GetTree().CreateTimer(9), "timeout");
         magicChant.Hide();
         magicSpell.Show();
-        magicSound.Play();
         magicSpell.Play("Spell");
         await ToSignal(GetTree().CreateTimer(1), "timeout");
         questVar.needToChangePosition = true;
         questVar.positionChanged = true;
+        questVar.AfterMinigame = true;
         questVar.KravonAfterTutorialDialogStart = true;
         GetTree().ChangeSceneToFile("res://essential/scenes/worlds/serenavon.tscn");
     }

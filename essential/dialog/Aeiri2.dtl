@@ -9,7 +9,6 @@ if {Timeline2.haveFInishedDialogManaPoisoning} == "true":
 			Aeiri: Aku ga nyangka kamu bisa nemu semua barang yang aku minta.
 			kaine: Memang agak ribet sih aku mencari barangnya, tapi akhirnya aku nemu semua.
 			Aeiri: Oke tunggu sebentar ya.
-			Aeiri: Proses pembuatan Mana Ambrosia memakan waktu lumayan lama.
 			Aeiri: Ini dia Mana Ambrosianya, berikan ini ke Heinrich secepat mungkin.
 			kaine: Terimakasih banyak atas potionnya!
 			[signal arg="ManaAmbriosaFinish"]

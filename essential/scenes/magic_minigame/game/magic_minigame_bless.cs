@@ -157,6 +157,7 @@ public partial class magic_minigame_bless : Node2D
         questVar.needToChangePosition = true;
         questVar.positionChanged = true;
         questVar.crystalJustFInished = true;
+        questVar.AfterMinigame = true;
         GetTree().ChangeSceneToFile("res://essential/scenes/worlds/townhall.tscn");
     }
 }

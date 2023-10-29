@@ -50,7 +50,7 @@ public partial class magic_minigame_boulder : Node2D
         magicChant = GetNode<Label>("Magic_Complete/Label");
         questVar = GetNode<quest_variables>("/root/QuestVariables");
         magicComplete.Hide();
-
+        magic = 149;
     }
 
     public void _on_timer_timeout()
